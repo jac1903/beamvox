@@ -36,6 +36,10 @@
     "tailwind-merge": "^3.5.0",
     "wouter": "^3.9.0",
     "zod": "^4.3.6"
+    "react-i18next": "^14.0.0",
+    "i18next": "^23.0.0",
+    "i18next-browser-languagedetector": "^7.0.0",
+    "i18next-http-backend": "^2.0.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
