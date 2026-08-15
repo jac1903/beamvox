@@ -92,4 +92,4 @@ cd packages/web
 bun run db:push        # Push schema to database
 bun run db:generate    # Generate migration files
 bun run db:migrate     # Run migrations
-```
+``` 
