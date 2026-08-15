@@ -109,7 +109,7 @@ function Positioning() {
           </div>
 
           <ul className="grid gap-px border border-line bg-line sm:grid-cols-2">
-            t('categories', { returnObjects: true }).map((category, i) => (
+            {t('categories', { returnObjects: true }).map((category, i) => (
               <li key={category.id} data-reveal data-reveal-delay={i * 60}>
                 <Link
                   to={`/products?category=${category.id}`}
@@ -194,7 +194,7 @@ function Applications() {
         />
 
         <div className="mt-14 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-          t('applications', { returnObjects: true }).map((application, i) => (
+          {t('applications', { returnObjects: true }).map((application, i) => (
             <Link
               key={application.id}
               to={`/applications#${application.id}`}
@@ -298,7 +298,7 @@ function Distribution() {
           </div>
 
           <ul className="divide-y divide-line border-y border-line">
-            t('regions', { returnObjects: true }).map((region, i) => (
+            {t('regions', { returnObjects: true }).map((region, i) => (
               <li
                 key={region.id}
                 className="grid gap-3 py-7 md:grid-cols-[10rem_1fr] md:gap-8"
