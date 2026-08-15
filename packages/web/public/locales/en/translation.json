@@ -47,5 +47,107 @@
     "description": "Tell us what the rig has to do and we will come back with a fixture list, the measured data behind it and the distributor who can quote it.",
     "quote": "Request a quote",
     "support": "Downloads & support"
-  }
+  },
+  "categories": [
+    {
+      "id": "beam-spot",
+      "name": "Beam & Spot",
+      "code": "01",
+      "summary": "Narrow-angle moving heads for long-throw work. Hard-edged output, fast optics, full gobo and prism paths.",
+      "image": "/images/fixtures/beam.jpg"
+    },
+    {
+      "id": "wash-profile",
+      "name": "Wash & Profile",
+      "code": "02",
+      "summary": "Even-field LED wash and framing profile heads with CMY colour mixing and variable CTO.",
+      "image": "/images/fixtures/wash.jpg"
+    },
+    {
+      "id": "effect",
+      "name": "Effect & Matrix",
+      "code": "03",
+      "summary": "Pixel-mappable matrix and hybrid heads for texture, aerial effect and audience interaction.",
+      "image": "/images/fixtures/movinghead.jpg"
+    },
+    {
+      "id": "strobe",
+      "name": "Strobe & Blinder",
+      "code": "04",
+      "summary": "High-output strobe and blinder bars with segmented control and calibrated white points.",
+      "image": "/images/fixtures/strobe.jpg"
+    },
+    {
+      "id": "static",
+      "name": "Static & Architectural",
+      "code": "05",
+      "summary": "IP65 battens and arc washes for permanent installation, façades and touring set dressing.",
+      "image": "/images/fixtures/batten.jpg"
+    },
+    {
+      "id": "control",
+      "name": "Control & Distribution",
+      "code": "06",
+      "summary": "Consoles, nodes and splitters. Art-Net, sACN and wired DMX across the whole rig.",
+      "image": "/images/fixtures/control.jpg"
+    }
+  ],
+  "regions": [
+    {
+      "id": "europe",
+      "name": "Europe",
+      "detail": "24 distributors · 18 countries",
+      "note": "Stocked warehouse, 48-hour dispatch on catalogue lines."
+    },
+    {
+      "id": "americas",
+      "name": "Americas",
+      "detail": "16 distributors · 9 countries",
+      "note": "ETL-listed variants, 120 V configurations available on request."
+    },
+    {
+      "id": "africa",
+      "name": "Africa",
+      "detail": "11 distributors · 8 countries",
+      "note": "Regional service partners for warranty work and spare parts."
+    }
+  ],
+  "applications_list": [
+    {
+      "id": "concerts",
+      "name": "Concerts & Tours",
+      "summary": "Tour-grade fixtures for moving heads and strobes that survive long runs and fast changeovers.",
+      "image": "/images/applications/concerts.jpg"
+    },
+    {
+      "id": "theatre",
+      "name": "Theatre",
+      "summary": "Quiet operation, smooth dimming and profile control for drama, musicals and dance.",
+      "image": "/images/applications/theatre.jpg"
+    },
+    {
+      "id": "broadcast",
+      "name": "Broadcast",
+      "summary": "High CRI, consistent colour and silent operation for studios and live productions.",
+      "image": "/images/applications/broadcast.jpg"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate & Events",
+      "summary": "Versatile fixtures for conferences, product launches and gala dinners.",
+      "image": "/images/applications/corporate.jpg"
+    },
+    {
+      "id": "architectural",
+      "name": "Architectural",
+      "summary": "IP-rated fixtures for permanent installation in façades, bridges and landmark buildings.",
+      "image": "/images/applications/architectural.jpg"
+    },
+    {
+      "id": "installation",
+      "name": "Fixed Installation",
+      "summary": "Reliable, low-maintenance fixtures for theme parks, museums and houses of worship.",
+      "image": "/images/applications/installation.jpg"
+    }
+  ]
 }
