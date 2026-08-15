@@ -112,7 +112,7 @@
       "note": "Regional service partners for warranty work and spare parts."
     }
   ],
-  "applications_list": [
+  "applications": [
     {
       "id": "concerts",
       "name": "Concerts & Tours",
