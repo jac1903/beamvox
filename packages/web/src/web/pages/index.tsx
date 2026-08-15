@@ -51,9 +51,9 @@ function Hero() {
             <Eyebrow>Stage lighting manufacturer — est. 2014</Eyebrow>
           </div>
           <h1 className="display-xl mt-7" data-reveal data-reveal-delay={80}>
-            JHONATAN
+            Fixtures that hold their
             <br />
-            ME LA PELA.
+            numbers on the tenth tour.
           </h1>
           <p
             className="mt-8 max-w-xl text-lg leading-relaxed text-muted"
