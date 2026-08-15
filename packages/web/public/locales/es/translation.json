@@ -47,5 +47,107 @@
     "description": "Cuéntanos lo que el rig tiene que hacer y te responderemos con una lista de equipos, los datos medidos detrás de ella y el distribuidor que puede cotizarla.",
     "quote": "Solicitar cotización",
     "support": "Descargas y soporte"
-  }
+  },
+  "categories": [
+    {
+      "id": "beam-spot",
+      "name": "Beam & Spot",
+      "code": "01",
+      "summary": "Cabezas móviles de ángulo estrecho para trabajos de largo alcance. Salida de borde duro, óptica rápida, rutas completas de gobos y prismas.",
+      "image": "/images/fixtures/beam.jpg"
+    },
+    {
+      "id": "wash-profile",
+      "name": "Wash & Profile",
+      "code": "02",
+      "summary": "Cabezas LED de lavado y perfil con mezcla de color CMY y CTO variable.",
+      "image": "/images/fixtures/wash.jpg"
+    },
+    {
+      "id": "effect",
+      "name": "Effect & Matrix",
+      "code": "03",
+      "summary": "Cabezas híbridas y matrices mapeables por píxeles para textura, efecto aéreo e interacción con el público.",
+      "image": "/images/fixtures/movinghead.jpg"
+    },
+    {
+      "id": "strobe",
+      "name": "Strobe & Blinder",
+      "code": "04",
+      "summary": "Barras de strobe y blinder de alta salida con control segmentado y puntos blancos calibrados.",
+      "image": "/images/fixtures/strobe.jpg"
+    },
+    {
+      "id": "static",
+      "name": "Static & Architectural",
+      "code": "05",
+      "summary": "Battenes IP65 y lavados de arco para instalación permanente, fachadas y decoración de giras.",
+      "image": "/images/fixtures/batten.jpg"
+    },
+    {
+      "id": "control",
+      "name": "Control & Distribution",
+      "code": "06",
+      "summary": "Consolas, nodos y divisores. Art-Net, sACN y DMX cableado en todo el rig.",
+      "image": "/images/fixtures/control.jpg"
+    }
+  ],
+  "regions": [
+    {
+      "id": "europe",
+      "name": "Europa",
+      "detail": "24 distribuidores · 18 países",
+      "note": "Almacén con stock, despacho en 48 horas en líneas de catálogo."
+    },
+    {
+      "id": "americas",
+      "name": "Américas",
+      "detail": "16 distribuidores · 9 países",
+      "note": "Variantes con certificación ETL, configuraciones de 120 V disponibles bajo pedido."
+    },
+    {
+      "id": "africa",
+      "name": "África",
+      "detail": "11 distribuidores · 8 países",
+      "note": "Socios de servicio regional para trabajos de garantía y repuestos."
+    }
+  ],
+  "applications": [
+    {
+      "id": "concerts",
+      "name": "Conciertos & Giras",
+      "summary": "Equipos de gira para cabezas móviles y strobes que sobreviven largas temporadas y cambios rápidos.",
+      "image": "/images/applications/concerts.jpg"
+    },
+    {
+      "id": "theatre",
+      "name": "Teatro",
+      "summary": "Operación silenciosa, atenuación suave y control de perfil para drama, musicales y danza.",
+      "image": "/images/applications/theatre.jpg"
+    },
+    {
+      "id": "broadcast",
+      "name": "Broadcast",
+      "summary": "Alto CRI, color consistente y operación silenciosa para estudios y producciones en vivo.",
+      "image": "/images/applications/broadcast.jpg"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporativo & Eventos",
+      "summary": "Equipos versátiles para conferencias, lanzamientos de productos y cenas de gala.",
+      "image": "/images/applications/corporate.jpg"
+    },
+    {
+      "id": "architectural",
+      "name": "Arquitectónico",
+      "summary": "Equipos con clasificación IP para instalación permanente en fachadas, puentes y edificios emblemáticos.",
+      "image": "/images/applications/architectural.jpg"
+    },
+    {
+      "id": "installation",
+      "name": "Instalación Fija",
+      "summary": "Equipos confiables y de bajo mantenimiento para parques temáticos, museos y casas de culto.",
+      "image": "/images/applications/installation.jpg"
+    }
+  ]
 }
