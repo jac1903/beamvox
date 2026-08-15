@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Beamvox",
+    "tagline": "Fabricante de iluminación escénica — fundado en 2014"
+  },
+  "hero": {
+    "title": "Equipos que mantienen sus números en la décima gira.",
+    "description": "Beamvox diseña y fabrica cabezas móviles, washes, strobes y control para giras, teatro, broadcast e instalación permanente. Cada especificación que publicamos proviene de una unidad medida.",
+    "cta_products": "Ver la gama",
+    "cta_quote": "Solicitar cotización",
+    "specs": {
+      "platforms": "Plataformas",
+      "warranty": "Garantía",
+      "photometrics": "Fotometría",
+      "distribution": "Distribución"
+    }
+  },
+  "positioning": {
+    "title": "Un rig completo, desde la cabeza hasta la superficie de control.",
+    "description": "Seis plataformas, un lenguaje de control. Los equipos comparten conectores, protocolos y piezas de servicio, por lo que un rig ensamblado del catálogo se comporta como un sistema en lugar de una colección de compras.",
+    "cta": "Ver todos los equipos"
+  },
+  "featured": {
+    "eyebrow": "Equipos seleccionados",
+    "title": "Tres que se especifican con más frecuencia",
+    "body": "Datos fotométricos completos, tablas DMX y documentación de servicio para cada modelo.",
+    "cta": "Los 11 modelos"
+  },
+  "applications": {
+    "eyebrow": "Dónde trabajan",
+    "title": "Especificados por el espacio, no por el folleto",
+    "body": "Diferentes espacios castigan diferentes debilidades. Cada página de aplicación enumera los equipos que pondríamos frente a ese brief."
+  },
+  "manufacturing": {
+    "eyebrow": "Cómo se construyen",
+    "title": "Cuatro pasos que no saltamos",
+    "body": "La disciplina de fabricación es la única razón por la que un equipo comprado en el tercer año sigue coincidiendo con uno comprado en el primero."
+  },
+  "distribution": {
+    "title": "Vendidos a través de socios que conocen el territorio.",
+    "description": "Suministramos a través de distribuidores y revendedores en Europa, América y África. El stock se mantiene regionalmente, por lo que las cotizaciones se basan en la disponibilidad en lugar de un programa de producción.",
+    "cta_partners": "Convertirse en distribuidor",
+    "cta_contact": "Encontrar un distribuidor"
+  },
+  "cta": {
+    "title": "Envíanos el plot, la sala o la lista corta.",
+    "description": "Cuéntanos lo que el rig tiene que hacer y te responderemos con una lista de equipos, los datos medidos detrás de ella y el distribuidor que puede cotizarla.",
+    "quote": "Solicitar cotización",
+    "support": "Descargas y soporte"
+  }
+}
