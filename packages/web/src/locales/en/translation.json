@@ -1,0 +1,131 @@
+{
+  "site": {
+    "name": "Beamvox",
+    "tagline": "Professional stage lighting",
+    "legalName": "Beamvox Lighting Industries",
+    "founded": 2014,
+    "email": "sales@beamvox.example",
+    "phone": "+00 000 000 0000",
+    "address": {
+      "line1": "Unit 14, Northgate Industrial Park",
+      "line2": "Placeholder City",
+      "country": "Placeholder Country"
+    },
+    "hours": "Mon–Fri, 08:00–18:00 CET"
+  },
+  "nav": [
+    { "label": "Products", "href": "/products" },
+    { "label": "Applications", "href": "/applications" },
+    { "label": "Why Beamvox", "href": "/why-beamvox" },
+    { "label": "Partners", "href": "/partners" },
+    { "label": "Support", "href": "/support" },
+    { "label": "About", "href": "/about" }
+  ],
+  "regions": [
+    {
+      "id": "europe",
+      "name": "Europe",
+      "detail": "24 distributors · 18 countries",
+      "note": "Stocked warehouse, 48-hour dispatch on catalogue lines."
+    },
+    {
+      "id": "americas",
+      "name": "Americas",
+      "detail": "16 distributors · 9 countries",
+      "note": "ETL-listed variants, 120 V configurations available on request."
+    },
+    {
+      "id": "africa",
+      "name": "Africa",
+      "detail": "11 distributors · 8 countries",
+      "note": "Regional service partners for warranty work and spare parts."
+    }
+  ],
+  "categories": [
+    {
+      "id": "beam-spot",
+      "name": "Beam & Spot",
+      "code": "01",
+      "summary": "Narrow-angle moving heads for long-throw work. Hard-edged output, fast optics, full gobo and prism paths.",
+      "image": "/images/fixtures/beam.jpg"
+    },
+    {
+      "id": "wash-profile",
+      "name": "Wash & Profile",
+      "code": "02",
+      "summary": "Even-field LED wash and framing profile heads with CMY colour mixing and variable CTO.",
+      "image": "/images/fixtures/wash.jpg"
+    },
+    {
+      "id": "effect",
+      "name": "Effect & Matrix",
+      "code": "03",
+      "summary": "Pixel-mappable matrix and hybrid heads for texture, aerial effect and audience interaction.",
+      "image": "/images/fixtures/movinghead.jpg"
+    },
+    {
+      "id": "strobe",
+      "name": "Strobe & Blinder",
+      "code": "04",
+      "summary": "High-output strobe and blinder bars with segmented control and calibrated white points.",
+      "image": "/images/fixtures/strobe.jpg"
+    },
+    {
+      "id": "static",
+      "name": "Static & Architectural",
+      "code": "05",
+      "summary": "IP65 battens and arc washes for permanent installation, façades and touring set dressing.",
+      "image": "/images/fixtures/batten.jpg"
+    },
+    {
+      "id": "control",
+      "name": "Control & Distribution",
+      "code": "06",
+      "summary": "Consoles, nodes and splitters. Art-Net, sACN and wired DMX across the whole rig.",
+      "image": "/images/fixtures/control.jpg"
+    }
+  ],
+  "products": [
+    {
+      "slug": "bvx-b450-ip",
+      "model": "BVX-B450 IP",
+      "name": "Beam 450 IP",
+      "category": "beam-spot",
+      "featured": true,
+      "status": "In production",
+      "tagline": "A 450 W beam engine with a 180 mm front optic and infinite pan.",
+      "intro": "The B450 IP is built for long-throw beam work where the edge of the light matters.",
+      "image": "/images/fixtures/beam.jpg",
+      "keySpecs": [
+        { "label": "Source", "value": "450 W discharge" },
+        { "label": "Zoom", "value": "0.8° – 8.4°" },
+        { "label": "Ingress", "value": "IP65" },
+        { "label": "Weight", "value": "31.4 kg" }
+      ],
+      "highlights": [
+        { "title": "180 mm front optic", "body": "A wide front lens holds beam density at distance." },
+        { "title": "CMY plus linear CTO", "body": "Subtractive colour mixing with a linear CTO flag." },
+        { "title": "Fifteen prism combinations", "body": "Two rotating prisms for aerial texture." },
+        { "title": "Sealed for the outdoors", "body": "IP65 head, base and yoke. Convection-cooled." }
+      ],
+      "specs": [
+        {
+          "group": "Optics & output",
+          "rows": [
+            ["Light source", "450 W short-arc discharge, 8,000 h rated"],
+            ["Colour temperature", "7,600 K ±300 K"],
+            ["Luminous flux", "23,400 lm"],
+            ["Illuminance at 20 m", "18,900 lux"],
+            ["Zoom range", "0.8° – 8.4° linear"],
+            ["Front lens", "180 mm multi-coated"]
+          ]
+        }
+      ],
+      "dmxModes": [
+        { "mode": "Standard", "channels": "38", "use": "Full feature set, 16-bit movement" },
+        { "mode": "Extended", "channels": "44", "use": "Adds per-prism and CTO fine control" },
+        { "mode": "Compact", "channels": "24", "use": "Reduced footprint for large rigs" }
+      ]
+    }
+  ]
+}
