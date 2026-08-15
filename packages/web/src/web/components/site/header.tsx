@@ -1,3 +1,4 @@
+import { LanguageSwitcher } from './language-switcher';
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -73,6 +74,8 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
             <Link
               to="/contact"
               className="hidden h-10 items-center gap-2 rounded-[4px] bg-ember px-5 text-[0.9375rem] font-medium text-void transition-colors duration-300 hover:bg-ember-soft sm:inline-flex"
@@ -119,6 +122,10 @@ export function Header() {
             ))}
           </nav>
           <div className="container-bv">
+            {/* Language Switcher for mobile */}
+            <div className="flex justify-center">
+              <LanguageSwitcher />
+            </div>
             <Link
               to="/contact"
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-[4px] bg-ember font-medium text-void"
