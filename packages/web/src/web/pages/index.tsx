@@ -150,7 +150,7 @@ function Featured() {
           <SectionHead
             eyebrow={t('featured.eyebrow')}
             title={t('featured.title')}
-            body={t('featured.body')}"
+            body={t('featured.body')}
           />
           <div className="pb-2" data-reveal>
             <TextLink href="/products">{t('featured.cta')}</TextLink>
