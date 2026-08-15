@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from "wouter";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
@@ -23,14 +24,14 @@ import {
 import { ProductCard } from "@/components/site/product-card";
 import { asset } from "@/lib/utils";
 
-const heroSpecs = [
-  { label: "Fixture platforms", value: "06" },
-  { label: "Warranty", value: "48 months" },
-  { label: "Photometrics", value: "Measured, published" },
-  { label: "Distribution", value: "3 regions" },
-];
-
 function Hero() {
+  const { t } = useTranslation();
+  const heroSpecs = [
+  { label: t('hero.specs.platforms'), value: "06" },
+  { label: t('hero.specs.warranty'), value: "48 months" },
+  { label: t('hero.specs.photometrics'), value: "Measured, published" },
+  { label: t('hero.specs.distribution'), value: "3 regions" },
+];
   return (
     <section className="grain relative isolate flex min-h-[92svh] flex-col justify-end overflow-hidden pt-32 pb-14 md:pb-20">
       <img
@@ -48,29 +49,25 @@ function Hero() {
       <Container className="relative">
         <div className="max-w-4xl">
           <div data-reveal>
-            <Eyebrow>Stage lighting manufacturer — est. 2014</Eyebrow>
+            <Eyebrow>{t('site.tagline')}</Eyebrow>
           </div>
           <h1 className="display-xl mt-7" data-reveal data-reveal-delay={80}>
-            Fixtures that hold their
-            <br />
-            numbers on the tenth tour.
+            {t('hero.title')}
           </h1>
           <p
             className="mt-8 max-w-xl text-lg leading-relaxed text-muted"
             data-reveal
             data-reveal-delay={160}
           >
-            Beamvox designs and manufactures moving heads, washes, strobes and control for
-            touring, theatre, broadcast and permanent installation. Every specification we
-            publish comes from a measured unit.
+            {t('hero.description')}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4" data-reveal data-reveal-delay={240}>
             <ButtonLink href="/products" size="lg">
-              View the range
+              {t('hero.cta_products')}
               <ArrowRight className="size-4" />
             </ButtonLink>
             <ButtonLink href="/contact" variant="outline" size="lg">
-              Request a quote
+              {t('hero.cta_quote')}
             </ButtonLink>
           </div>
         </div>
@@ -95,27 +92,24 @@ function Hero() {
 }
 
 function Positioning() {
+  const { t } = useTranslation();
   return (
     <Section tone="surface" className="beam-edge">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
           <div data-reveal>
             <Eyebrow>What we make</Eyebrow>
-            <h2 className="display-lg mt-6">
-              A complete rig, from the head to the control surface.
+            <h2 className="display-lg mt-6">{t('positioning.title')}
             </h2>
-            <p className="mt-6 text-muted">
-              Six platforms, one control language. Fixtures share connectors, protocols and
-              service parts, so a rig assembled from the catalogue behaves as one system
-              rather than a collection of purchases.
+            <p className="mt-6 text-muted">{t('positioning.description')}
             </p>
             <div className="mt-9">
-              <TextLink href="/products">Browse all fixtures</TextLink>
+              <TextLink href="/products">{t('positioning.cta')}</TextLink>
             </div>
           </div>
 
           <ul className="grid gap-px border border-line bg-line sm:grid-cols-2">
-            {categories.map((category, i) => (
+            t('categories', { returnObjects: true }).map((category, i) => (
               <li key={category.id} data-reveal data-reveal-delay={i * 60}>
                 <Link
                   to={`/products?category=${category.id}`}
@@ -146,6 +140,7 @@ function Positioning() {
 }
 
 function Featured() {
+  const { t } = useTranslation();
   const featured = products.filter((p) => p.featured).slice(0, 3);
 
   return (
@@ -153,12 +148,12 @@ function Featured() {
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-8">
           <SectionHead
-            eyebrow="Selected fixtures"
-            title="Three that get specified most"
-            body="Full photometric data, DMX charts and service documentation for every model."
+            eyebrow={t('featured.eyebrow')}
+            title={t('featured.title')}
+            body={t('featured.body')}"
           />
           <div className="pb-2" data-reveal>
-            <TextLink href="/products">All 11 models</TextLink>
+            <TextLink href="/products">{t('featured.cta')}</TextLink>
           </div>
         </div>
 
@@ -188,17 +183,18 @@ function Proof() {
 }
 
 function Applications() {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
         <SectionHead
-          eyebrow="Where they work"
-          title="Specified by the room, not by the brochure"
-          body="Different rooms punish different weaknesses. Each application page lists the fixtures we would put in front of that brief."
+          eyebrow={t('applications.eyebrow')}
+          title={t('applications.title')}
+          body={t('applications.body')}
         />
 
         <div className="mt-14 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-          {applications.map((application, i) => (
+          t('applications', { returnObjects: true }).map((application, i) => (
             <Link
               key={application.id}
               to={`/applications#${application.id}`}
@@ -236,6 +232,7 @@ function Applications() {
 }
 
 function Manufacturing() {
+  const { t } = useTranslation();
   return (
     <Section tone="surface">
       <Container>
@@ -257,9 +254,9 @@ function Manufacturing() {
 
           <div>
             <SectionHead
-              eyebrow="How they are built"
-              title="Four steps we do not skip"
-              body="Manufacturing discipline is the only reason a fixture bought in year three still matches one bought in year one."
+              eyebrow={t('manufacturing.eyebrow')}
+              title={t('manufacturing.title')}
+              body={t('manufacturing.body')}
             />
             <div className="mt-12 grid gap-8 sm:grid-cols-2">
               {capabilities.map((capability, i) => (
@@ -283,26 +280,25 @@ function Manufacturing() {
 }
 
 function Distribution() {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <div data-reveal>
             <Eyebrow>Distribution</Eyebrow>
-            <h2 className="display-lg mt-6">Sold through partners who know the territory.</h2>
+            <h2 className="display-lg mt-6">{t('distribution.title')}</h2>
             <p className="mt-6 text-muted">
-              We supply through distributors and resellers in Europe, the Americas and Africa.
-              Stock is held regionally, so quotes are drawn from availability rather than a
-              production schedule.
+              {t('distribution.description')}
             </p>
             <div className="mt-9 flex flex-wrap gap-6">
-              <TextLink href="/partners">Become a distributor</TextLink>
-              <TextLink href="/contact">Find a distributor</TextLink>
+              <TextLink href="/partners">{t('distribution.cta_partners')}</TextLink>
+              <TextLink href="/contact">{t('distribution.cta_contact')}</TextLink>
             </div>
           </div>
 
           <ul className="divide-y divide-line border-y border-line">
-            {regions.map((region, i) => (
+            t('regions', { returnObjects: true }).map((region, i) => (
               <li
                 key={region.id}
                 className="grid gap-3 py-7 md:grid-cols-[10rem_1fr] md:gap-8"
@@ -337,6 +333,7 @@ function Distribution() {
 }
 
 function ClosingCta() {
+  const { t } = useTranslation();
   return (
     <Section tone="surface" className="grain beam-top overflow-hidden">
       <span className="grain-layer" aria-hidden="true" />
@@ -346,19 +343,18 @@ function ClosingCta() {
             Next step
           </Eyebrow>
           <h2 className="display-lg mt-6">
-            Send us the plot, the room or the shortlist.
+            {t('cta.title')}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-muted">
-            Tell us what the rig has to do and we will come back with a fixture list, the
-            measured data behind it and the distributor who can quote it.
+            {t('cta.description')}
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <ButtonLink href="/contact" size="lg">
-              Request a quote
+              {t('cta.quote')}
               <ArrowRight className="size-4" />
             </ButtonLink>
             <ButtonLink href="/support" variant="outline" size="lg">
-              Downloads & support
+              	{t('cta.support')}
             </ButtonLink>
           </div>
         </div>
@@ -369,6 +365,7 @@ function ClosingCta() {
 
 function Index() {
   useReveal();
+  const { t } = useTranslation();
 
   return (
     <>
