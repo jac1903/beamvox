@@ -6,7 +6,7 @@ import {
   applications,
   capabilities,
   categories,
-  certifications,f
+  certifications,
   products,
   regions,
   stats,
