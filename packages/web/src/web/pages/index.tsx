@@ -6,7 +6,7 @@ import {
   applications,
   capabilities,
   categories,
-  certifications,
+  certifications,f
   products,
   regions,
   stats,
@@ -188,9 +188,9 @@ function Applications() {
     <Section>
       <Container>
         <SectionHead
-          eyebrow={t('applications.eyebrow')}
-          title={t('applications.title')}
-          body={t('applications.body')}
+          eyebrow={t('applications_heading.eyebrow')}
+          title={t('applications_heading.title')}
+          body={t('applications_heading.body')}
         />
 
         <div className="mt-14 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
