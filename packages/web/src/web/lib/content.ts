@@ -558,14 +558,14 @@ export const products: Product[] = [
           ["Pixel control", "19 cells, individually addressable"],
           ["Front rotation", "Continuous, bidirectional"],
           ["Macros", "64 cell effects"],
-          ["Strobe", "1 – 25 Hz"],
+          ["Strobe", "Variable strobe frequency up to 13 times per second, with random strobe and pulse strobe functions"],
         ],
       },
       commonElectrical,
       {
         group: "Physical",
         rows: [
-          ["Dimensions", "380 × 290 × 560 mm"],
+          ["Dimensions", "65 × 55 × 70 cm"],
           ["Weight", "22.4 kg"],
           ["Ingress protection", "IP20"],
           ["Rigging", "Two quarter-turn omega brackets"],
