@@ -343,6 +343,7 @@ export const products: Product[] = [
     tagline: "A 400W LED moving head with a 4–50 m linear focus and full CMY+CTO color system.",
     intro:
       "The LED400W is a versatile powerhouse for modern stages. Its 400 W LED engine, linear 4–50 m focus, CMY+CTO mixing, dual rotating prisms, and fixed/rotating gobos deliver rich, dynamic effects. With robust cooling and RDM support, it excels in tours, theaters, and indoor fixed installations.",
+    image: "/images/fixtures/400w.jpg",
     keySpecs: [
       { label: "Source", value: "550 W discharge" },
       { label: "Zoom", value: "4° – 50°" },
