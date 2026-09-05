@@ -333,7 +333,7 @@ export const products: Product[] = [
       { mode: "Compact", channels: "24", use: "Reduced footprint for large rigs" },
     ],
   },
-    {
+  {
     slug: "LED400W Beam Light",
     model: "LED400W Beam Light",
     name: "LED400W Beam Light",
