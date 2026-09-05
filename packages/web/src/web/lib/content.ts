@@ -158,16 +158,16 @@ const commonWarranty: SpecGroup = {
 
 export const products: Product[] = [
   {
-    slug: "bvx-b450-ip",
-    model: "BVX-B450 IP",
-    name: "Beam 450 IP",
+    slug: "380W Beam Light",
+    model: "380W Beam Light",
+    name: "380W Beam Light",
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A 450 W beam engine with a 180 mm front optic and infinite pan.",
+    tagline: "A 550 W beam engine with a 160 mm front optic and infinite pan.",
     intro:
-      "The B450 IP is built for long-throw beam work where the edge of the light matters. A 180 mm coated front lens, a 450 W discharge engine and a sealed IP65 head make it equally suited to arena tours and permanent outdoor installation.",
-    image: "/images/fixtures/beam.jpg",
+      "The 380W Beam Light is built for long-throw beam work where the edge of the light matters. A 160 mm coated front lens, a 550 W discharge engine and a sealed head make it equally suited to arena tours and permanent outdoor installation.",
+    image: "/images/fixtures/380w.jpg",
     keySpecs: [
       { label: "Source", value: "450 W discharge" },
       { label: "Zoom", value: "0.8° – 8.4°" },
