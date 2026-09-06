@@ -28,7 +28,7 @@ function About() {
       <PageHero
         eyebrow="About Beamvox"
         title="A lighting manufacturer that publishes its numbers."
-        body="Beamvox has built stage lighting since 2014 — first for regional touring companies, now for distributors and productions across Europe, the Americas and Africa. Placeholder company profile pending final approval."
+        body="Beamvox has built stage lighting since 2016 — first for regional touring companies, now started operating around the world"
       />
 
       <Section>
@@ -79,8 +79,8 @@ function About() {
               data-reveal-delay={90}
             >
               <img
-                src={asset("/images/factory-qa.jpg")}
-                alt="Final quality control and photometric verification on the Beamvox production floor"
+                src={asset("/images/factorypl.jpg")}
+                alt="Final quality control on the Beamvox production floor"
                 className="aspect-4/3 w-full object-cover"
                 loading="lazy"
               />
