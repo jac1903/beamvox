@@ -34,9 +34,21 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="grain relative overflow-hidden border-t border-line bg-surface">
-      <span className="grain-layer" aria-hidden="true" />
-      <Container className="relative">
+    <footer className="relative overflow-hidden border-t border-line bg-surface">
+      {/* 🏢 Background image - Company facade */}
+      <img
+        src={asset("/images/factoryentr.jpg")}
+        alt="Our company entrance"
+        loading="lazy"
+        className="absolute inset-0 -z-10 size-full object-cover opacity-30"
+      />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 -z-10 bg-void/85" aria-hidden="true" />
+      
+      {/* Grain overlay (kept from original) */}
+      <span className="grain-layer -z-5" aria-hidden="true" />
+      
+      <Container className="relative z-10">
         <div className="grid gap-12 py-16 md:py-20 lg:grid-cols-[1.4fr_repeat(3,1fr)] lg:gap-10">
           <div>
             <img
