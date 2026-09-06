@@ -776,25 +776,25 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "bvx-px1000-ip",
-    model: "BVX-PX1000 IP",
-    name: "Pixel Batten 1000 IP",
+    slug: "IP65 Strike V",
+    model: "IP65 Strike V",
+    name: "IP65 Strike V",
     category: "static",
     status: "In production",
-    tagline: "A one-metre IP65 batten with 40 addressable pixels.",
+    tagline: "An IP65-rated 1000 W pixel‑matrix moving head with a 12°–110° beam spread and full Art‑Net control.",
     intro:
-      "A slim outdoor-rated batten for set dressing, façades and permanent architectural work. Forty pixels per metre, with fixtures that align end-to-end without a visible gap.",
-    image: "/images/fixtures/batten.jpg",
+      "The IP65 Strike V is a high‑output pixel‑matrix powerhouse, featuring 24×40 W main LEDs and 24×6 W auxiliary LEDs with individual pixel control for limitless eye‑candy effects. Its massive beam spread (12°–110° with E‑frost options), IP65‑rated die‑cast aluminum shell, and Art‑Net support make it a versatile choice for outdoor festivals, stadium tours, and large‑scale architectural projections—built to perform in any weather.",
+    image: "/images/fixtures/strikev.jpg",
     keySpecs: [
       { label: "Pixels", value: "40 per metre" },
-      { label: "Source", value: "Ushio 520W" },
+      { label: "Source", value: "TX high quality 4 in 1 RGBW" },
       { label: "Ingress", value: "IP65" },
-      { label: "Weight", value: "5.4 kg" },
+      { label: "Weight", value: "16.5 kg" },
     ],
     highlights: [
       {
-        title: "Gapless alignment",
-        body: "End caps are designed so adjacent units keep pixel pitch constant across a run.",
+        title: "Pixel matrix",
+        body: "Main LED and Auxiliary LED both can be control individually",
       },
       {
         title: "IP65 with rated glands",
@@ -809,9 +809,9 @@ export const products: Product[] = [
       {
         group: "Output",
         rows: [
-          ["Light source", "40 × 5 W RGBW LED"],
-          ["Beam angle", "25° standard, 15°/40° optional"],
-          ["Colour temperature", "2,700 K – 8,000 K"],
+          ["Light source", "RGBW 5060 40W × 24 + 24 × 6W RGBW 4 in 1 LEDs"],
+          ["Beam angle", "Main LED 12°，Main LED with E-frost  48°"],
+          ["Colour temperature", "2,800 K – 8,000 K"],
           ["Luminous flux", "4,900 lm (placeholder)"],
         ],
       },
@@ -827,17 +827,17 @@ export const products: Product[] = [
       {
         group: "Physical",
         rows: [
-          ["Dimensions", "1,000 × 90 × 110 mm"],
-          ["Weight", "5.4 kg"],
+          ["Dimensions", "40.4 × 20.2 × 35 mm"],
+          ["Weight", "16.5 kg"],
           ["Ingress protection", "IP65"],
-          ["Operating temperature", "−25 °C to 50 °C"],
+          ["Operating temperature", "−25 °C to 45 °C"],
         ],
       },
       commonWarranty,
     ],
     dmxModes: [
-      { mode: "Basic", channels: "5", use: "Whole-unit colour" },
-      { mode: "Pixel", channels: "160", use: "Per-pixel RGBW" },
+      { mode: "Basic", channels: "29", use: "Whole-unit colour" },
+      { mode: "Pixel", channels: "222", use: "Per-pixel RGBW" },
     ],
   },
   {
