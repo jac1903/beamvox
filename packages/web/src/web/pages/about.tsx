@@ -84,7 +84,7 @@ function About() {
                 loading="lazy"
               />
               <figcaption className="mono-meta border-t border-line bg-surface px-5 py-4 text-faint">
-                Final test and photometric verification · production floor
+                Final test verification · production floor
               </figcaption>
             </figure>
           </div>
@@ -189,8 +189,8 @@ function About() {
             <div>
               <SectionHead
                 eyebrow="Where we ship"
-                title="Three regions, stocked locally"
-                body="Distributor network placeholder — figures to be confirmed per territory."
+                title="Three regions"
+                body="Americas, Africa, Europe"
               />
               <ul className="mt-12 border-t border-line">
                 {regions.map((region, i) => (
