@@ -9,10 +9,11 @@ export const site = {
   tagline: "Professional stage lighting",
   legalName: "Beamvox Lighting Industries",
   founded: 2016,
-  email: "sales@beamvox.example",
-  phone: "+00 000 000 0000",
+  email: "beamvox@zoho.com",
+  phone: "+57 314 297 94925  Spanish",
+  phone: "+86 190 981 70080  English",
   address: {
-    line1: "Unit 14, Northgate Industrial Park",
+    line1: "Baiyun district",
     line2: "Guangzhou",
     country: "China",
   },
@@ -32,19 +33,16 @@ export const regions = [
   {
     id: "europe",
     name: "Europe",
-    detail: "24 distributors · 18 countries",
     note: "Stocked warehouse, 48-hour dispatch on catalogue lines.",
   },
   {
     id: "americas",
     name: "Americas",
-    detail: "16 distributors · 9 countries",
     note: "ETL-listed variants, 120 V configurations available on request.",
   },
   {
     id: "africa",
     name: "Africa",
-    detail: "11 distributors · 8 countries",
     note: "Regional service partners for warranty work and spare parts.",
   },
 ] as const;
@@ -149,10 +147,10 @@ const commonElectrical: SpecGroup = {
 const commonWarranty: SpecGroup = {
   group: "Compliance & warranty",
   rows: [
-    ["Certification", "CE, RoHS, EMC (placeholder)"],
-    ["Warranty", "48 months, parts and labour"],
-    ["Service interval", "1,500 operating hours"],
-    ["Country of manufacture", "Placeholder"],
+    ["Certification", "CE, RoHS, EMC"],
+    ["Warranty", "12 months, parts and labour"],
+    ["Service interval", "+ 3,000 operating hours"],
+    ["China"],
   ],
 };
 
@@ -198,8 +196,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "550 W short-arc discharge, 8,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "23,400 lm (placeholder)"],
-          ["Illuminance at 20 m", "18,900 lux (placeholder)"],
+          ["Luminous flux", "23,400 lm "],
+          ["Illuminance at 20 m", "18,900 lux "],
           ["Zoom range", "0.8° – 8.4° linear"],
           ["Front lens", "160 mm multi-coated"],
         ],
@@ -286,8 +284,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "230 W short-arc discharge, 8,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "23,400 lm (placeholder)"],
-          ["Illuminance at 20 m", "18,900 lux (placeholder)"],
+          ["Luminous flux", "23,400 lm "],
+          ["Illuminance at 20 m", "18,900 lux "],
           ["Zoom range", "0.8° – 8.4° linear"],
           ["Front lens", "160 mm multi-coated"],
         ],
@@ -374,8 +372,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "550 W short-arc discharge, 20,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "23,400 lm (placeholder)"],
-          ["Illuminance at 20 m", "18,900 lux (placeholder)"],
+          ["Luminous flux", "23,400 lm "],
+          ["Illuminance at 20 m", "18,900 lux "],
           ["Zoom range", "0.8° – 8.4° linear"],
           ["Front lens", "160 mm multi-coated"],
         ],
@@ -463,8 +461,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "550 W short-arc discharge, 20,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "23,400 lm (placeholder)"],
-          ["Illuminance at 20 m", "18,900 lux (placeholder)"],
+          ["Luminous flux", "23,400 lm "],
+          ["Illuminance at 20 m", "18,900 lux "],
           ["Zoom range", "0° – 3.9° linear"],
           ["Front lens", "165 mm multi-coated"],
         ],
@@ -553,8 +551,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "600 W LED Module, , 20,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "23,400 lm (placeholder)"],
-          ["Illuminance at 20 m", "18,900 lux (placeholder)"],
+          ["Luminous flux", "23,400 lm "],
+          ["Illuminance at 20 m", "18,900 lux "],
           ["Zoom range", "4° – 50° linear"],
           ["Front lens", "165 mm multi-coated"],
         ],
@@ -641,8 +639,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "Ushio 520W Long-Life Gas, 3,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "27,400 lm (placeholder)"],
-          ["Illuminance at 15 m", "355500 lux (placeholder)"],
+          ["Luminous flux", "27,400 lm "],
+          ["Illuminance at 15 m", "355500 lux "],
           ["Zoom range", "4° – 50° linear"],
           ["Front lens", "200 mm multi-coated"],
         ],
@@ -728,8 +726,8 @@ export const products: Product[] = [
         rows: [
           ["Light source", "High power TX 4in1 RGBW 7Pcs 60W LEDs + 210pcs 0.3W 50503in1 RGB LEDs, 50,000 h rated"],
           ["Colour temperature", "7,600 K ±300 K"],
-          ["Luminous flux", "27,400 lm (placeholder)"],
-          ["Illuminance at 15 m", "355500 lux (placeholder)"],
+          ["Luminous flux", "27,400 lm "],
+          ["Illuminance at 15 m", "355500 lux "],
           ["Zoom range", "4° – 50° linear"],
           ["Front lens", "180 mm multi-coated"],
         ],
@@ -812,7 +810,7 @@ export const products: Product[] = [
           ["Light source", "RGBW 5060 40W × 24 + 24 × 6W RGBW 4 in 1 LEDs"],
           ["Beam angle", "Main LED 12°，Main LED with E-frost  48°"],
           ["Colour temperature", "2,800 K – 8,000 K"],
-          ["Luminous flux", "4,900 lm (placeholder)"],
+          ["Luminous flux", "4,900 lm "],
         ],
       },
       {
@@ -873,7 +871,7 @@ export const products: Product[] = [
           ["Light source", "200 W RGBW LED"],
           ["Beam angle", "10° / 20° / 30° / 45° snap-in"],
           ["Colour temperature", "2,700 K – 8,000 K"],
-          ["Luminous flux", "7,200 lm (placeholder)"],
+          ["Luminous flux", "7,200 lm "],
         ],
       },
       commonElectrical,
@@ -1129,12 +1127,12 @@ export const certifications = [
 ];
 
 export const timeline = [
-  { year: "2014", title: "Founded", body: "Beamvox begins as a six-person optical workshop building custom fixtures for regional touring companies." },
+  { year: "2016", title: "Founded", body: "Beamvox begins as a six-person optical workshop building custom fixtures for regional touring companies." },
   { year: "2017", title: "First catalogue range", body: "The first standardised product range ships, alongside a published photometric dataset for every model." },
-  { year: "2019", title: "European distribution", body: "A stocked European warehouse opens, moving lead times on catalogue lines from months to days." },
+  { year: "2018", title: "National distribution", body: "A stocked Chinese warehouse opens, operation starts growing up inside the country" },
   { year: "2022", title: "IP65 platform", body: "The sealed head platform enters production, bringing touring-grade fixtures to permanent outdoor installation." },
-  { year: "2024", title: "Americas and Africa", body: "Regional service partners are appointed, with local spare parts and warranty handling." },
-  { year: "2026", title: "Control platform", body: "The Command console and Node range complete the rig, from fixture to control surface." },
+  { year: "2024", title: "Expanded catalogue", body: "New products developed to cover different scenarios" },
+  { year: "2026", title: "Starts operating overseas", body: "The company is set up to start operations around the Americas, Africa and Europe." },
 ];
 
 /* ── Support ────────────────────────────────────────────────────────────── */
@@ -1154,7 +1152,7 @@ export const downloadGroups = [
     name: "DMX charts & profiles",
     note: "Channel maps, GDTF files and console personalities.",
     items: [
-      { title: "Full range — DMX chart bundle", meta: "ZIP · 1.1 MB · updated placeholder date" },
+      { title: "Full range — DMX chart bundle", meta: "ZIP · 1.1 MB " },
       { title: "Full range — GDTF fixture library", meta: "ZIP · 2.7 MB · GDTF 1.2" },
       { title: "Full range — MVR reference scene", meta: "ZIP · 5.4 MB" },
     ],
@@ -1180,7 +1178,7 @@ export const downloadGroups = [
     name: "Commercial documents",
     note: "For distributors and specifiers.",
     items: [
-      { title: "Product catalogue", meta: "PDF · 22 MB · placeholder edition" },
+      { title: "Product catalogue", meta: "PDF · 22 MB " },
       { title: "Declaration of conformity — full range", meta: "PDF · 1.4 MB" },
       { title: "Warranty terms", meta: "PDF · 240 KB" },
     ],
@@ -1189,20 +1187,16 @@ export const downloadGroups = [
 
 export const faqs = [
   {
-    q: "What is covered by the 48-month warranty?",
-    a: "Parts and labour on manufacturing defects for 48 months from the invoice date, handled through the distributor that supplied the fixture. Consumables such as lamps and gobos are covered for 12 months. Placeholder terms — replace with the final warranty text.",
+    q: "What is covered by the 12-month warranty?",
+    a: "Parts and labour on manufacturing defects for 48 months from the invoice date, handled through the distributor that supplied the fixture. Consumables such as lamps and gobos are covered for 12 months. ",
   },
   {
     q: "What are typical lead times?",
-    a: "Catalogue lines held in a regional warehouse dispatch within 48 hours. Configured or OEM orders are quoted with a confirmed production window at the time of order. Placeholder figures.",
+    a: "Configured or OEM orders are quoted with a confirmed production window at the time of order.",
   },
   {
     q: "Do you supply OEM and ODM configurations?",
     a: "Yes. Housing colour, connector layout, voltage configuration and branding can be specified from an agreed minimum order quantity. Optical modifications are assessed case by case.",
-  },
-  {
-    q: "How do I get spare parts?",
-    a: "Through your distributor, or directly from the regional service partner listed for your territory. Common wear parts are held in all three regional warehouses.",
   },
   {
     q: "Are fixtures compatible with my console?",
@@ -1257,18 +1251,18 @@ export const partnerSteps = [
 export const values = [
   {
     code: "01",
-    title: "Publish the measurement",
-    body: "Every figure on this site comes from a measured unit, or it is marked as a placeholder. We would rather lose a comparison than win it with a number we cannot defend.",
+    title: "Innovation",
+    body: "We constantly push the boundaries of stage lighting technology...",
   },
   {
     code: "02",
-    title: "Build for the tenth year",
-    body: "Fixtures are designed around service access and parts availability, because most of a fixture's life happens after the sale.",
+    title: "Quality",
+    body: "Every product is built to withstand the rigors of touring...",
   },
   {
     code: "03",
-    title: "Sell through partners",
-    body: "Our distributors own the customer relationship. We do not compete with them for the accounts they build.",
+    title: "Customer First",
+    body: "Our clients are our partners, and their success is our success...",
   },
 ];
 
@@ -1305,13 +1299,13 @@ export const claims = [
 export const commitments = [
   {
     code: "01",
-    title: "48-month warranty, parts and labour",
+    title: "12-month warranty, parts and labour",
     body: "Handled by the distributor that supplied the fixture, with regional stock so a failed unit is replaced rather than queued behind a shipment.",
   },
   {
     code: "02",
     title: "Ten years of spare parts",
-    body: "Wear parts, optics, boards and motors stay available for ten years from the end of production. Placeholder commitment pending final policy.",
+    body: "Wear parts, optics, boards and motors stay available for ten years from the end of production.",
   },
   {
     code: "03",
