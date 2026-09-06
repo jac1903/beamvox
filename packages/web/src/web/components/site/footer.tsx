@@ -37,7 +37,7 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-line bg-surface">
       {/* 🏢 Background image - Company facade */}
       <img
-        src={asset("/images/factoryentrc.jpg")}
+        src="/beamvox/images/factoryentrc.jpg"
         alt="Our company entrance"
         loading="lazy"
         className="absolute inset-0 -z-10 size-full object-cover opacity-30"
