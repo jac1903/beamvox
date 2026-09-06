@@ -765,7 +765,7 @@ export const products: Product[] = [
     image: "/images/fixtures/batten.jpg",
     keySpecs: [
       { label: "Pixels", value: "40 per metre" },
-      { label: "Source", value: "RGBW LED" },
+      { label: "Source", value: "Ushio 520W" },
       { label: "Ingress", value: "IP65" },
       { label: "Weight", value: "5.4 kg" },
     ],
@@ -1001,7 +1001,7 @@ export const applications = [
   {
     id: "touring",
     name: "Concerts & touring",
-    image: "/images/applications/concert.jpg",
+    image: "/images/applications/concerts.jpg",
     summary:
       "Fixtures that survive a truck pack every night and still hold calibration at the end of a run.",
     points: [
