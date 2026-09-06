@@ -55,8 +55,7 @@ function About() {
                 <p>
                   Today the range spans beam, wash, effect, strobe, static and control
                   products, assembled on an {stats[1]?.value} floor with optical design,
-                  photometric verification and final test kept in house. Placeholder copy —
-                  replace with the approved company history.
+                  photometric verification and final test kept in house.
                 </p>
                 <p>
                   We sell through distributors and resellers only. That keeps our attention on
