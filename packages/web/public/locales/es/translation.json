@@ -181,7 +181,7 @@
     "cta_body": "Envíanos un rig, un lugar o una lista de especificaciones. Te diremos qué equipos encajan y cuáles no.",
     "cta_sales": "Contactar a ventas",
     "cta_partner": "Convertirse en distribuidor"
-  }
+  },
   "history": {
     "eyebrow": "Historia",
     "title": "Diez años, en orden"
@@ -238,5 +238,37 @@
     "eyebrow": "Dónde enviamos",
     "title": "Tres regiones",
     "body": "Américas, África, Europa"
-  }
+  },
+  "timeline": [
+    {
+      "year": "2016",
+      "title": "Fundada",
+      "body": "Beamvox comienza como un taller óptico de seis personas que construye equipos personalizados para compañías de gira regionales."
+    },
+    {
+      "year": "2017",
+      "title": "Primer catálogo",
+      "body": "Se lanza la primera gama de productos estandarizada, junto con un conjunto de datos fotométricos publicados para cada modelo."
+    },
+    {
+      "year": "2019",
+      "title": "Distribución en Europa",
+      "body": "Se abre un almacén europeo con stock, reduciendo los plazos de entrega de meses a días."
+    },
+    {
+      "year": "2022",
+      "title": "Plataforma IP65",
+      "body": "La plataforma de cabeza sellada entra en producción, llevando equipos de gira a instalaciones permanentes en exteriores."
+    },
+    {
+      "year": "2024",
+      "title": "Américas y África",
+      "body": "Se nombran socios de servicio regionales, con repuestos locales y gestión de garantías."
+    },
+    {
+      "year": "2026",
+      "title": "Plataforma de control",
+      "body": "La consola Command y la gama Node completan el rig, desde el equipo hasta la superficie de control."
+    }
+  ]
 }
