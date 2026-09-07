@@ -189,7 +189,6 @@ function About() {
                       <p className="font-display text-xl font-semibold tracking-[-0.03em]">
                         {region.name}
                       </p>
-                      <p className="mono-meta text-ember">{region.detail}</p>
                     </div>
                     <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted">
                       {region.note}
