@@ -3,7 +3,7 @@ import { useParams, Link } from "wouter";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useReveal } from "@/hooks/use-reveal";
-import { products, categories } from "@/lib/content";
+import { useContent } from "@/lib/use-content";
 import {
   ButtonLink,
   Container,
@@ -16,6 +16,7 @@ import { asset, cn } from "@/lib/utils";
 function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
+  const { products, categories } = useContent(); 
 
   const product = useMemo(() => products.find((p) => p.slug === slug), [slug]);
   const category = useMemo(
