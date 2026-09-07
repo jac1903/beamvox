@@ -1,136 +1,113 @@
-import { Link, useParams } from "wouter";
-import { ArrowLeft, ArrowRight, Download } from "lucide-react";
-import { useReveal, useScrollTop } from "@/hooks/use-reveal";
-import { categoryById, productBySlug, products } from "@/lib/content";
+import { useMemo } from "react";
+import { useParams, Link } from "wouter";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useReveal } from "@/hooks/use-reveal";
+import { products, categories } from "@/lib/content";
 import {
   ButtonLink,
   Container,
   Eyebrow,
   Section,
   SectionHead,
-  TextLink,
 } from "@/components/site/primitives";
-import { ProductCard } from "@/components/site/product-card";
-import { asset } from "@/lib/utils";
-
-function NotFound({ slug }: { slug: string }) {
-  return (
-    <Section className="pt-40">
-      <Container>
-        <Eyebrow>Not found</Eyebrow>
-        <h1 className="display-lg mt-6">No model matches “{slug}”.</h1>
-        <p className="mt-6 measure text-muted">
-          The model may have been renamed or withdrawn from the catalogue. The current range is
-          listed on the products page, and superseded models are available on request.
-        </p>
-        <div className="mt-10">
-          <ButtonLink href="/products">
-            Back to the range
-            <ArrowRight className="size-4" />
-          </ButtonLink>
-        </div>
-      </Container>
-    </Section>
-  );
-}
+import { asset, cn } from "@/lib/utils";
 
 function ProductDetail() {
-  const params = useParams<{ slug: string }>();
-  const slug = params.slug ?? "";
-  const product = productBySlug(slug);
+  const { slug } = useParams<{ slug: string }>();
+  const { t } = useTranslation();
 
-  useScrollTop(slug);
-  useReveal([slug]);
+  const product = useMemo(() => products.find((p) => p.slug === slug), [slug]);
+  const category = useMemo(
+    () => (product ? categories.find((c) => c.id === product.category) : null),
+    [product]
+  );
 
-  if (!product) return <NotFound slug={slug} />;
+  useReveal();
 
-  const category = categoryById(product.category);
-  const related = products
-    .filter((p) => p.slug !== product.slug && p.category === product.category)
-    .concat(products.filter((p) => p.slug !== product.slug && p.category !== product.category))
-    .slice(0, 3);
+  if (!product) {
+    return (
+      <Section>
+        <Container>
+          <div className="py-20 text-center">
+            <h1 className="display-lg">{t('product.not_found')}</h1>
+            <p className="mt-4 text-muted">{t('product.not_found_body')}</p>
+            <ButtonLink href="/products" className="mt-8">
+              {t('product.back_to_products')}
+            </ButtonLink>
+          </div>
+        </Container>
+      </Section>
+    );
+  }
 
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────────────────────── */}
-      <header className="grain relative overflow-hidden border-b border-line beam-top pt-32 pb-16 md:pt-40 md:pb-20">
+      <Section className="grain relative overflow-hidden">
         <span className="grain-layer" aria-hidden="true" />
-        <Container className="relative">
-          <Link
-            to="/products"
-            className="inline-flex items-center gap-2 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-faint transition-colors hover:text-ink"
-          >
-            <ArrowLeft className="size-3.5" />
-            {category ? `${category.code} — ${category.name}` : "All products"}
-          </Link>
+        <Container>
+          <div className="mb-8">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
+            >
+              <ArrowLeft className="size-4" />
+              {t('product.back_to_products')}
+            </Link>
+          </div>
 
-          <div className="mt-10 grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
-            <div>
-              <div className="flex flex-wrap items-center gap-4">
-                <p className="font-mono text-[0.8125rem] tracking-[0.16em] uppercase text-ember">
-                  {product.model}
-                </p>
-                <span className="h-px w-6 bg-line-strong" aria-hidden="true" />
-                <p className="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-faint">
-                  {product.status}
-                </p>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div data-reveal>
+              <img
+                src={asset(product.image)}
+                alt={product.name}
+                className="w-full border border-line object-cover aspect-square"
+                loading="lazy"
+              />
+            </div>
+            <div data-reveal data-reveal-delay={80}>
+              <Eyebrow>{category?.name}</Eyebrow>
+              <h1 className="display-lg mt-4">{product.name}</h1>
+              <p className="mt-4 text-xl font-medium text-ember">{product.tagline}</p>
+              <p className="mt-6 text-muted">{product.intro}</p>
+
+              <div className="mt-8 grid grid-cols-2 gap-4 border-t border-line pt-8">
+                {product.keySpecs.map((spec) => (
+                  <div key={spec.label}>
+                    <p className="font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
+                      {spec.label}
+                    </p>
+                    <p className="mt-1 font-mono text-sm text-ink">{spec.value}</p>
+                  </div>
+                ))}
               </div>
-              <h1 className="display-xl mt-5">{product.name}</h1>
-              <p className="mt-6 max-w-xl text-lg text-muted">{product.tagline}</p>
-              <p className="mt-6 max-w-xl leading-relaxed text-muted">{product.intro}</p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <ButtonLink href={`/contact?product=${product.slug}`} size="lg">
-                  Request a quote
+              <div className="mt-8 flex flex-wrap gap-4">
+                <ButtonLink href="/contact" size="lg">
+                  {t('product.request_quote')}
                   <ArrowRight className="size-4" />
                 </ButtonLink>
                 <ButtonLink href="/support" variant="outline" size="lg">
-                  <Download className="size-4" />
-                  Manual & DMX chart
+                  {t('product.downloads')}
                 </ButtonLink>
               </div>
             </div>
-
-            <div className="relative">
-              <img
-                src={asset(product.image)}
-                alt={`${product.name} — ${product.model}`}
-                className="w-full border border-line object-cover"
-              />
-              <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,106,26,0.12),transparent_70%)]"
-                aria-hidden="true"
-              />
-            </div>
           </div>
-
-          {/* Key specs strip */}
-          <dl className="mt-16 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {product.keySpecs.map((spec) => (
-              <div key={spec.label} className="bg-void px-5 py-6">
-                <dt className="font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                  {spec.label}
-                </dt>
-                <dd className="mt-2.5 font-mono text-[0.9375rem] text-ink">{spec.value}</dd>
-              </div>
-            ))}
-          </dl>
         </Container>
-      </header>
+      </Section>
 
-      {/* ── Highlights ──────────────────────────────────────────────────── */}
       <Section tone="surface">
         <Container>
           <SectionHead
-            eyebrow="Design notes"
-            title="What the engineering buys you"
-            body="Written for the person who has to rig it, focus it and service it — not for the brochure."
+            eyebrow={t('product.highlights_eyebrow')}
+            title={t('product.highlights_title')}
+            body={t('product.highlights_body')}
           />
-          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
             {product.highlights.map((highlight, i) => (
               <div
                 key={highlight.title}
-                className="border-t border-line pt-6"
+                className="border border-line bg-surface p-6"
                 data-reveal
                 data-reveal-delay={i * 70}
               >
@@ -146,32 +123,26 @@ function ProductDetail() {
         </Container>
       </Section>
 
-      {/* ── Specifications ──────────────────────────────────────────────── */}
-      <Section id="specifications">
+      <Section>
         <Container>
           <SectionHead
-            eyebrow="Specifications"
-            title="Measured, not estimated"
-            body="Output figures come from goniophotometer measurement of a production unit. Figures marked placeholder are for layout review only."
+            eyebrow={t('product.specs_eyebrow')}
+            title={t('product.specs_title')}
           />
-
-          <div className="mt-14 grid gap-x-16 gap-y-12 lg:grid-cols-2">
-            {product.specs.map((group, i) => (
-              <div key={group.group} data-reveal data-reveal-delay={(i % 2) * 70}>
-                <h3 className="eyebrow flex items-center gap-3 text-ink">
-                  <span className="h-px w-6 bg-ember" aria-hidden="true" />
-                  {group.group}
+          <div className="mt-14 space-y-10">
+            {product.specs.map((specGroup) => (
+              <div key={specGroup.group}>
+                <h3 className="font-display text-xl font-semibold tracking-[-0.03em]">
+                  {specGroup.group}
                 </h3>
-                <dl className="mt-5 divide-y divide-line border-y border-line">
-                  {group.rows.map(([label, value]) => (
+                <dl className="mt-4 grid gap-px bg-line sm:grid-cols-2">
+                  {specGroup.rows.map(([label, value]) => (
                     <div
                       key={label}
-                      className="grid gap-1 py-3.5 sm:grid-cols-[13rem_1fr] sm:gap-6"
+                      className="flex justify-between bg-surface px-5 py-4 text-[0.9375rem]"
                     >
-                      <dt className="text-[0.9375rem] text-faint">{label}</dt>
-                      <dd className="font-mono text-[0.875rem] leading-relaxed text-ink">
-                        {value}
-                      </dd>
+                      <dt className="text-muted">{label}</dt>
+                      <dd className="font-mono text-ink">{value}</dd>
                     </div>
                   ))}
                 </dl>
@@ -181,74 +152,51 @@ function ProductDetail() {
         </Container>
       </Section>
 
-      {/* ── DMX modes ───────────────────────────────────────────────────── */}
       <Section tone="surface">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
-            <div data-reveal>
-              <Eyebrow>Control</Eyebrow>
-              <h2 className="display-md mt-6">DMX modes</h2>
-              <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted">
-                Modes are selectable from the display or over RDM. The full channel map ships
-                in the manual, with a GDTF profile for console import.
-              </p>
-              <div className="mt-8">
-                <TextLink href="/support">Download DMX charts</TextLink>
+          <SectionHead
+            eyebrow={t('product.dmx_eyebrow')}
+            title={t('product.dmx_title')}
+          />
+          <div className="mt-14 grid gap-px bg-line sm:grid-cols-3">
+            {product.dmxModes.map((mode) => (
+              <div key={mode.mode} className="bg-surface p-6">
+                <p className="font-mono text-sm tracking-[0.12em] text-ember">{mode.mode}</p>
+                <p className="mt-1 font-mono text-sm text-faint">{mode.channels} {t('product.channels')}</p>
+                <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted">{mode.use}</p>
               </div>
-            </div>
-
-            <div className="overflow-x-auto" data-reveal data-reveal-delay={80}>
-              <table className="w-full min-w-[34rem] border-collapse text-left">
-                <thead>
-                  <tr className="border-b border-line-strong">
-                    <th className="pb-3 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                      Mode
-                    </th>
-                    <th className="pb-3 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                      Channels
-                    </th>
-                    <th className="pb-3 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                      Intended use
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-line">
-                  {product.dmxModes.map((mode) => (
-                    <tr key={mode.mode}>
-                      <td className="py-4 pr-6 font-mono text-[0.875rem] text-ink">
-                        {mode.mode}
-                      </td>
-                      <td className="py-4 pr-6 font-mono text-[0.875rem] text-ember">
-                        {mode.channels}
-                      </td>
-                      <td className="py-4 text-[0.9375rem] text-muted">{mode.use}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            ))}
           </div>
         </Container>
       </Section>
 
-      {/* ── Related ─────────────────────────────────────────────────────── */}
       <Section>
         <Container>
-          <div className="flex flex-wrap items-end justify-between gap-8">
-            <SectionHead eyebrow="Also consider" title="Fixtures specified alongside it" />
-            <div className="pb-2" data-reveal>
-              <TextLink href="/products">All models</TextLink>
+          <div
+            className="grain relative overflow-hidden border border-line bg-surface px-7 py-14 text-center md:px-16 md:py-20"
+            data-reveal
+          >
+            <span className="grain-layer" aria-hidden="true" />
+            <div className="relative mx-auto max-w-2xl">
+              <Eyebrow className="justify-center" withRule={false}>
+                {t('product.cta_eyebrow')}
+              </Eyebrow>
+              <h2 className="display-lg mt-5">
+                {t('product.cta_title')}
+              </h2>
+              <p className="mt-5 text-muted">
+                {t('product.cta_body')}
+              </p>
+              <div className="mt-9 flex flex-wrap justify-center gap-4">
+                <ButtonLink href="/contact" size="lg">
+                  {t('product.cta_quote')}
+                  <ArrowRight className="size-4" />
+                </ButtonLink>
+                <ButtonLink href="/products" variant="outline" size="lg">
+                  {t('product.cta_products')}
+                </ButtonLink>
+              </div>
             </div>
-          </div>
-          <div className="mt-14 grid gap-px bg-line md:grid-cols-3">
-            {related.map((item, i) => (
-              <ProductCard
-                key={item.slug}
-                product={item}
-                delay={i * 80}
-                className="border-0"
-              />
-            ))}
           </div>
         </Container>
       </Section>
