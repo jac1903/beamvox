@@ -288,4 +288,25 @@
       "body": "Our distributors own the customer relationship. We do not compete with them for the accounts they build."
     }
   ]
+    "products": {
+    "eyebrow": "Product range",
+    "title": "Beam & Strobe — Our bestsellers",
+    "body": "Every fixture ships with a published DMX chart, a GDTF profile and measured photometric data. Configured and OEM variants are quoted on request.",
+    "stats": {
+      "models": "Models",
+      "platforms": "Platforms",
+      "warranty": "Warranty",
+      "data": "Data"
+    },
+    "filter_label": "Filter by platform",
+    "filter_all": "All",
+    "model_singular": "model",
+    "model_plural": "models",
+    "config_eyebrow": "Configured orders",
+    "config_title": "Not in the catalogue? It is probably still buildable.",
+    "config_body": "Housing colour, connector layout, voltage configuration, firmware defaults and branding can be specified from an agreed minimum quantity. Optical changes are assessed case by case, with a sample before tooling.",
+    "config_cta": "Discuss a configuration",
+    "support_cta": "Download the catalogue",
+    "download_catalogue": "Download catalogue (PDF)"
+  },
 }
