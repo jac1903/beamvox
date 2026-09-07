@@ -270,5 +270,22 @@
       "title": "Control platform",
       "body": "The Command console and Node range complete the rig, from fixture to control surface."
     }
+      "values": [
+    {
+      "code": "01",
+      "title": "Publish the measurement",
+      "body": "Every figure on this site comes from a measured unit, or it is marked as a placeholder. We would rather lose a comparison than win it with a number we cannot defend."
+    },
+    {
+      "code": "02",
+      "title": "Build for the tenth year",
+      "body": "Fixtures are designed around service access and parts availability, because most of a fixture's life happens after the sale."
+    },
+    {
+      "code": "03",
+      "title": "Sell through partners",
+      "body": "Our distributors own the customer relationship. We do not compete with them for the accounts they build."
+    }
+  ],
   ]
 }
