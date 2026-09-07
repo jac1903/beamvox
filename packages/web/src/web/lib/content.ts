@@ -10,8 +10,7 @@ export const site = {
   legalName: "Beamvox Lighting Industries",
   founded: 2016,
   email: "beamvox@zoho.com",
-  phone: "+57 314 297 94925  Spanish",
-  phone: "+86 190 981 70080  English",
+  phone: "English: +86 190 000 00080 | Spanish: +57 323 8998025",
   address: {
     line1: "Baiyun district",
     line2: "Guangzhou",
@@ -1088,10 +1087,9 @@ export const applications = [
 /* ── Proof ──────────────────────────────────────────────────────────────── */
 
 export const stats = [
-  { value: "2014", label: "Manufacturing since" },
-  { value: "8,400 m²", label: "Production floor" },
-  { value: "51", label: "Distributors" },
-  { value: "48 mo", label: "Standard warranty" },
+  { value: "2016", label: "Manufacturing since" },
+  { value: "4,100 m²", label: "Production floor" },
+  { value: "12 mo", label: "Standard warranty" },
 ];
 
 export const capabilities = [
