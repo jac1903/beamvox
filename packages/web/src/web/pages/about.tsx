@@ -1,14 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useReveal } from "@/hooks/use-reveal";
-import {
-  capabilities,
-  certifications,
-  regions,
-  site,
-  stats,
-  timeline,
-  values,
-} from "@/lib/content";
+import { site, stats, values } from "@/lib/content";
 import {
   ButtonLink,
   Container,
