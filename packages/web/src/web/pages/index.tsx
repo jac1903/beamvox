@@ -2,15 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from "wouter";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
-import {
-  applications,
-  capabilities,
-  categories,
-  certifications,
-  products,
-  regions,
-  stats,
-} from "@/lib/content";
+import { useContent } from "@/lib/use-content";
 import {
   ButtonLink,
   Container,
@@ -366,7 +358,7 @@ function ClosingCta() {
 function Index() {
   useReveal();
   const { t } = useTranslation();
-
+  const { applications, capabilities, categories, certifications, products, regions, stats } = useContent();
   return (
     <>
       <Hero />
