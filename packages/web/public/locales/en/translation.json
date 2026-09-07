@@ -150,4 +150,36 @@
       "image": "/images/applications/installation.jpg"
     }
   ]
+    "about": {
+    "eyebrow": "About us",
+    "title": "Professional lighting backed by data.",
+    "body": "At Beamvox we design and manufacture stage lighting equipment with a focus on durability and measurable performance. Since 2016, we've grown from a local workshop to a global operator, serving theaters, tours, and broadcast studios.",
+    "company_eyebrow": "The company",
+    "company_title": "Six people and one goniophotometer, to begin with",
+    "company_body_1": "Beamvox started in 2016 as an optical workshop, building fixtures to order for touring companies who could not get the throw they needed from catalogue products. Measuring every unit was a practical necessity then. It became the way the company works.",
+    "company_body_2": "Today the range spans beam, wash, effect, strobe, static and control products, assembled on an 4.100 m² floor with optical design, photometric verification and final test kept in house.",
+    "company_body_3": "We sell through distributors and resellers only. That keeps our attention on the fixtures and keeps the customer relationship where it belongs.",
+    "cta_contact": "Talk to us",
+    "cta_compare": "How we compare",
+    "factory_alt": "Final quality control on the Beamvox production floor",
+    "factory_caption": "Final test verification · production floor",
+    "values_eyebrow": "What we hold to",
+    "values_title": "Three positions we do not trade away",
+    "manufacturing_eyebrow": "Manufacturing",
+    "manufacturing_title": "Kept in house, on purpose",
+    "manufacturing_body": "Design, verification and final assembly stay under one roof so a fault found in test reaches the engineer who drew the part.",
+    "history_eyebrow": "History",
+    "history_title": "Ten years, in order",
+    "compliance_eyebrow": "Compliance",
+    "compliance_title": "Certifications and listings",
+    "compliance_body": "Declarations of conformity are published per model. Placeholder list pending certificate audit.",
+    "regions_eyebrow": "Where we ship",
+    "regions_title": "Three regions",
+    "regions_body": "Americas, Africa, Europe",
+    "cta_eyebrow": "Next step",
+    "cta_title": "Ask us for the measured data",
+    "cta_body": "Send a rig, a venue or a spec sheet. We will tell you which fixtures fit and which do not.",
+    "cta_sales": "Contact sales",
+    "cta_partner": "Become a distributor"
+  },
 }
