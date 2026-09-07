@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useLocation, useSearch } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { useReveal } from "@/hooks/use-reveal";
 import { categories, products, type CategoryId } from "@/lib/content";
@@ -13,20 +14,35 @@ import {
 } from "@/components/site/primitives";
 import { ProductCard } from "@/components/site/product-card";
 
+// ✅ Only show these categories for now
+const ACTIVE_CATEGORIES: CategoryId[] = ["beam-spot", "strobe"];
+
 const isCategoryId = (value: string | null): value is CategoryId =>
   categories.some((category) => category.id === value);
 
 function Products() {
+  const { t } = useTranslation();
   const search = useSearch();
   const [, navigate] = useLocation();
 
+  // Filter categories to only show active ones
+  const activeCategories = useMemo(
+    () => categories.filter((c) => ACTIVE_CATEGORIES.includes(c.id)),
+    []
+  );
+
   const active = useMemo(() => {
     const value = new URLSearchParams(search).get("category");
-    return isCategoryId(value) ? value : null;
+    return isCategoryId(value) && ACTIVE_CATEGORIES.includes(value) ? value : null;
   }, [search]);
 
-  const visible = active ? products.filter((p) => p.category === active) : products;
-  const activeCategory = categories.find((c) => c.id === active);
+  // Filter products to only show active categories
+  const visible = useMemo(() => {
+    const filtered = products.filter((p) => ACTIVE_CATEGORIES.includes(p.category));
+    return active ? filtered.filter((p) => p.category === active) : filtered;
+  }, [active]);
+
+  const activeCategory = activeCategories.find((c) => c.id === active);
 
   useReveal([active]);
 
@@ -34,19 +50,22 @@ function Products() {
     navigate(id ? `/products?category=${id}` : "/products");
   };
 
+  // Get catalog download URL (you can replace this with your actual catalog file)
+  const catalogUrl = "/downloads/catalogue.pdf";
+
   return (
     <>
       <PageHero
-        eyebrow="Product range"
-        title="Eleven models, six platforms, one control language."
-        body="Every fixture ships with a published DMX chart, a GDTF profile and measured photometric data. Configured and OEM variants are quoted on request."
+        eyebrow={t('products.eyebrow')}
+        title={t('products.title')}
+        body={t('products.body')}
       >
         <div className="mt-12 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border-t border-line pt-8 sm:grid-cols-4">
           {[
-            { label: "Models", value: String(products.length) },
-            { label: "Platforms", value: String(categories.length) },
-            { label: "Warranty", value: "48 months" },
-            { label: "Data", value: "IES · GDTF" },
+            { label: t('products.stats.models'), value: String(visible.length) },
+            { label: t('products.stats.platforms'), value: String(activeCategories.length) },
+            { label: t('products.stats.warranty'), value: "12 months" },
+            { label: t('products.stats.data'), value: "IES · GDTF" },
           ].map((item) => (
             <div key={item.label}>
               <p className="font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
@@ -61,7 +80,7 @@ function Products() {
       <Section tone="surface" className="py-12 md:py-14">
         <Container>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by platform">
+            <div className="flex flex-wrap gap-2" role="group" aria-label={t('products.filter_label')}>
               <button
                 type="button"
                 onClick={() => setCategory(null)}
@@ -73,9 +92,9 @@ function Products() {
                     : "border-line text-muted hover:border-line-strong hover:text-ink",
                 )}
               >
-                All
+                {t('products.filter_all')}
               </button>
-              {categories.map((category) => (
+              {activeCategories.map((category) => (
                 <button
                   key={category.id}
                   type="button"
@@ -93,7 +112,7 @@ function Products() {
               ))}
             </div>
             <p className="mono-meta shrink-0 text-faint">
-              {visible.length} {visible.length === 1 ? "model" : "models"}
+              {visible.length} {visible.length === 1 ? t('products.model_singular') : t('products.model_plural')}
             </p>
           </div>
 
@@ -124,23 +143,27 @@ function Products() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-20">
             <div data-reveal>
-              <Eyebrow>Configured orders</Eyebrow>
+              <Eyebrow>{t('products.config_eyebrow')}</Eyebrow>
               <h2 className="display-lg mt-6">
-                Not in the catalogue? It is probably still buildable.
+                {t('products.config_title')}
               </h2>
               <p className="mt-6 measure text-muted">
-                Housing colour, connector layout, voltage configuration, firmware defaults and
-                branding can be specified from an agreed minimum quantity. Optical changes are
-                assessed case by case, with a sample before tooling.
+                {t('products.config_body')}
               </p>
+              <div className="mt-6">
+                <ButtonLink href={catalogUrl} size="lg" target="_blank" rel="noopener noreferrer">
+                  {t('products.download_catalogue')}
+                  <ArrowRight className="size-4" />
+                </ButtonLink>
+              </div>
             </div>
             <div className="flex flex-wrap gap-4 lg:justify-end" data-reveal data-reveal-delay={80}>
               <ButtonLink href="/contact" size="lg">
-                Discuss a configuration
+                {t('products.config_cta')}
                 <ArrowRight className="size-4" />
               </ButtonLink>
               <ButtonLink href="/support" variant="outline" size="lg">
-                Download the catalogue
+                {t('products.support_cta')}
               </ButtonLink>
             </div>
           </div>
