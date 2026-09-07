@@ -182,4 +182,61 @@
     "cta_sales": "Contact sales",
     "cta_partner": "Become a distributor"
   }
+    "history": {
+    "eyebrow": "History",
+    "title": "Ten years, in order"
+  },
+  "capabilities": [
+    {
+      "code": "01",
+      "title": "In-house optical design",
+      "body": "Lens systems, reflectors and gobo paths are designed and simulated in-house, then verified against physical prototypes before tooling is cut."
+    },
+    {
+      "code": "02",
+      "title": "Photometric verification",
+      "body": "Every model is measured on a goniophotometer and published with the data that measurement produced. No estimates, no rounded-up lumen figures."
+    },
+    {
+      "code": "03",
+      "title": "Batch colour calibration",
+      "body": "LED fixtures are calibrated at assembly against a reference unit, so a fixture bought in year three still matches one bought in year one."
+    },
+    {
+      "code": "04",
+      "title": "Burn-in and shake test",
+      "body": "Every unit runs a timed burn-in with movement cycling, plus a vibration profile that approximates road transport, before it is packed."
+    }
+  ],
+  "certifications": [
+    {
+      "code": "CE",
+      "note": "European conformity"
+    },
+    {
+      "code": "RoHS",
+      "note": "Restricted substances"
+    },
+    {
+      "code": "EMC",
+      "note": "Electromagnetic compatibility"
+    },
+    {
+      "code": "ETL",
+      "note": "North American listing"
+    },
+    {
+      "code": "IP65",
+      "note": "Ingress protection, rated models"
+    },
+    {
+      "code": "ISO 9001",
+      "note": "Quality management"
+    }
+  ],
+  "regions_title": {
+    "eyebrow": "Where we ship",
+    "title": "Three regions",
+    "body": "Americas, Africa, Europe"
+  }
 }
