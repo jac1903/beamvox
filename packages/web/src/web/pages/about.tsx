@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useReveal } from "@/hooks/use-reveal";
 import {
   capabilities,
@@ -22,13 +23,14 @@ import { asset } from "@/lib/utils";
 
 function About() {
   useReveal();
+  const { t } = useTranslation();
 
   return (
     <>
       <PageHero
-        eyebrow="About Beamvox"
-        title="From workshop to world stage, we design lighting you can rely on."
-        body="Beamvox has built stage lighting since 2016 — first for regional touring companies, now started operating around the world"
+        eyebrow={t('about.eyebrow')}
+        title={t('about.title')}
+        body={t('about.body')}
       />
 
       <Section>
@@ -41,33 +43,27 @@ function About() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-20">
             <div data-reveal>
-              <Eyebrow>The company</Eyebrow>
+              <Eyebrow>{t('about.company_eyebrow')}</Eyebrow>
               <h2 className="display-lg mt-5">
-                Six people and one goniophotometer, to begin with
+                {t('about.company_title')}
               </h2>
               <div className="mt-7 space-y-5 text-[1.0625rem] leading-relaxed text-muted">
                 <p>
-                  {site.legalName} started in {site.founded} as an optical workshop, building
-                  fixtures to order for touring companies who could not get the throw they
-                  needed from catalogue products. Measuring every unit was a practical
-                  necessity then. It became the way the company works.
+                  {t('about.company_body_1')}
                 </p>
                 <p>
-                  Today the range spans beam, wash, effect, strobe, static and control
-                  products, assembled on an {stats[1]?.value} floor with optical design,
-                  photometric verification and final test kept in house.
+                  {t('about.company_body_2')}
                 </p>
                 <p>
-                  We sell through distributors and resellers only. That keeps our attention on
-                  the fixtures and keeps the customer relationship where it belongs.
+                  {t('about.company_body_3')}
                 </p>
               </div>
               <div className="mt-9 flex flex-wrap gap-4">
                 <ButtonLink href="/contact" size="lg">
-                  Talk to us
+                  {t('about.cta_contact')}
                 </ButtonLink>
                 <ButtonLink href="/why-beamvox" variant="outline" size="lg">
-                  How we compare
+                  {t('about.cta_compare')}
                 </ButtonLink>
               </div>
             </div>
@@ -79,12 +75,12 @@ function About() {
             >
               <img
                 src={asset("/images/factorypl.jpg")}
-                alt="Final quality control on the Beamvox production floor"
+                alt={t('about.factory_alt')}
                 className="aspect-4/3 w-full object-cover"
                 loading="lazy"
               />
               <figcaption className="mono-meta border-t border-line bg-surface px-5 py-4 text-faint">
-                Final test verification · production floor
+                {t('about.factory_caption')}
               </figcaption>
             </figure>
           </div>
@@ -94,8 +90,8 @@ function About() {
       <Section>
         <Container>
           <SectionHead
-            eyebrow="What we hold to"
-            title="Three positions we do not trade away"
+            eyebrow={t('about.values_eyebrow')}
+            title={t('about.values_title')}
           />
           <div className="mt-14 grid gap-x-16 gap-y-10 md:grid-cols-3">
             {values.map((value, i) => (
@@ -115,9 +111,9 @@ function About() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.85fr_1fr] lg:gap-20">
             <SectionHead
-              eyebrow="Manufacturing"
-              title="Kept in house, on purpose"
-              body="Design, verification and final assembly stay under one roof so a fault found in test reaches the engineer who drew the part."
+              eyebrow={t('about.manufacturing_eyebrow')}
+              title={t('about.manufacturing_title')}
+              body={t('about.manufacturing_body')}
             />
             <div className="grid gap-x-14 gap-y-10 sm:grid-cols-2">
               {capabilities.map((capability, i) => (
@@ -136,7 +132,10 @@ function About() {
 
       <Section>
         <Container>
-          <SectionHead eyebrow="History" title="Twelve years, in order" />
+          <SectionHead
+            eyebrow={t('about.history_eyebrow')}
+            title={t('about.history_title')}
+          />
           <ol className="mt-14 border-t border-line">
             {timeline.map((entry, i) => (
               <li
@@ -167,9 +166,9 @@ function About() {
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
             <div>
               <SectionHead
-                eyebrow="Compliance"
-                title="Certifications and listings"
-                body="Declarations of conformity are published per model. Placeholder list pending certificate audit."
+                eyebrow={t('about.compliance_eyebrow')}
+                title={t('about.compliance_title')}
+                body={t('about.compliance_body')}
               />
               <ul className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2">
                 {certifications.map((cert, i) => (
@@ -188,9 +187,9 @@ function About() {
 
             <div>
               <SectionHead
-                eyebrow="Where we ship"
-                title="Three regions"
-                body="Americas, Africa, Europe"
+                eyebrow={t('about.regions_eyebrow')}
+                title={t('about.regions_title')}
+                body={t('about.regions_body')}
               />
               <ul className="mt-12 border-t border-line">
                 {regions.map((region, i) => (
@@ -226,19 +225,20 @@ function About() {
             <span className="grain-layer" aria-hidden="true" />
             <div className="relative mx-auto max-w-2xl">
               <Eyebrow className="justify-center" withRule={false}>
-                Next step
+                {t('about.cta_eyebrow')}
               </Eyebrow>
-              <h2 className="display-lg mt-5">Ask us for the measured data</h2>
+              <h2 className="display-lg mt-5">
+                {t('about.cta_title')}
+              </h2>
               <p className="mt-5 text-muted">
-                Send a rig, a venue or a spec sheet. We will tell you which fixtures fit and
-                which do not.
+                {t('about.cta_body')}
               </p>
               <div className="mt-9 flex flex-wrap justify-center gap-4">
                 <ButtonLink href="/contact" size="lg">
-                  Contact sales
+                  {t('about.cta_sales')}
                 </ButtonLink>
                 <ButtonLink href="/partners" variant="outline" size="lg">
-                  Become a distributor
+                  {t('about.cta_partner')}
                 </ButtonLink>
               </div>
             </div>
