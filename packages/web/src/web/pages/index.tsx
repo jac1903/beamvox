@@ -28,7 +28,7 @@ function Hero() {
   const { t } = useTranslation();
   const heroSpecs = [
   { label: t('hero.specs.platforms'), value: "06" },
-  { label: t('hero.specs.warranty'), value: "48 months" },
+  { label: t('hero.specs.warranty'), value: "12 months" },
   { label: t('hero.specs.photometrics'), value: "Measured, published" },
   { label: t('hero.specs.distribution'), value: "3 regions" },
 ];
