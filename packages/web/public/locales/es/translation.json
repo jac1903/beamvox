@@ -5,7 +5,7 @@
   },
   "hero": {
     "title": "Iluminación confiable. Del primer show al centésimo.",
-    "description": "Diseñamos y fabricamos cabezas móviles, lavadores, estroboscópicas y sistemas de control para giras, teatro, transmisiones en vivo e instalación permanente.",
+    "description": "Diseñamos y fabricamos cabezas móviles, lavadores, estrobos y sistemas de control para giras, teatro, broadcast e instalación permanente.",
     "cta_products": "Ver productos",
     "cta_quote": "Solicitar cotización",
     "specs": {
@@ -22,9 +22,9 @@
   },
   "featured": {
     "eyebrow": "Equipos seleccionados",
-    "title": "Tres que se especifican con más frecuencia",
+    "title": "Nuestros modelos más especificados",
     "body": "Datos fotométricos completos, tablas DMX y documentación de servicio para cada modelo.",
-    "cta": "Los 11 modelos"
+    "cta": "Los más vendidos"
   },
   "applications_heading": {
     "eyebrow": "Dónde trabajan",
@@ -149,5 +149,14 @@
       "summary": "Equipos confiables y de bajo mantenimiento para parques temáticos, museos y casas de culto.",
       "image": "/images/applications/installation.jpg"
     }
-  ]
+  ],
+  "about": {
+    "eyebrow": "Sobre nosotros",
+    "title": "Iluminación profesional con respaldo de datos.",
+    "body": "En Beamvox diseñamos y fabricamos equipos de iluminación escénica con un enfoque en la durabilidad y el rendimiento medible. Desde 2016, hemos crecido de un taller local a un operador global, sirviendo a teatros, giras y estudios de broadcast.",
+    "mission_title": "Nuestra misión",
+    "mission_text": "Hacer que los equipos de iluminación sean más confiables — y compartir los datos que lo demuestran.",
+    "team_title": "Nuestro equipo",
+    "team_text": "Ingenieros, diseñadores ópticos y técnicos de iluminación que trabajan juntos para crear equipos que realmente cumplen lo que prometen."
+  }
 }
