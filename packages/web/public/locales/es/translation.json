@@ -288,4 +288,25 @@
       "body": "Nuestros clientes son nuestros socios, y su éxito es nuestro éxito. Trabajamos junto a ellos para lograr los mejores resultados."
     }
   ]
+    "products": {
+    "eyebrow": "Productos",
+    "title": "Haz & Strobe — Nuestros más vendidos",
+    "body": "Cada equipo incluye una tabla DMX publicada, un perfil GDTF y datos fotométricos medidos. Las variantes configuradas y OEM se cotizan bajo pedido.",
+    "stats": {
+      "models": "Modelos",
+      "platforms": "Plataformas",
+      "warranty": "Garantía",
+      "data": "Datos"
+    },
+    "filter_label": "Filtrar por plataforma",
+    "filter_all": "Todos",
+    "model_singular": "modelo",
+    "model_plural": "modelos",
+    "config_eyebrow": "Pedidos configurados",
+    "config_title": "¿No está en el catálogo? Probablemente se pueda fabricar.",
+    "config_body": "El color de la carcasa, la distribución de conectores, la configuración de voltaje, los valores predeterminados del firmware y la marca se pueden especificar a partir de una cantidad mínima acordada. Los cambios ópticos se evalúan caso por caso, con una muestra antes de la fabricación.",
+    "config_cta": "Consultar una configuración",
+    "support_cta": "Descargar el catálogo",
+    "download_catalogue": "Descargar catálogo (PDF)"
+  },
 }
