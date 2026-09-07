@@ -943,58 +943,58 @@ export const products: Product[] = [
       { mode: "Extended", channels: "16", use: "Adds CCT, curves and strobe" },
     ],
   },
-  {
-    slug: "bvx-n8",
-    model: "BVX-N8",
-    name: "Node 8",
-    category: "control",
+    {
+    slug: "10 x 40W BEAM LIGHT",
+    model: "10 x 40W BEAM LIGHT",
+    name: "10 x 40W BEAM LIGHT",
+    category: "strobe",
     status: "In production",
-    tagline: "An eight-port Art-Net and sACN node with isolated outputs.",
+    tagline: "A 10‑head 400 W beam light with individual LED control and RDM support.",
     intro:
-      "Eight optically isolated DMX ports in a 1U rack frame, with per-port protocol, merge and RDM configuration from the front panel or a browser.",
-    image: "/images/fixtures/control.jpg",
-    keySpecs: [
-      { label: "Ports", value: "8 isolated" },
-      { label: "Protocols", value: "Art-Net, sACN" },
-      { label: "Format", value: "1U rack" },
-      { label: "Weight", value: "3.1 kg" },
+      "The 10×40W Beam Light packs ten 4‑in‑1 LED heads into a compact bar with individual pixel control. Its 32‑bit dimming, variable strobe, and flexible channel modes deliver dynamic aerial effects and chases—perfect for clubs, mobile DJs, and touring.",
+      image: "/images/fixtures/900pc.jpg",
+        keySpecs: [
+      { label: "Source", value: "10 × 40W 4‑in‑1 RGBW LEDs" },
+      { label: "Optics", value: "3.5° to 55°" },
+      { label: "Ingress", value: "IP20" },
+      { label: "Weight", value: "8 kg" },
     ],
     highlights: [
       {
-        title: "Isolated per port",
-        body: "Each output is optically isolated so a fault on one run cannot propagate through the node.",
+        title: "Individual head control",
+        body: "Each of the 10 beam heads is independently addressable, allowing for dynamic chase sequences, pixel‑mapped effects, and synchronized aerial displays that transform any stage or dancefloor.",
       },
       {
-        title: "Configure without a laptop",
-        body: "Front-panel display and encoder for addressing, plus a browser interface for bulk configuration.",
-      },
-      {
-        title: "Redundant power",
-        body: "Dual inputs with automatic failover and PoE support on both network ports.",
+        title: "Flexible programming",
+        body: "With multiple channel modes (up to 43 CH), RDM support, and 32‑bit dimming, this compact bar adapts to any rig—from simple standalone setups to complex DMX productions.",
       },
     ],
     specs: [
       {
-        group: "Control",
+        group: "Output",
         rows: [
-          ["Ports", "8 × 5-pin DMX, optically isolated"],
-          ["Protocols", "Art-Net 4, sACN, RDM"],
-          ["Merge modes", "HTP, LTP, priority per port"],
-          ["Network", "2 × Gigabit Ethernet with PoE"],
+          ["Light source", "10 × 40W 4‑in‑1 RGBW LEDs"],
+          ["Beam angle", "3.5° to 55°"],
+          ["Colour temperature", "2,700 K – 8,000 K"],
+          ["Luminous flux", "15,364 lm"],
         ],
       },
+      commonElectrical,
       {
-        group: "Power & physical",
+        group: "Physical",
         rows: [
-          ["Input voltage", "100–240 V AC, dual redundant"],
-          ["Dimensions", "483 × 180 × 44 mm (1U)"],
-          ["Weight", "3.1 kg"],
+          ["Dimensions", "115 × 16 × 27 cm"],
+          ["Weight", "8 kg"],
           ["Ingress protection", "IP20"],
+          ["Operating temperature", "−30 °C to 50 °C"],
         ],
       },
       commonWarranty,
     ],
-    dmxModes: [{ mode: "Node", channels: "—", use: "Protocol conversion device" }],
+    dmxModes: [
+      { mode: "Basic", channels: "7", use: "RGBW" },
+      { mode: "Extended", channels: "43", use: "Adds CCT, curves and strobe" },
+    ],
   },
 ];
 
