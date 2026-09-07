@@ -102,7 +102,7 @@ function About() {
               body={t('about.manufacturing_body')}
             />
             <div className="grid gap-x-14 gap-y-10 sm:grid-cols-2">
-              {t('capabilities', { returnObjects: true }).map((capability, i) => (
+              {(t('capabilities', { returnObjects: true }) || []).map((capability, i) => (
                 <NumberedItem
                   key={capability.code}
                   code={capability.code}
@@ -123,7 +123,7 @@ function About() {
             title={t('about.history_title')}
           />
           <ol className="mt-14 border-t border-line">
-            {t('timeline', { returnObjects: true }).map((entry, i) => (
+            {(t('timeline', { returnObjects: true }) || []).map((entry, i) => (
               <li
                 key={entry.year}
                 className="grid gap-3 border-b border-line py-8 md:grid-cols-[8rem_1fr] md:gap-10"
@@ -157,7 +157,7 @@ function About() {
                 body={t('about.compliance_body')}
               />
               <ul className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2">
-                {t('certifications', { returnObjects: true }).map((cert, i) => (
+                {(t('certifications', { returnObjects: true }) || []).map((cert, i) => (
                   <li
                     key={cert.code}
                     className="bg-surface px-5 py-6"
@@ -178,7 +178,7 @@ function About() {
                 body={t('about.regions_body')}
               />
               <ul className="mt-12 border-t border-line">
-                {t('regions', { returnObjects: true }).map((region, i) => (
+                {(t('regions', { returnObjects: true }) || []).map((region, i) => (
                   <li
                     key={region.id}
                     className="border-b border-line py-7"
