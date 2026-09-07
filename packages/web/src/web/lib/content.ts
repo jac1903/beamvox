@@ -776,7 +776,7 @@ export const products: Product[] = [
     slug: "IP65 Strike V",
     model: "IP65 Strike V",
     name: "IP65 Strike V",
-    category: "static",
+    category: "strobe",
     status: "In production",
     tagline: "An IP65-rated 1000 W pixel‑matrix moving head with a 12°–110° beam spread and full Art‑Net control.",
     intro:
@@ -838,20 +838,20 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "bvx-ar200-ip",
-    model: "BVX-AR200 IP",
-    name: "Arc Wash 200 IP",
-    category: "static",
-    status: "Pre-release",
-    tagline: "A compact IP65 static wash for façades and permanent rigs.",
+    slug: "LED 48 + 24 LONG STROBE LIGHT",
+    model: "LED 48 + 24 LONG STROBE LIGHT",
+    name: "LED 48 + 24 LONG STROBE LIGHT",
+    category: "strobe",
+    status: "In production",
+    tagline: "A 200 W long‑form strobe with LED and 48‑segment pixel control.",
     intro:
-      "A static wash for installation work where a moving head is neither needed nor welcome. Field-changeable optics and a locking yoke that holds its aim through weather and vibration.",
-    image: "/images/fixtures/batten.jpg",
+      "The LED 48+24 Long Strobe Light delivers bold, pixel‑mapped effects in a sleek bar design. With 720 RGB and cool‑white LEDs and smooth 0–100% dimming, it creates dynamic color chases, water‑flow effects, and variable strobe sequences—perfect for concerts, TV studios, and clubs.",
+    image: "/images/fixtures/4824strobe.jpg",
     keySpecs: [
       { label: "Source", value: "200 W RGBW" },
       { label: "Optics", value: "10° – 45° field-changeable" },
       { label: "Ingress", value: "IP65" },
-      { label: "Weight", value: "7.8 kg" },
+      { label: "Weight", value: "7 kg" },
     ],
     highlights: [
       {
@@ -868,8 +868,8 @@ export const products: Product[] = [
         group: "Output",
         rows: [
           ["Light source", "200 W RGBW LED"],
-          ["Beam angle", "10° / 20° / 30° / 45° snap-in"],
-          ["Colour temperature", "2,700 K – 8,000 K"],
+          ["Beam angle", "135°"],
+          ["Colour temperature", "3,500 K – 6,500 K"],
           ["Luminous flux", "7,200 lm "],
         ],
       },
@@ -877,8 +877,8 @@ export const products: Product[] = [
       {
         group: "Physical",
         rows: [
-          ["Dimensions", "290 × 250 × 340 mm"],
-          ["Weight", "7.8 kg"],
+          ["Dimensions", "97 × 7 × 12 cm"],
+          ["Weight", "7 kg"],
           ["Ingress protection", "IP65"],
           ["Operating temperature", "−25 °C to 50 °C"],
         ],
@@ -887,15 +887,15 @@ export const products: Product[] = [
     ],
     dmxModes: [
       { mode: "Basic", channels: "4", use: "RGBW" },
-      { mode: "Extended", channels: "9", use: "Adds CCT, curves and strobe" },
+      { mode: "Extended", channels: "16", use: "Adds CCT, curves and strobe" },
     ],
   },
   {
     slug: "bvx-c24",
     model: "BVX-C24",
     name: "Command 24",
-    category: "control",
-    status: "New",
+    category: "strobe",
+    status: "In production",
     tagline: "A 24-fader console with 16 universes and dual touchscreens.",
     intro:
       "A control surface for touring and installation: 24 motorised faders, two 15-inch touchscreens and 16 universes of output over Art-Net, sACN and eight physical DMX ports.",
