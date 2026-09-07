@@ -27,7 +27,7 @@ function About() {
     <>
       <PageHero
         eyebrow="About Beamvox"
-        title="A lighting manufacturer that publishes its numbers."
+        title="From workshop to world stage, we design lighting you can rely on."
         body="Beamvox has built stage lighting since 2016 — first for regional touring companies, now started operating around the world"
       />
 
