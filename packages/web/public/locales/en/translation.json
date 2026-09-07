@@ -270,7 +270,8 @@
       "title": "Control platform",
       "body": "The Command console and Node range complete the rig, from fixture to control surface."
     }
-      "values": [
+  ],
+  "values": [
     {
       "code": "01",
       "title": "Publish the measurement",
@@ -286,6 +287,5 @@
       "title": "Sell through partners",
       "body": "Our distributors own the customer relationship. We do not compete with them for the accounts they build."
     }
-  ],
   ]
 }
