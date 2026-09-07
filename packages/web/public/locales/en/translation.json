@@ -181,8 +181,8 @@
     "cta_body": "Send a rig, a venue or a spec sheet. We will tell you which fixtures fit and which do not.",
     "cta_sales": "Contact sales",
     "cta_partner": "Become a distributor"
-  }
-    "history": {
+  },
+  "history": {
     "eyebrow": "History",
     "title": "Ten years, in order"
   },
@@ -238,5 +238,37 @@
     "eyebrow": "Where we ship",
     "title": "Three regions",
     "body": "Americas, Africa, Europe"
-  }
+  },
+  "timeline": [
+    {
+      "year": "2016",
+      "title": "Founded",
+      "body": "Beamvox begins as a six-person optical workshop building custom fixtures for regional touring companies."
+    },
+    {
+      "year": "2017",
+      "title": "First catalogue range",
+      "body": "The first standardised product range ships, alongside a published photometric dataset for every model."
+    },
+    {
+      "year": "2019",
+      "title": "European distribution",
+      "body": "A stocked European warehouse opens, moving lead times on catalogue lines from months to days."
+    },
+    {
+      "year": "2022",
+      "title": "IP65 platform",
+      "body": "The sealed head platform enters production, bringing touring-grade fixtures to permanent outdoor installation."
+    },
+    {
+      "year": "2024",
+      "title": "Americas and Africa",
+      "body": "Regional service partners are appointed, with local spare parts and warranty handling."
+    },
+    {
+      "year": "2026",
+      "title": "Control platform",
+      "body": "The Command console and Node range complete the rig, from fixture to control surface."
+    }
+  ]
 }
