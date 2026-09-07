@@ -182,61 +182,61 @@
     "cta_sales": "Contactar a ventas",
     "cta_partner": "Convertirse en distribuidor"
   }
-    "history": {
-    "eyebrow": "History",
-    "title": "Ten years, in order"
+  "history": {
+    "eyebrow": "Historia",
+    "title": "Diez años, en orden"
   },
   "capabilities": [
     {
       "code": "01",
-      "title": "In-house optical design",
-      "body": "Lens systems, reflectors and gobo paths are designed and simulated in-house, then verified against physical prototypes before tooling is cut."
+      "title": "Diseño óptico interno",
+      "body": "Los sistemas de lentes, reflectores y rutas de gobos se diseñan y simulan internamente, y luego se verifican con prototipos físicos antes de fabricar las herramientas."
     },
     {
       "code": "02",
-      "title": "Photometric verification",
-      "body": "Every model is measured on a goniophotometer and published with the data that measurement produced. No estimates, no rounded-up lumen figures."
+      "title": "Verificación fotométrica",
+      "body": "Cada modelo se mide en un goniofotómetro y se publica con los datos que produce esa medición. Sin estimaciones, sin cifras de lúmenes redondeadas."
     },
     {
       "code": "03",
-      "title": "Batch colour calibration",
-      "body": "LED fixtures are calibrated at assembly against a reference unit, so a fixture bought in year three still matches one bought in year one."
+      "title": "Calibración de color por lote",
+      "body": "Los equipos LED se calibran en el ensamblaje contra una unidad de referencia, para que un equipo comprado en el tercer año siga coincidiendo con uno comprado en el primero."
     },
     {
       "code": "04",
-      "title": "Burn-in and shake test",
-      "body": "Every unit runs a timed burn-in with movement cycling, plus a vibration profile that approximates road transport, before it is packed."
+      "title": "Prueba de quemado y vibración",
+      "body": "Cada unidad pasa por un quemado controlado con ciclos de movimiento, más un perfil de vibración que simula el transporte por carretera, antes de ser empaquetada."
     }
   ],
   "certifications": [
     {
       "code": "CE",
-      "note": "European conformity"
+      "note": "Conformidad europea"
     },
     {
       "code": "RoHS",
-      "note": "Restricted substances"
+      "note": "Sustancias restringidas"
     },
     {
       "code": "EMC",
-      "note": "Electromagnetic compatibility"
+      "note": "Compatibilidad electromagnética"
     },
     {
       "code": "ETL",
-      "note": "North American listing"
+      "note": "Certificación para Norteamérica"
     },
     {
       "code": "IP65",
-      "note": "Ingress protection, rated models"
+      "note": "Protección contra ingreso, modelos clasificados"
     },
     {
       "code": "ISO 9001",
-      "note": "Quality management"
+      "note": "Gestión de calidad"
     }
   ],
   "regions_title": {
-    "eyebrow": "Where we ship",
-    "title": "Three regions",
-    "body": "Americas, Africa, Europe"
+    "eyebrow": "Dónde enviamos",
+    "title": "Tres regiones",
+    "body": "Américas, África, Europa"
   }
 }
