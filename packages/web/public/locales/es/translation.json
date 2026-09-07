@@ -287,8 +287,8 @@
       "title": "El cliente primero",
       "body": "Nuestros clientes son nuestros socios, y su éxito es nuestro éxito. Trabajamos junto a ellos para lograr los mejores resultados."
     }
-  ]
-    "products": {
+  ],
+  "products": {
     "eyebrow": "Productos",
     "title": "Haz & Strobe — Nuestros más vendidos",
     "body": "Cada equipo incluye una tabla DMX publicada, un perfil GDTF y datos fotométricos medidos. Las variantes configuradas y OEM se cotizan bajo pedido.",
@@ -309,4 +309,24 @@
     "support_cta": "Descargar el catálogo",
     "download_catalogue": "Descargar catálogo (PDF)"
   },
+  "product": {
+    "not_found": "Producto no encontrado",
+    "not_found_body": "El producto que buscas no existe o ha sido eliminado.",
+    "back_to_products": "Volver a productos",
+    "request_quote": "Solicitar cotización",
+    "downloads": "Descargas",
+    "highlights_eyebrow": "Características clave",
+    "highlights_title": "Lo que lo hace destacar",
+    "highlights_body": "Cada equipo está construido con estas características principales que lo distinguen.",
+    "specs_eyebrow": "Especificaciones técnicas",
+    "specs_title": "Especificaciones completas",
+    "dmx_eyebrow": "Modos DMX",
+    "dmx_title": "Modos de control",
+    "channels": "canales",
+    "cta_eyebrow": "Próximo paso",
+    "cta_title": "¿Listo para especificar este equipo?",
+    "cta_body": "Contacta a nuestro equipo para precios, disponibilidad o para solicitar una unidad de demostración.",
+    "cta_quote": "Obtener cotización",
+    "cta_products": "Ver todos los productos"
+  }
 }
