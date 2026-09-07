@@ -287,8 +287,8 @@
       "title": "Sell through partners",
       "body": "Our distributors own the customer relationship. We do not compete with them for the accounts they build."
     }
-  ]
-    "products": {
+  ],
+  "products": {
     "eyebrow": "Product range",
     "title": "Beam & Strobe — Our bestsellers",
     "body": "Every fixture ships with a published DMX chart, a GDTF profile and measured photometric data. Configured and OEM variants are quoted on request.",
@@ -309,4 +309,24 @@
     "support_cta": "Download the catalogue",
     "download_catalogue": "Download catalogue (PDF)"
   },
+  "product": {
+    "not_found": "Product not found",
+    "not_found_body": "The product you're looking for doesn't exist or has been removed.",
+    "back_to_products": "Back to products",
+    "request_quote": "Request a quote",
+    "downloads": "Downloads",
+    "highlights_eyebrow": "Key features",
+    "highlights_title": "What makes it stand out",
+    "highlights_body": "Every fixture is built with these core features that set it apart.",
+    "specs_eyebrow": "Technical specifications",
+    "specs_title": "Full specifications",
+    "dmx_eyebrow": "DMX modes",
+    "dmx_title": "Control modes",
+    "channels": "channels",
+    "cta_eyebrow": "Next step",
+    "cta_title": "Ready to spec this fixture?",
+    "cta_body": "Contact our team for pricing, availability, or to request a demo unit.",
+    "cta_quote": "Get a quote",
+    "cta_products": "Browse all products"
+  }
 }
