@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { useReveal } from "@/hooks/use-reveal";
-import { categories, products, type CategoryId } from "@/lib/content";
+import { useContent } from "@/lib/use-content";
+import type { CategoryId } from "@/lib/content";
 import {
   ButtonLink,
   Container,
@@ -22,6 +23,7 @@ const isCategoryId = (value: string | null): value is CategoryId =>
 
 function Products() {
   const { t } = useTranslation();
+  const { categories, products } = useContent();
   const search = useSearch();
   const [, navigate] = useLocation();
 
