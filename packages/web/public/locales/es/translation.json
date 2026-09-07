@@ -271,4 +271,21 @@
       "body": "La consola Command y la gama Node completan el rig, desde el equipo hasta la superficie de control."
     }
   ]
+    "values": [
+    {
+      "code": "01",
+      "title": "Innovación",
+      "body": "Constantemente superamos los límites de la tecnología de iluminación escénica para ofrecer soluciones más confiables y eficientes."
+    },
+    {
+      "code": "02",
+      "title": "Calidad",
+      "body": "Cada producto está construido para soportar las exigencias de las giras y el uso intensivo, sin comprometer el rendimiento."
+    },
+    {
+      "code": "03",
+      "title": "El cliente primero",
+      "body": "Nuestros clientes son nuestros socios, y su éxito es nuestro éxito. Trabajamos junto a ellos para lograr los mejores resultados."
+    }
+  ],
 }
