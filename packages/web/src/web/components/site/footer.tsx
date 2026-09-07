@@ -40,7 +40,7 @@ export function Footer() {
         src="/beamvox/images/factoryentrc.jpg"
         alt="Our company entrance"
         loading="lazy"
-        className="absolute inset-0 size-full object-contain"
+        className="absolute inset-0 size-full object-cover object-top"
         style={{ opacity: 0.3 }}
       />
       {/* Dark overlay for readability */}
