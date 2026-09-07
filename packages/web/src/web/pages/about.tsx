@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useReveal } from "@/hooks/use-reveal";
-import { site, stats, values } from "@/lib/content";
+import { site, stats } from "@/lib/content"; // <-- REMOVED "values"
 import {
   ButtonLink,
   Container,
@@ -80,7 +80,7 @@ function About() {
             title={t('about.values_title')}
           />
           <div className="mt-14 grid gap-x-16 gap-y-10 md:grid-cols-3">
-            {values.map((value, i) => (
+            {(t('values', { returnObjects: true }) || []).map((value, i) => (
               <NumberedItem
                 key={value.code}
                 code={value.code}
