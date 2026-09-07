@@ -150,13 +150,36 @@
       "image": "/images/applications/installation.jpg"
     }
   ],
-  "about": {
+    "about": {
     "eyebrow": "Sobre nosotros",
     "title": "Iluminación profesional con respaldo de datos.",
     "body": "En Beamvox diseñamos y fabricamos equipos de iluminación escénica con un enfoque en la durabilidad y el rendimiento medible. Desde 2016, hemos crecido de un taller local a un operador global, sirviendo a teatros, giras y estudios de broadcast.",
-    "mission_title": "Nuestra misión",
-    "mission_text": "Hacer que los equipos de iluminación sean más confiables — y compartir los datos que lo demuestran.",
-    "team_title": "Nuestro equipo",
-    "team_text": "Ingenieros, diseñadores ópticos y técnicos de iluminación que trabajan juntos para crear equipos que realmente cumplen lo que prometen."
-  }
+    "company_eyebrow": "La empresa",
+    "company_title": "Seis personas y un goniofotómetro, para empezar",
+    "company_body_1": "Beamvox comenzó en 2016 como un taller óptico, construyendo equipos a medida para compañías de gira que no podían obtener el alcance que necesitaban de los productos de catálogo. Medir cada unidad era una necesidad práctica entonces. Se convirtió en la forma de trabajar de la empresa.",
+    "company_body_2": "Hoy, la gama abarca productos de haz, wash, efecto, strobe, estáticos y de control, ensamblados en una planta de 8.400 m² con diseño óptico, verificación fotométrica y pruebas finales realizadas internamente.",
+    "company_body_3": "Vendemos exclusivamente a través de distribuidores y revendedores. Eso mantiene nuestra atención en los equipos y la relación con el cliente donde corresponde.",
+    "cta_contact": "Contáctanos",
+    "cta_compare": "Cómo nos comparamos",
+    "factory_alt": "Control de calidad final en la planta de producción de Beamvox",
+    "factory_caption": "Verificación de prueba final · planta de producción",
+    "values_eyebrow": "Lo que defendemos",
+    "values_title": "Tres posiciones que no negociamos",
+    "manufacturing_eyebrow": "Fabricación",
+    "manufacturing_title": "Mantenida internamente, a propósito",
+    "manufacturing_body": "El diseño, la verificación y el ensamblaje final permanecen bajo un mismo techo para que una falla detectada en las pruebas llegue al ingeniero que diseñó la pieza.",
+    "history_eyebrow": "Historia",
+    "history_title": "Diez años, en orden",
+    "compliance_eyebrow": "Cumplimiento",
+    "compliance_title": "Certificaciones y registros",
+    "compliance_body": "Las declaraciones de conformidad se publican por modelo. Lista provisional pendiente de auditoría de certificación.",
+    "regions_eyebrow": "Dónde enviamos",
+    "regions_title": "Tres regiones",
+    "regions_body": "Américas, África, Europa",
+    "cta_eyebrow": "Próximo paso",
+    "cta_title": "Pídenos los datos medidos",
+    "cta_body": "Envíanos un rig, un lugar o una lista de especificaciones. Te diremos qué equipos encajan y cuáles no.",
+    "cta_sales": "Contactar a ventas",
+    "cta_partner": "Convertirse en distribuidor"
+  },
 }
