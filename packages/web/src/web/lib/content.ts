@@ -952,7 +952,7 @@ export const products: Product[] = [
     tagline: "A 10‑head 400 W beam light with individual LED control and RDM support.",
     intro:
       "The 10×40W Beam Light packs ten 4‑in‑1 LED heads into a compact bar with individual pixel control. Its 32‑bit dimming, variable strobe, and flexible channel modes deliver dynamic aerial effects and chases—perfect for clubs, mobile DJs, and touring.",
-      image: "/images/fixtures/900pc.jpg",
+      image: "/images/fixtures/1040w.jpg",
         keySpecs: [
       { label: "Source", value: "10 × 40W 4‑in‑1 RGBW LEDs" },
       { label: "Optics", value: "3.5° to 55°" },
