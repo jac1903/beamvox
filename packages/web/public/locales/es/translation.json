@@ -417,5 +417,22 @@
         "a": "Hay stock de demostración disponible a través de distribuidores regionales para evaluación. Contáctanos y dirigiremos la solicitud al socio más cercano."
       }
     ]
+  },
+    "contact": {
+    "eyebrow": "Contacto",
+    "title": "Envíanos el rig, no solo el número de modelo.",
+    "body": "Consultas de ventas, técnicas y de distribución llegan aquí. Dinos el alcance, el lugar y la cantidad, y la respuesta será específica.",
+    "form_eyebrow": "Formulario de consulta",
+    "form_title": "Cuéntanos lo que necesitas",
+    "form_body": "Formulario provisional para revisión — los envíos se almacenan y se listan para el equipo de ventas.",
+    "direct_eyebrow": "Directo",
+    "email_label": "Correo electrónico",
+    "phone_label": "Teléfono",
+    "hours_label": "Horario",
+    "address_label": "Dirección",
+    "placeholder_note": "Datos de contacto provisionales — reemplazar antes del lanzamiento.",
+    "regions_eyebrow": "Enrutamiento regional",
+    "whatsapp_button": "Chatea con nosotros en WhatsApp",
+    "whatsapp_message": "Hola, estoy interesado en sus productos de iluminación escénica."
   }
 }
