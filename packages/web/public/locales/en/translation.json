@@ -357,5 +357,39 @@
     "cta_body": "Evaluation stock is available through regional distributors. Measure it yourself against the published data.",
     "cta_demo": "Request a demonstration",
     "cta_data": "Photometric data"
+  },
+    "support": {
+    "eyebrow": "Support & downloads",
+    "title": "Documentation on the shelf, not on request.",
+    "body": "Manuals, DMX charts, GDTF profiles, photometric files and firmware for every model in the range. Placeholder files for review — links resolve once the document library is connected.",
+    "downloads_heading": "Commercial documents",
+    "downloads_note": "For distributors and specifiers.",
+    "downloads_items": [
+      {
+        "title": "Product catalogue",
+        "meta": "PDF · 22 MB"
+      },
+      {
+        "title": "Declaration of conformity — full range",
+        "meta": "PDF · 1.4 MB"
+      },
+      {
+        "title": "Warranty terms",
+        "meta": "PDF · 240 KB"
+      }
+    ],
+    "service_eyebrow": "Warranty & service",
+    "service_title": "If a fixture fails, this is the path.",
+    "service_body": "12 months on parts and labour, handled regionally. Common wear parts are held in all three served regions, and certified partners carry out warranty work locally.",
+    "service_cta": "Open a service enquiry",
+    "step_1_title": "Contact your distributor",
+    "step_1_body": "Warranty and service run through the partner that supplied the fixture. They hold the invoice, the stock and the authority to replace.",
+    "step_2_title": "Send the fault detail",
+    "step_2_body": "Model, serial number, firmware version, operating hours and a short description of the fault. A phone video of the behaviour saves a week.",
+    "step_3_title": "Receive an RMA reference",
+    "step_3_body": "Issued within two working days, with return instructions and, where stock allows, a replacement dispatched ahead of the return.",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Questions we answer weekly",
+    "faq_contact": "Something not covered here? Technical questions reach an engineer, not a ticket queue —"
   }
 }
