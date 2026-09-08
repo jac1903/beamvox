@@ -1,12 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './language-switcher';
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { asset, cn } from "@/lib/utils";
-import { nav } from "@/lib/content";
+import { useContent } from "@/lib/use-content";
 import { Container } from "./primitives";
 
 export function Header() {
+  const { t } = useTranslation();
+  const { nav } = useContent();
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -80,7 +83,7 @@ export function Header() {
               to="/contact"
               className="hidden h-10 items-center gap-2 rounded-[4px] bg-ember px-5 text-[0.9375rem] font-medium text-void transition-colors duration-300 hover:bg-ember-soft sm:inline-flex"
             >
-              Request a quote
+              {t('header.request_quote')}
               <ArrowRight className="size-4" />
             </Link>
             <button
@@ -105,7 +108,7 @@ export function Header() {
       >
         <div className="flex h-full flex-col justify-between pt-28 pb-10">
           <nav className="container-bv flex flex-col" aria-label="Mobile">
-            {[{ label: "Home", href: "/" }, ...nav].map((item, i) => (
+            {[{ label: t('header.home'), href: "/" }, ...nav].map((item, i) => (
               <Link
                 key={item.href}
                 to={item.href}
@@ -130,7 +133,7 @@ export function Header() {
               to="/contact"
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-[4px] bg-ember font-medium text-void"
             >
-              Request a quote
+              {t('header.request_quote')}
               <ArrowRight className="size-4" />
             </Link>
           </div>
