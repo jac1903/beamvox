@@ -23,9 +23,10 @@ export const nav = [
   { label: "Products", href: "/products" },
   { label: "Applications", href: "/applications" },
   { label: "Why Beamvox", href: "/why-beamvox" },
-  { label: "Partners", href: "/partners" },
+ // { label: "Partners", href: "/partners" }, //
   { label: "Support", href: "/support" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const regions = [
