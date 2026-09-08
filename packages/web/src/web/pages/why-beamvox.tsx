@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 import {
@@ -21,14 +22,15 @@ import {
 import { asset } from "@/lib/utils";
 
 function WhyBeamvox() {
+  const { t } = useTranslation();
   useReveal();
 
   return (
     <>
       <PageHero
-        eyebrow="Why Beamvox"
-        title="The quiet argument: our numbers survive scrutiny."
-        body="Anyone can print a bigger figure on a spec sheet. The test is whether the fixture still measures that way after a season on the road, and whether the next batch matches the last one."
+        eyebrow={t('why.eyebrow')}
+        title={t('why.title')}
+        body={t('why.body')}
       />
 
       <Section tone="surface" className="py-14 md:py-16">
@@ -41,9 +43,9 @@ function WhyBeamvox() {
       <Section>
         <Container>
           <SectionHead
-            eyebrow="Specification honesty"
-            title="How we state a figure, and how it is usually stated"
-            body="Not a competitor comparison — a description of the two conventions you will meet while comparing quotes."
+            eyebrow={t('why.specs_eyebrow')}
+            title={t('why.specs_title')}
+            body={t('why.specs_body')}
           />
 
           <div className="mt-14 overflow-x-auto" data-reveal>
@@ -51,13 +53,13 @@ function WhyBeamvox() {
               <thead>
                 <tr className="border-b border-line-strong">
                   <th className="w-[16rem] pb-4 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                    Figure
+                    {t('why.figure_column')}
                   </th>
                   <th className="pb-4 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-ember">
-                    How Beamvox states it
+                    {t('why.ours_column')}
                   </th>
                   <th className="pb-4 font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                    Commonly stated as
+                    {t('why.common_column')}
                   </th>
                 </tr>
               </thead>
@@ -87,8 +89,8 @@ function WhyBeamvox() {
           <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
             <div>
               <SectionHead
-                eyebrow="Manufacturing"
-                title="Four steps between the board and the box"
+                eyebrow={t('why.manufacturing_eyebrow')}
+                title={t('why.manufacturing_title')}
               />
               <div className="relative mt-12" data-reveal>
                 <img
@@ -119,9 +121,9 @@ function WhyBeamvox() {
       <Section>
         <Container>
           <SectionHead
-            eyebrow="After the sale"
-            title="Most of a fixture's life happens after the invoice"
-            body="Purchase price is a small part of what a rig costs over ten years. These are the commitments that decide the rest."
+            eyebrow={t('why.after_sale_eyebrow')}
+            title={t('why.after_sale_title')}
+            body={t('why.after_sale_body')}
           />
           <div className="mt-14 grid gap-x-16 gap-y-10 md:grid-cols-2">
             {commitments.map((commitment, i) => (
@@ -142,7 +144,7 @@ function WhyBeamvox() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
             <div>
-              <Eyebrow>What we hold to</Eyebrow>
+              <Eyebrow>{t('why.values_eyebrow')}</Eyebrow>
               <div className="mt-10 space-y-10">
                 {values.map((value, i) => (
                   <div key={value.code} data-reveal data-reveal-delay={i * 70}>
@@ -156,7 +158,7 @@ function WhyBeamvox() {
             </div>
 
             <div>
-              <Eyebrow>Compliance</Eyebrow>
+              <Eyebrow>{t('why.compliance_eyebrow')}</Eyebrow>
               <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2">
                 {certifications.map((certification, i) => (
                   <li
@@ -173,9 +175,7 @@ function WhyBeamvox() {
                 ))}
               </ul>
               <p className="mt-6 text-[0.8125rem] leading-relaxed text-faint">
-                Certification scope varies by model and market. Declarations of conformity are
-                published for every fixture in the downloads section. Placeholder listing
-                pending final certification records.
+                {t('why.compliance_note')}
               </p>
             </div>
           </div>
@@ -186,18 +186,17 @@ function WhyBeamvox() {
         <span className="grain-layer" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center" data-reveal>
-            <h2 className="display-lg">Test the claims with a demo unit.</h2>
+            <h2 className="display-lg">{t('why.cta_title')}</h2>
             <p className="mt-6 text-muted">
-              Evaluation stock is available through regional distributors. Measure it yourself
-              against the published data.
+              {t('why.cta_body')}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <ButtonLink href="/contact" size="lg">
-                Request a demonstration
+                {t('why.cta_demo')}
                 <ArrowRight className="size-4" />
               </ButtonLink>
               <ButtonLink href="/support" variant="outline" size="lg">
-                Photometric data
+                {t('why.cta_data')}
               </ButtonLink>
             </div>
           </div>
