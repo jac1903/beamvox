@@ -143,18 +143,6 @@
       "summary": "Iluminación discreta y silenciosa para espacios donde el equipo no debe llamar la atención.",
       "image": "/images/applications/corporate.jpg"
     }
-      "applications_page": {
-    "eyebrow": "Aplicaciones",
-    "title": "Cada espacio castiga una debilidad diferente.",
-    "body": "Las giras dañan los conectores. El teatro escucha los ventiladores. El broadcast ve el parpadeo. Los clubes cocinan las carcasas. Estos son los equipos que pondríamos frente a cada brief, y por qué.",
-    "application_label": "Aplicación",
-    "specified_fixtures": "Equipos especificados",
-    "cta_eyebrow": "¿No estás seguro de qué encaja?",
-    "cta_title": "Envíanos el espacio y te enviaremos la lista.",
-    "cta_body": "Plano, dimensiones del lugar, distancias de proyección o un cronograma de equipos existente — cualquiera de esos es suficiente para que te propongamos un rig y los datos detrás de él.",
-    "cta_contact": "Hablar con un especialista",
-    "cta_products": "Ver la gama"
-  },
   ],
   "about": {
     "eyebrow": "Sobre nosotros",
@@ -334,5 +322,17 @@
     "cta_body": "Contacta a nuestro equipo para precios, disponibilidad o para solicitar una unidad de demostración.",
     "cta_quote": "Obtener cotización",
     "cta_products": "Ver todos los productos"
+  },
+  "applications_page": {
+    "eyebrow": "Aplicaciones",
+    "title": "Cada espacio castiga una debilidad diferente.",
+    "body": "Las giras dañan los conectores. El teatro escucha los ventiladores. El broadcast ve el parpadeo. Los clubes cocinan las carcasas. Estos son los equipos que pondríamos frente a cada brief, y por qué.",
+    "application_label": "Aplicación",
+    "specified_fixtures": "Equipos especificados",
+    "cta_eyebrow": "¿No estás seguro de qué encaja?",
+    "cta_title": "Envíanos el espacio y te enviaremos la lista.",
+    "cta_body": "Plano, dimensiones del lugar, distancias de proyección o un cronograma de equipos existente — cualquiera de esos es suficiente para que te propongamos un rig y los datos detrás de él.",
+    "cta_contact": "Hablar con un especialista",
+    "cta_products": "Ver la gama"
   }
 }
