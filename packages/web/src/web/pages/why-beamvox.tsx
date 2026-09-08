@@ -1,14 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
-import {
-  capabilities,
-  certifications,
-  claims,
-  commitments,
-  stats,
-  values,
-} from "@/lib/content";
+import { useContent } from "@/lib/use-content";
 import {
   ButtonLink,
   Container,
@@ -23,6 +16,7 @@ import { asset } from "@/lib/utils";
 
 function WhyBeamvox() {
   const { t } = useTranslation();
+  const { capabilities, certifications, claims, commitments, stats, values } = useContent();
   useReveal();
 
   return (
