@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useParams, Link } from "wouter";
-import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useReveal } from "@/hooks/use-reveal";
 import { useContent } from "@/lib/use-content";
@@ -11,17 +11,17 @@ import {
   Section,
   SectionHead,
 } from "@/components/site/primitives";
-import { asset, cn } from "@/lib/utils";
+import { asset } from "@/lib/utils";
 
 function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
-  const { products, categories } = useContent(); 
+  const { products, categories } = useContent();
 
-  const product = useMemo(() => products.find((p) => p.slug === slug), [slug]);
+  const product = useMemo(() => products.find((p) => p.slug === slug), [slug, products]);
   const category = useMemo(
     () => (product ? categories.find((c) => c.id === product.category) : null),
-    [product]
+    [product, categories]
   );
 
   useReveal();
