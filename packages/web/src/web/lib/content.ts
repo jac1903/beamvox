@@ -1168,7 +1168,7 @@ export const downloadGroups = [
 export const faqs = [
   {
     q: "What is covered by the 12-month warranty?",
-    a: "Parts and labour on manufacturing defects for 48 months from the invoice date, handled through the distributor that supplied the fixture. Consumables such as lamps and gobos are covered for 12 months. ",
+    a: "Parts and labour on manufacturing defects for 12 months from the invoice date, handled through the distributor that supplied the fixture. Consumables such as lamps and gobos are covered for 12 months. ",
   },
   {
     q: "What are typical lead times?",
