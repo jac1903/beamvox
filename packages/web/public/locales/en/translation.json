@@ -417,5 +417,22 @@
         "a": "Demonstration stock is available through regional distributors for evaluation. Contact us and we will route the request to the nearest partner."
       }
     ]
+  },
+    "contact": {
+    "eyebrow": "Contact",
+    "title": "Send the rig, not just the model number.",
+    "body": "Sales, technical and distribution enquiries all arrive here. Tell us the throw, the venue and the quantity, and the reply will be specific.",
+    "form_eyebrow": "Enquiry form",
+    "form_title": "Tell us what you need",
+    "form_body": "Placeholder form for review — submissions are stored and listed for the sales team.",
+    "direct_eyebrow": "Direct",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "hours_label": "Hours",
+    "address_label": "Works",
+    "placeholder_note": "Placeholder contact details — replace before launch.",
+    "regions_eyebrow": "Regional routing",
+    "whatsapp_button": "Chat with us on WhatsApp",
+    "whatsapp_message": "Hello, I'm interested in your stage lighting products."
   }
 }
