@@ -1008,66 +1008,61 @@ export const applications = [
     id: "touring",
     name: "Concerts & touring",
     image: "/images/applications/concerts.jpg",
-    summary:
-      "Fixtures that survive a truck pack every night and still hold calibration at the end of a run.",
+    summary: "Fixtures that survive a truck pack every night and still hold calibration at the end of a run.",
     points: [
       "Beam and hybrid heads for long-throw arena work",
       "Consistent colour across production batches",
       "Spare parts held in three regional warehouses",
     ],
-    recommended: ["bvx-b450-ip", "bvx-h380", "bvx-st1200"],
+    recommended: ["380W Beam Light", "380W Prism King", "IP66 550W Moving Head Light"],
   },
   {
     id: "theatre",
     name: "Theatre & performing arts",
     image: "/images/applications/theatre.jpg",
-    summary:
-      "Quiet fixtures with framing control, specified for repertory rigs that stay up for years.",
+    summary: "Quiet fixtures with framing control, specified for repertory rigs that stay up for years.",
     points: [
       "32 dB(A) theatre mode on profile heads",
       "Four-blade framing with ±60° rotation",
       "Long service intervals and tool-free access",
     ],
-    recommended: ["bvx-s700", "bvx-w760-ip", "bvx-bl8"],
+    recommended: ["380W Prism King", "LED600W Beam Light"],
   },
   {
     id: "broadcast",
     name: "Television & broadcast",
     image: "/images/applications/broadcast.jpg",
-    summary:
-      "Flicker-free output with high colour fidelity for multi-camera studio environments.",
+    summary: "Flicker-free output with high colour fidelity for multi-camera studio environments.",
     points: [
       "Selectable PWM up to 25 kHz",
       "CRI ≥ 92 with calibrated white points",
       "Tint trim over RDM for camera matching",
     ],
-    recommended: ["bvx-w760-ip", "bvx-s700", "bvx-px1000-ip"],
+    recommended: ["LED600W Beam Light", "LED400W Beam Light"],
   },
   {
     id: "clubs",
     name: "Clubs & nightlife",
     image: "/images/applications/club.jpg",
-    summary:
-      "Compact heads and effect fixtures rated for long nightly hours in warm, enclosed rooms.",
+    summary: "Compact heads and effect fixtures rated for long nightly hours in warm, enclosed rooms.",
     points: [
       "Effect and matrix heads with continuous rotation",
       "Convection-cooled housings with no filters to clean",
       "Standalone and sound-active modes for small venues",
     ],
-    recommended: ["bvx-m19", "bvx-h380", "bvx-st1200"],
+    recommended: ["IP65 Strike V", "LED 48 + 24 LONG STROBE LIGHT", "10 x 40W BEAM LIGHT"],
   },
   {
     id: "corporate",
     name: "Corporate & houses of worship",
     image: "/images/applications/corporate.jpg",
-    summary:
-      "Restrained, quiet lighting for rooms where the fixture should never draw attention.",
+    summary: "Restrained, quiet lighting for rooms where the fixture should never draw attention.",
     points: [
       "Low-noise operation for spoken-word programmes",
       "Static architectural fixtures for permanent installation",
       "Simple recall from a small control surface",
     ],
-    recommended: ["bvx-ar200-ip", "bvx-px1000-ip", "bvx-c24"],
+    recommended: ["380W Prism King", "LED600W Beam Light"],
   },
 ];
 
