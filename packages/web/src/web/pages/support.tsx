@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Download, Plus } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
-import { faqs, site } from "@/lib/content";
+import { site } from "@/lib/content";
 import {
   ButtonLink,
   Container,
@@ -15,12 +15,15 @@ function Support() {
   const { t } = useTranslation();
   useReveal();
 
-  // Get the commercial documents from translation (or from content if you prefer)
+  // Get the commercial documents from translation
   const downloadGroup = {
     name: t('support.downloads_heading'),
     note: t('support.downloads_note'),
     items: t('support.downloads_items', { returnObjects: true }),
   };
+
+  // Get FAQs from translation
+  const faqs = t('support.faqs', { returnObjects: true }) || [];
 
   const serviceSteps = [
     { code: "01", title: t('support.step_1_title'), body: t('support.step_1_body') },
@@ -162,7 +165,7 @@ function Support() {
             </div>
 
             <div className="divide-y divide-line border-y border-line">
-              {faqs.map((faq, i) => (
+              {faqs.map((faq: any, i: number) => (
                 <details
                   key={faq.q}
                   className="group py-5"
