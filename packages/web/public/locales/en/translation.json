@@ -15,6 +15,10 @@
       "distribution": "Distribution"
     }
   },
+    "header": {
+    "home": "Home",
+    "request_quote": "Request a quote"
+  },
   "positioning": {
     "title": "A complete rig, from the head to the control surface.",
     "description": "Six platforms, one control language. Fixtures share connectors, protocols and service parts, so a rig assembled from the catalogue behaves as one system rather than a collection of purchases.",
