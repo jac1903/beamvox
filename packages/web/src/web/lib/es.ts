@@ -1,7 +1,7 @@
 /**
  * Spanish (Latin America) content overlay.
- * Product names and taglines remain in English.
- * Only descriptive text is translated.
+ * Product names remain in English.
+ * Taglines and all descriptive text are translated.
  */
 
 export const site = {
@@ -161,7 +161,7 @@ export const products: Product[] = [
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A 550 W beam engine with a 160 mm front optic and infinite pan.",
+    tagline: "Un motor de haz de 550 W con óptica frontal de 160 mm y paneo infinito.",
     intro:
       "El 380W Beam Light está diseñado para trabajos de haz de largo alcance donde el borde de la luz es clave. Una lente frontal recubierta de 160 mm, un motor de descarga de 550 W y una cabeza sellada lo hacen igualmente adecuado para giras en arenas e instalaciones permanentes en exteriores.",
     image: "/images/fixtures/380w.jpg",
@@ -249,7 +249,7 @@ export const products: Product[] = [
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A mini beam engine with a all the features of a high quality light.",
+    tagline: "Un motor de haz mini con todas las características de un equipo de alta calidad.",
     intro:
       "El MINI295 Beam Light está diseñado para trabajos de haz de largo alcance donde el borde de la luz es clave. Una lente frontal recubierta de 160 mm, un motor de descarga de 550 W y una cabeza sellada lo hacen igualmente adecuado para giras en arenas e instalaciones permanentes en exteriores.",
     image: "/images/fixtures/295mini.jpg",
@@ -337,7 +337,7 @@ export const products: Product[] = [
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A 400W LED moving head with a 4–50 m linear focus and full CMY+CTO color system.",
+    tagline: "Cabezal móvil LED de 400 W con enfoque lineal de 4–50 m y sistema de color CMY+CTO completo.",
     intro:
       "El LED400W es una fuente de potencia versátil para escenarios modernos. Su motor LED de 400 W, enfoque lineal de 4–50 m, mezcla CMY+CTO, prismas giratorios duales y gobos fijos/giratorios ofrecen efectos ricos y dinámicos. Con refrigeración robusta y soporte RDM, destaca en giras, teatros e instalaciones fijas en interiores.",
     image: "/images/fixtures/400w.jpg",
@@ -426,7 +426,7 @@ export const products: Product[] = [
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A 380 W beam moving head with a 165 mm aperture and a 4‑prism wheel system delivering dozens of dynamic effects.",
+    tagline: "Cabezal móvil de haz de 380 W con apertura de 165 mm y sistema de 4 ruedas de prismas que ofrece docenas de efectos dinámicos.",
     intro:
       "El 380W Prism King combina una lámpara Philips de 380 W y un conjunto óptico de 165 mm en un haz ajustado (0°–3.9°). Sus cuatro ruedas de prismas —apilables y bidireccionales— crean innumerables efectos multifacéticos, mientras que 14 gobos, 13 colores y un estroboscópico variable lo convierten en la opción ideal para conciertos de alta energía, programas de televisión y producciones en gira.",
     image: "/images/fixtures/prismk.jpg",
@@ -516,7 +516,7 @@ export const products: Product[] = [
     category: "beam-spot",
     featured: true,
     status: "In production",
-    tagline: "A 600 W LED 3-in-1 moving head with 4°–50° linear zoom and full CMY+CTO color mixing.",
+    tagline: "Cabezal móvil LED 3-en-1 de 600 W con zoom lineal de 4°–50° y mezcla de color CMY+CTO completa.",
     intro:
       "El LED 600W 3-in-1 es un verdadero todoterreno, ofreciendo proyección nítida en un amplio rango de zoom de 4°–50°. Su motor LED de 600 W, mezcla CMY+CTO lineal, prismas duales independientes y gobos de vidrio fijos y giratorios ofrecen una creatividad sin límites para conciertos, producciones teatrales y giras de alto nivel, respaldados por soporte RDM y refrigeración forzada robusta.",
     image: "/images/fixtures/600w.jpg",
@@ -604,7 +604,7 @@ export const products: Product[] = [
     name: "IP66 550W Moving Head Light",
     category: "beam-spot",
     status: "In production",
-    tagline: "An IP66-rated 550 W beam moving head with a massive 200 mm aperture, CMY mixing, and a razor-sharp 1.5° beam.",
+    tagline: "Cabezal móvil de haz de 550 W con clasificación IP66, apertura masiva de 200 mm, mezcla CMY y un haz nítido de 1.5°.",
     intro:
       "Diseñado para soportar los elementos, este cabezal móvil de 550 W con clasificación IP66 combina una apertura colosal de 200 mm con un haz de 1.5° y una salida de 355,500 Lux. Su sistema CMY independiente, 17 gobos, 14 colores y tres prismas apilables desbloquean una creatividad infinita, mientras que una carcasa de aleación de magnesio-aluminio, conexiones impermeables y refrigeración silenciosa lo convierten en una potencia robusta para estadios al aire libre, festivales e instalaciones costeras.",
     image: "/images/fixtures/ip66550w.jpg",
@@ -691,7 +691,7 @@ export const products: Product[] = [
     name: "LED 7x60W BEE EYE Moving Light",
     category: "beam-spot",
     status: "In production",
-    tagline: "An IP65-rated 7x60 W RGBW moving head with a 4°–60° zoom and a 210‑LED pixel ring for limitless eye-candy effects.",
+    tagline: "Cabezal móvil RGBW de 7x60 W con clasificación IP65, zoom de 4°–60° y anillo de píxeles de 210 LEDs para efectos visuales ilimitados.",
     intro:
       "El LED BEE EYE impermeable combina un potente motor RGBW de 7x60 W con un anillo de píxeles de 210 LEDs y control de píxel individual para ofrecer impresionantes efectos de vórtice, caleidoscopio y cintura en un amplio rango de zoom de 4°–60°. Con un espejo frontal infinitamente giratorio, múltiples modos de canal y construcción con clasificación IP65, está diseñado para dominar festivales al aire libre, producciones en gira e instalaciones arquitectónicas —llueva o truene.",
     image: "/images/fixtures/led660wbee.jpg",
@@ -778,7 +778,7 @@ export const products: Product[] = [
     name: "IP65 Strike V",
     category: "strobe",
     status: "In production",
-    tagline: "An IP65-rated 1000 W pixel‑matrix moving head with a 12°–110° beam spread and full Art‑Net control.",
+    tagline: "Cabezal móvil de matriz de píxeles de 1000 W con clasificación IP65, dispersión de haz de 12°–110° y control completo Art‑Net.",
     intro:
       "El IP65 Strike V es una potencia de matriz de píxeles de alta salida, con 24 LEDs principales de 40 W y 24 LEDs auxiliares de 6 W con control de píxel individual para efectos visuales ilimitados. Su amplia dispersión de haz (12°–110° con opciones de E-frost), carcasa de aluminio fundido a presión con clasificación IP65 y soporte Art-Net lo convierten en una opción versátil para festivales al aire libre, giras en estadios y proyecciones arquitectónicas a gran escala —diseñado para funcionar en cualquier clima.",
     image: "/images/fixtures/strikev.jpg",
@@ -843,7 +843,7 @@ export const products: Product[] = [
     name: "LED 48 + 24 LONG STROBE LIGHT",
     category: "strobe",
     status: "In production",
-    tagline: "A 200 W long‑form strobe with LED and 48‑segment pixel control.",
+    tagline: "Estroboscópico de formato largo de 200 W con LED y control de píxeles de 48 segmentos.",
     intro:
       "El LED 48+24 Long Strobe Light ofrece efectos de mapeo de píxeles en un diseño de barra elegante. Con 720 LEDs RGB y blancos fríos y atenuación suave de 0–100%, crea secuencias de colores dinámicas, efectos de flujo de agua y secuencias estroboscópicas variables —perfecto para conciertos, estudios de televisión y clubes.",
     image: "/images/fixtures/4824strobe.jpg",
@@ -896,7 +896,7 @@ export const products: Product[] = [
     name: "960 RGBW LEDs 8 + 8 Segment Strobe Light",
     category: "strobe",
     status: "In production",
-    tagline: "A 250 W pixel‑mapped strobe with 960 RGBW LEDs and 8+8 segment control.",
+    tagline: "Estroboscópico de mapeo de píxeles de 250 W con 960 LEDs RGBW y control de segmentos 8+8.",
     intro:
       "El 960 RGBW Strobe Light contiene 864 LEDs RGB y 96 LEDs blancos de alta potencia en una barra compacta de 8+8 segmentos con control de píxel individual. Su atenuación de 32 bits sin parpadeo, estroboscópico variable de 1–30 Hz y múltiples modos de canal ofrecen secuencias dinámicas, lavados de color y efectos de ráfaga —ideal para conciertos, clubes y producciones en gira.",
     image: "/images/fixtures/900pc.jpg",
@@ -949,7 +949,7 @@ export const products: Product[] = [
     name: "10 x 40W BEAM LIGHT",
     category: "strobe",
     status: "In production",
-    tagline: "A 10‑head 400 W beam light with individual LED control and RDM support.",
+    tagline: "Luz de haz de 10 cabezales de 400 W con control individual de LEDs y soporte RDM.",
     intro:
       "El 10×40W Beam Light combina diez cabezales LED 4-en-1 en una barra compacta con control de píxel individual. Su atenuación de 32 bits, estroboscópico variable y modos de canal flexibles ofrecen efectos aéreos dinámicos y secuencias —perfecto para clubes, DJs móviles y giras.",
     image: "/images/fixtures/1040w.jpg",
