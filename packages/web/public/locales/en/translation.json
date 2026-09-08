@@ -143,6 +143,18 @@
       "summary": "Restrained, quiet lighting for rooms where the fixture should never draw attention.",
       "image": "/images/applications/corporate.jpg"
     }
+      "applications_page": {
+    "eyebrow": "Applications",
+    "title": "Every room punishes a different weakness.",
+    "body": "Touring kills connectors. Theatre hears fans. Broadcast sees flicker. Clubs cook housings. These are the fixtures we would put in front of each brief, and why.",
+    "application_label": "Application",
+    "specified_fixtures": "Specified fixtures",
+    "cta_eyebrow": "Not sure what fits",
+    "cta_title": "Send the room and we will send the list.",
+    "cta_body": "Plot, venue dimensions, throw distances or an existing fixture schedule — any of those is enough for us to propose a rig and the data behind it.",
+    "cta_contact": "Talk to a specifier",
+    "cta_products": "Browse the range"
+  },  
   ],
   
   "about": {
