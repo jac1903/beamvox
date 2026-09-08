@@ -15,18 +15,17 @@ import {
 } from "@/components/site/primitives";
 import { ProductCard } from "@/components/site/product-card";
 
-// ✅ Only show these categories for now
-const ACTIVE_CATEGORIES: CategoryId[] = ["beam-spot", "strobe"];
-
-const isCategoryId = (value: string | null): value is CategoryId =>
-  categories.some((category) => category.id === value);
-
 function Products() {
   const { t } = useTranslation();
-  const { categories, products } = useContent();
+  const { categories, products } = useContent(); // <-- First, get the data
   const search = useSearch();
   const [, navigate] = useLocation();
 
+  const ACTIVE_CATEGORIES: CategoryId[] = ["beam-spot", "strobe"];
+
+  const isCategoryId = (value: string | null): value is CategoryId =>
+    categories.some((category) => category.id === value);
+  
   // Filter categories to only show active ones
   const activeCategories = useMemo(
     () => categories.filter((c) => ACTIVE_CATEGORIES.includes(c.id)),
