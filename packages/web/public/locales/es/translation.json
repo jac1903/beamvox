@@ -15,6 +15,10 @@
       "distribution": "Distribución"
     }
   },
+    "header": {
+    "home": "Inicio",
+    "request_quote": "Solicitar cotización"
+  },
   "positioning": {
     "title": "Un rig completo, desde la cabeza hasta la superficie de control.",
     "description": "Seis plataformas, un lenguaje de control. Los equipos comparten conectores, protocolos y piezas de servicio, por lo que un rig ensamblado del catálogo se comporta como un sistema en lugar de una colección de compras.",
