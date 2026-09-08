@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { ArrowRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useReveal } from "@/hooks/use-reveal";
 import { products, regions, site } from "@/lib/content";
 import { useSubmitContact } from "@/queries/contact";
 import {
   Container,
   Button,
+  ButtonLink,
   Eyebrow,
   PageHero,
   Section,
@@ -164,26 +166,26 @@ function ContactForm() {
   );
 }
 
-const details = [
-  { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
-  { icon: Phone, label: "Phone", value: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}` },
-  { icon: Clock, label: "Hours", value: site.hours },
-  {
-    icon: MapPin,
-    label: "Works",
-    value: `${site.address.line1}, ${site.address.line2}, ${site.address.country}`,
-  },
-];
-
 function Contact() {
+  const { t, i18n } = useTranslation();
   useReveal();
+
+  // Get the phone number from site and format it for WhatsApp
+  const phoneRaw = site.phone;
+  const phoneDigits = phoneRaw.replace(/\D/g, "");
+
+  // Pre-filled message in the correct language
+  const whatsappMessage = t('contact.whatsapp_message', { defaultValue: "Hello, I'm interested in your stage lighting products." });
+
+  // Build WhatsApp URL
+  const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
       <PageHero
-        eyebrow="Contact"
-        title="Send the rig, not just the model number."
-        body="Sales, technical and distribution enquiries all arrive here. Tell us the throw, the venue and the quantity, and the reply will be specific."
+        eyebrow={t('contact.eyebrow')}
+        title={t('contact.title')}
+        body={t('contact.body')}
       />
 
       <Section>
@@ -193,11 +195,10 @@ function Contact() {
               className="border border-line bg-surface p-7 md:p-10"
               data-reveal
             >
-              <Eyebrow>Enquiry form</Eyebrow>
-              <h2 className="display-md mt-5">Tell us what you need</h2>
+              <Eyebrow>{t('contact.form_eyebrow')}</Eyebrow>
+              <h2 className="display-md mt-5">{t('contact.form_title')}</h2>
               <p className="mt-4 text-[0.9375rem] leading-relaxed text-muted">
-                Placeholder form for review — submissions are stored and listed for the sales
-                team.
+                {t('contact.form_body')}
               </p>
               <div className="mt-9">
                 <ContactForm />
@@ -206,9 +207,32 @@ function Contact() {
 
             <div className="space-y-12">
               <div data-reveal data-reveal-delay={80}>
-                <Eyebrow>Direct</Eyebrow>
+                <Eyebrow>{t('contact.direct_eyebrow')}</Eyebrow>
+
+                {/* WhatsApp button */}
+                <div className="mt-6">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-3 rounded-[4px] bg-[#25D366] px-6 py-4 font-medium text-white transition-colors hover:bg-[#1ebe5c]"
+                  >
+                    <MessageCircle className="size-6" />
+                    {t('contact.whatsapp_button')}
+                  </a>
+                </div>
+
                 <ul className="mt-7 border-t border-line">
-                  {details.map(({ icon: Icon, label, value, href }) => (
+                  {[
+                    { icon: Mail, label: t('contact.email_label'), value: site.email, href: `mailto:${site.email}` },
+                    { icon: Phone, label: t('contact.phone_label'), value: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}` },
+                    { icon: Clock, label: t('contact.hours_label'), value: site.hours },
+                    {
+                      icon: MapPin,
+                      label: t('contact.address_label'),
+                      value: `${site.address.line1}, ${site.address.line2}, ${site.address.country}`,
+                    },
+                  ].map(({ icon: Icon, label, value, href }) => (
                     <li key={label} className="flex gap-4 border-b border-line py-5">
                       <Icon className="mt-0.5 size-4 shrink-0 text-ember" aria-hidden="true" />
                       <div>
@@ -228,12 +252,12 @@ function Contact() {
                   ))}
                 </ul>
                 <p className="mt-5 text-[0.8125rem] text-faint">
-                  Placeholder contact details — replace before launch.
+                  {t('contact.placeholder_note')}
                 </p>
               </div>
 
               <div data-reveal data-reveal-delay={140}>
-                <Eyebrow>Regional routing</Eyebrow>
+                <Eyebrow>{t('contact.regions_eyebrow')}</Eyebrow>
                 <ul className="mt-7 space-y-6">
                   {regions.map((region) => (
                     <li key={region.id} className="border-l-2 border-line pl-5">
