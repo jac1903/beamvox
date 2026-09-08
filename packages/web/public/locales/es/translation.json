@@ -335,7 +335,7 @@
     "cta_contact": "Hablar con un especialista",
     "cta_products": "Ver la gama"
   },
-    "why": {
+  "why": {
     "eyebrow": "Por qué Beamvox",
     "title": "El argumento silencioso: nuestros números sobreviven al escrutinio.",
     "body": "Cualquiera puede imprimir una cifra mayor en una hoja de especificaciones. La prueba es si el equipo sigue midiendo igual después de una temporada en la carretera, y si el siguiente lote coincide con el anterior.",
@@ -358,7 +358,7 @@
     "cta_demo": "Solicitar una demostración",
     "cta_data": "Datos fotométricos"
   },
-    "support": {
+  "support": {
     "eyebrow": "Soporte y descargas",
     "title": "Documentación disponible, no bajo solicitud.",
     "body": "Manuales, tablas DMX, perfiles GDTF, archivos fotométricos y firmware para cada modelo de la gama. Archivos provisionales para revisión — los enlaces se activarán cuando la biblioteca de documentos esté conectada.",
@@ -390,8 +390,8 @@
     "step_3_body": "Se emite en un plazo de dos días hábiles, con instrucciones de devolución y, cuando el stock lo permite, un reemplazo enviado antes de la devolución.",
     "faq_eyebrow": "Preguntas frecuentes",
     "faq_title": "Preguntas que respondemos semanalmente",
-    "faq_contact": "¿Algo no cubierto aquí? Las preguntas técnicas llegan a un ingeniero, no a una cola de tickets —"
-          "faqs": [
+    "faq_contact": "¿Algo no cubierto aquí? Las preguntas técnicas llegan a un ingeniero, no a una cola de tickets —",
+    "faqs": [
       {
         "q": "¿Qué cubre la garantía de 12 meses?",
         "a": "Piezas y mano de obra en defectos de fabricación durante 12 meses desde la fecha de factura, gestionado a través del distribuidor que suministró el equipo. Los consumibles como lámparas y gobos están cubiertos por 12 meses."
@@ -411,7 +411,7 @@
       {
         "q": "¿Puedo solicitar una unidad de demostración?",
         "a": "Hay stock de demostración disponible a través de distribuidores regionales para evaluación. Contáctanos y dirigiremos la solicitud al socio más cercano."
-      },
-    ],
+      }
+    ]
   }
 }
