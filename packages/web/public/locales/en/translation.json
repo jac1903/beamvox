@@ -335,7 +335,7 @@
     "cta_contact": "Talk to a specifier",
     "cta_products": "Browse the range"
   },
-    "why": {
+  "why": {
     "eyebrow": "Why Beamvox",
     "title": "The quiet argument: our numbers survive scrutiny.",
     "body": "Anyone can print a bigger figure on a spec sheet. The test is whether the fixture still measures that way after a season on the road, and whether the next batch matches the last one.",
@@ -358,7 +358,7 @@
     "cta_demo": "Request a demonstration",
     "cta_data": "Photometric data"
   },
-    "support": {
+  "support": {
     "eyebrow": "Support & downloads",
     "title": "Documentation on the shelf, not on request.",
     "body": "Manuals, DMX charts, GDTF profiles, photometric files and firmware for every model in the range. Placeholder files for review — links resolve once the document library is connected.",
@@ -390,8 +390,8 @@
     "step_3_body": "Issued within two working days, with return instructions and, where stock allows, a replacement dispatched ahead of the return.",
     "faq_eyebrow": "FAQ",
     "faq_title": "Questions we answer weekly",
-    "faq_contact": "Something not covered here? Technical questions reach an engineer, not a ticket queue —"
-      "faqs": [
+    "faq_contact": "Something not covered here? Technical questions reach an engineer, not a ticket queue —",
+    "faqs": [
       {
         "q": "What is covered by the 12-month warranty?",
         "a": "Parts and labour on manufacturing defects for 12 months from the invoice date, handled through the distributor that supplied the fixture. Consumables such as lamps and gobos are covered for 12 months."
@@ -411,7 +411,7 @@
       {
         "q": "Can I request a demonstration unit?",
         "a": "Demonstration stock is available through regional distributors for evaluation. Contact us and we will route the request to the nearest partner."
-      },
-    ],
+      }
+    ]
   }
 }
