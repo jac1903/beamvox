@@ -391,5 +391,27 @@
     "faq_eyebrow": "Preguntas frecuentes",
     "faq_title": "Preguntas que respondemos semanalmente",
     "faq_contact": "¿Algo no cubierto aquí? Las preguntas técnicas llegan a un ingeniero, no a una cola de tickets —"
+          "faqs": [
+      {
+        "q": "¿Qué cubre la garantía de 12 meses?",
+        "a": "Piezas y mano de obra en defectos de fabricación durante 12 meses desde la fecha de factura, gestionado a través del distribuidor que suministró el equipo. Los consumibles como lámparas y gobos están cubiertos por 12 meses."
+      },
+      {
+        "q": "¿Cuáles son los plazos de entrega típicos?",
+        "a": "Los pedidos configurados u OEM se cotizan con una ventana de producción confirmada en el momento del pedido."
+      },
+      {
+        "q": "¿Ofrecen configuraciones OEM y ODM?",
+        "a": "Sí. El color de la carcasa, la distribución de conectores, la configuración de voltaje y el branding se pueden especificar a partir de una cantidad mínima de pedido acordada. Las modificaciones ópticas se evalúan caso por caso."
+      },
+      {
+        "q": "¿Son compatibles los equipos con mi consola?",
+        "a": "Cada modelo incluye un perfil GDTF y una tabla DMX publicada. Las personalidades para las principales plataformas de consola están disponibles en la sección de descargas."
+      },
+      {
+        "q": "¿Puedo solicitar una unidad de demostración?",
+        "a": "Hay stock de demostración disponible a través de distribuidores regionales para evaluación. Contáctanos y dirigiremos la solicitud al socio más cercano."
+      },
+    ],
   }
 }
