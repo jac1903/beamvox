@@ -334,5 +334,28 @@
     "cta_body": "Plot, venue dimensions, throw distances or an existing fixture schedule — any of those is enough for us to propose a rig and the data behind it.",
     "cta_contact": "Talk to a specifier",
     "cta_products": "Browse the range"
+  },
+    "why": {
+    "eyebrow": "Why Beamvox",
+    "title": "The quiet argument: our numbers survive scrutiny.",
+    "body": "Anyone can print a bigger figure on a spec sheet. The test is whether the fixture still measures that way after a season on the road, and whether the next batch matches the last one.",
+    "specs_eyebrow": "Specification honesty",
+    "specs_title": "How we state a figure, and how it is usually stated",
+    "specs_body": "Not a competitor comparison — a description of the two conventions you will meet while comparing quotes.",
+    "figure_column": "Figure",
+    "ours_column": "How Beamvox states it",
+    "common_column": "Commonly stated as",
+    "manufacturing_eyebrow": "Manufacturing",
+    "manufacturing_title": "Four steps between the board and the box",
+    "after_sale_eyebrow": "After the sale",
+    "after_sale_title": "Most of a fixture's life happens after the invoice",
+    "after_sale_body": "Purchase price is a small part of what a rig costs over ten years. These are the commitments that decide the rest.",
+    "values_eyebrow": "What we hold to",
+    "compliance_eyebrow": "Compliance",
+    "compliance_note": "Certification scope varies by model and market. Declarations of conformity are published for every fixture in the downloads section. Placeholder listing pending final certification records.",
+    "cta_title": "Test the claims with a demo unit.",
+    "cta_body": "Evaluation stock is available through regional distributors. Measure it yourself against the published data.",
+    "cta_demo": "Request a demonstration",
+    "cta_data": "Photometric data"
   }
 }
