@@ -1,8 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from "wouter";
 import { ArrowRight, Check } from "lucide-react";
 import { asset, cn } from "@/lib/utils";
 import { useReveal } from "@/hooks/use-reveal";
-import { applications, productBySlug } from "@/lib/content";
+import { useContent } from "@/lib/use-content";
 import {
   ButtonLink,
   Container,
@@ -12,14 +13,16 @@ import {
 } from "@/components/site/primitives";
 
 function Applications() {
+  const { t } = useTranslation();
+  const { applications, productBySlug } = useContent();
   useReveal();
 
   return (
     <>
       <PageHero
-        eyebrow="Applications"
-        title="Every room punishes a different weakness."
-        body="Touring kills connectors. Theatre hears fans. Broadcast sees flicker. Clubs cook housings. These are the fixtures we would put in front of each brief, and why."
+        eyebrow={t('applications_page.eyebrow')}
+        title={t('applications_page.title')}
+        body={t('applications_page.body')}
       >
         <nav className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8" aria-label="Applications">
           {applications.map((application) => (
@@ -36,8 +39,8 @@ function Applications() {
 
       {applications.map((application, index) => {
         const recommended = application.recommended
-          .map((slug) => productBySlug(slug))
-          .filter((p): p is NonNullable<typeof p> => Boolean(p));
+          ?.map((slug: string) => productBySlug(slug))
+          ?.filter((p): p is NonNullable<typeof p> => Boolean(p)) || [];
 
         return (
           <Section
@@ -67,12 +70,14 @@ function Applications() {
                 </div>
 
                 <div>
-                  <Eyebrow>{String(index + 1).padStart(2, "0")} — Application</Eyebrow>
+                  <Eyebrow>
+                    {String(index + 1).padStart(2, "0")} — {t('applications_page.application_label')}
+                  </Eyebrow>
                   <h2 className="display-lg mt-6">{application.name}</h2>
                   <p className="mt-6 measure text-muted">{application.summary}</p>
 
                   <ul className="mt-9 space-y-4">
-                    {application.points.map((point, i) => (
+                    {application.points?.map((point: string, i: number) => (
                       <li
                         key={point}
                         className="flex gap-3.5 text-[0.9375rem] leading-relaxed text-muted"
@@ -87,7 +92,7 @@ function Applications() {
 
                   <div className="mt-10 border-t border-line pt-7">
                     <p className="font-mono text-[0.625rem] tracking-[0.16em] uppercase text-faint">
-                      Specified fixtures
+                      {t('applications_page.specified_fixtures')}
                     </p>
                     <ul className="mt-4 flex flex-wrap gap-2.5">
                       {recommended.map((product) => (
@@ -115,20 +120,19 @@ function Applications() {
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center" data-reveal>
             <Eyebrow className="justify-center" withRule={false}>
-              Not sure what fits
+              {t('applications_page.cta_eyebrow')}
             </Eyebrow>
-            <h2 className="display-lg mt-6">Send the room and we will send the list.</h2>
+            <h2 className="display-lg mt-6">{t('applications_page.cta_title')}</h2>
             <p className="mt-6 text-muted">
-              Plot, venue dimensions, throw distances or an existing fixture schedule — any of
-              those is enough for us to propose a rig and the data behind it.
+              {t('applications_page.cta_body')}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <ButtonLink href="/contact" size="lg">
-                Talk to a specifier
+                {t('applications_page.cta_contact')}
                 <ArrowRight className="size-4" />
               </ButtonLink>
               <ButtonLink href="/products" variant="outline" size="lg">
-                Browse the range
+                {t('applications_page.cta_products')}
               </ButtonLink>
             </div>
           </div>
