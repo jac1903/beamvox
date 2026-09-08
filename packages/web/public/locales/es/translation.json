@@ -357,5 +357,39 @@
     "cta_body": "Hay stock de evaluación disponible a través de distribuidores regionales. Mídelo tú mismo contra los datos publicados.",
     "cta_demo": "Solicitar una demostración",
     "cta_data": "Datos fotométricos"
+  },
+    "support": {
+    "eyebrow": "Soporte y descargas",
+    "title": "Documentación disponible, no bajo solicitud.",
+    "body": "Manuales, tablas DMX, perfiles GDTF, archivos fotométricos y firmware para cada modelo de la gama. Archivos provisionales para revisión — los enlaces se activarán cuando la biblioteca de documentos esté conectada.",
+    "downloads_heading": "Documentos comerciales",
+    "downloads_note": "Para distribuidores y especificadores.",
+    "downloads_items": [
+      {
+        "title": "Catálogo de productos",
+        "meta": "PDF · 22 MB"
+      },
+      {
+        "title": "Declaración de conformidad — gama completa",
+        "meta": "PDF · 1.4 MB"
+      },
+      {
+        "title": "Términos de garantía",
+        "meta": "PDF · 240 KB"
+      }
+    ],
+    "service_eyebrow": "Garantía y servicio",
+    "service_title": "Si un equipo falla, este es el camino.",
+    "service_body": "12 meses en piezas y mano de obra, gestionado regionalmente. Las piezas de desgaste comunes se mantienen en las tres regiones atendidas, y los socios certificados realizan el trabajo de garantía localmente.",
+    "service_cta": "Abrir una consulta de servicio",
+    "step_1_title": "Contacta a tu distribuidor",
+    "step_1_body": "La garantía y el servicio se gestionan a través del socio que suministró el equipo. Ellos tienen la factura, el stock y la autoridad para reemplazar.",
+    "step_2_title": "Envía los detalles de la falla",
+    "step_2_body": "Modelo, número de serie, versión de firmware, horas de operación y una breve descripción de la falla. Un video del comportamiento con el teléfono ahorra una semana.",
+    "step_3_title": "Recibe una referencia RMA",
+    "step_3_body": "Se emite en un plazo de dos días hábiles, con instrucciones de devolución y, cuando el stock lo permite, un reemplazo enviado antes de la devolución.",
+    "faq_eyebrow": "Preguntas frecuentes",
+    "faq_title": "Preguntas que respondemos semanalmente",
+    "faq_contact": "¿Algo no cubierto aquí? Las preguntas técnicas llegan a un ingeniero, no a una cola de tickets —"
   }
 }
