@@ -10,6 +10,11 @@ import {
   SectionHead,
 } from "@/components/site/primitives";
 
+// Only show the "Commercial documents" download group
+const activeDownloadGroups = downloadGroups.filter(
+  (group) => group.name === "Commercial documents"
+);
+
 const serviceSteps = [
   {
     code: "01",
@@ -39,7 +44,7 @@ function Support() {
         body="Manuals, DMX charts, GDTF profiles, photometric files and firmware for every model in the range. Placeholder files for review — links resolve once the document library is connected."
       >
         <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8">
-          {downloadGroups.map((group) => (
+          {activeDownloadGroups.map((group) => (
             <a
               key={group.name}
               href={`#${group.name.toLowerCase().replace(/[^a-z]+/g, "-")}`}
@@ -61,7 +66,7 @@ function Support() {
       <Section>
         <Container>
           <div className="space-y-16">
-            {downloadGroups.map((group, groupIndex) => (
+            {activeDownloadGroups.map((group, groupIndex) => (
               <div
                 key={group.name}
                 id={group.name.toLowerCase().replace(/[^a-z]+/g, "-")}
@@ -116,7 +121,7 @@ function Support() {
               <Eyebrow>Warranty & service</Eyebrow>
               <h2 className="display-lg mt-6">If a fixture fails, this is the path.</h2>
               <p className="mt-6 measure text-muted">
-                48 months on parts and labour, handled regionally. Common wear parts are held in
+                12 months on parts and labour, handled regionally. Common wear parts are held in
                 all three served regions, and certified partners carry out warranty work
                 locally.
               </p>
