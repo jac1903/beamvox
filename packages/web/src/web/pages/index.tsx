@@ -19,11 +19,11 @@ import { asset } from "@/lib/utils";
 function Hero() {
   const { t } = useTranslation();
   const heroSpecs = [
-  { label: t('hero.specs.platforms'), value: "06" },
-  { label: t('hero.specs.warranty'), value: "12 months" },
-  { label: t('hero.specs.photometrics'), value: "Measured, published" },
-  { label: t('hero.specs.distribution'), value: "3 regions" },
-];
+    { label: t('hero.specs.platforms'), value: "06" },
+    { label: t('hero.specs.warranty'), value: "12 months" },
+    { label: t('hero.specs.photometrics'), value: "Measured, published" },
+    { label: t('hero.specs.distribution'), value: "3 regions" },
+  ];
   return (
     <section className="grain relative isolate flex min-h-[92svh] flex-col justify-end overflow-hidden pt-32 pb-14 md:pb-20">
       <img
@@ -91,10 +91,8 @@ function Positioning() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
           <div data-reveal>
             <Eyebrow>What we make</Eyebrow>
-            <h2 className="display-lg mt-6">{t('positioning.title')}
-            </h2>
-            <p className="mt-6 text-muted">{t('positioning.description')}
-            </p>
+            <h2 className="display-lg mt-6">{t('positioning.title')}</h2>
+            <p className="mt-6 text-muted">{t('positioning.description')}</p>
             <div className="mt-9">
               <TextLink href="/products">{t('positioning.cta')}</TextLink>
             </div>
@@ -133,6 +131,7 @@ function Positioning() {
 
 function Featured() {
   const { t } = useTranslation();
+  const { products } = useContent(); // <-- GET products HERE
   const featured = products.filter((p) => p.featured).slice(0, 3);
 
   return (
@@ -165,6 +164,7 @@ function Featured() {
 }
 
 function Proof() {
+  const { stats } = useContent(); // <-- GET stats HERE
   return (
     <Section tone="surface" className="py-16 md:py-20">
       <Container>
@@ -225,6 +225,7 @@ function Applications() {
 
 function Manufacturing() {
   const { t } = useTranslation();
+  const { capabilities } = useContent(); // <-- GET capabilities HERE
   return (
     <Section tone="surface">
       <Container>
@@ -273,6 +274,7 @@ function Manufacturing() {
 
 function Distribution() {
   const { t } = useTranslation();
+  const { regions, certifications } = useContent(); // <-- GET regions and certifications HERE
   return (
     <Section>
       <Container>
@@ -346,7 +348,7 @@ function ClosingCta() {
               <ArrowRight className="size-4" />
             </ButtonLink>
             <ButtonLink href="/support" variant="outline" size="lg">
-              	{t('cta.support')}
+              {t('cta.support')}
             </ButtonLink>
           </div>
         </div>
@@ -358,7 +360,7 @@ function ClosingCta() {
 function Index() {
   useReveal();
   const { t } = useTranslation();
-  const { applications, capabilities, categories, certifications, products, regions, stats } = useContent();
+  // No need to destructure everything here anymore – each child component gets its own data
   return (
     <>
       <Hero />
