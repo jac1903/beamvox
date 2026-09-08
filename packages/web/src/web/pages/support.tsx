@@ -1,6 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Download, Plus } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
-import { downloadGroups, faqs, site } from "@/lib/content";
+import { faqs, site } from "@/lib/content";
 import {
   ButtonLink,
   Container,
@@ -10,49 +11,37 @@ import {
   SectionHead,
 } from "@/components/site/primitives";
 
-// Only show the "Commercial documents" download group
-const activeDownloadGroups = downloadGroups.filter(
-  (group) => group.name === "Commercial documents"
-);
-
-const serviceSteps = [
-  {
-    code: "01",
-    title: "Contact your distributor",
-    body: "Warranty and service run through the partner that supplied the fixture. They hold the invoice, the stock and the authority to replace.",
-  },
-  {
-    code: "02",
-    title: "Send the fault detail",
-    body: "Model, serial number, firmware version, operating hours and a short description of the fault. A phone video of the behaviour saves a week.",
-  },
-  {
-    code: "03",
-    title: "Receive an RMA reference",
-    body: "Issued within two working days, with return instructions and, where stock allows, a replacement dispatched ahead of the return.",
-  },
-];
-
 function Support() {
+  const { t } = useTranslation();
   useReveal();
+
+  // Get the commercial documents from translation (or from content if you prefer)
+  const downloadGroup = {
+    name: t('support.downloads_heading'),
+    note: t('support.downloads_note'),
+    items: t('support.downloads_items', { returnObjects: true }),
+  };
+
+  const serviceSteps = [
+    { code: "01", title: t('support.step_1_title'), body: t('support.step_1_body') },
+    { code: "02", title: t('support.step_2_title'), body: t('support.step_2_body') },
+    { code: "03", title: t('support.step_3_title'), body: t('support.step_3_body') },
+  ];
 
   return (
     <>
       <PageHero
-        eyebrow="Support & downloads"
-        title="Documentation on the shelf, not on request."
-        body="Manuals, DMX charts, GDTF profiles, photometric files and firmware for every model in the range. Placeholder files for review — links resolve once the document library is connected."
+        eyebrow={t('support.eyebrow')}
+        title={t('support.title')}
+        body={t('support.body')}
       >
         <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8">
-          {activeDownloadGroups.map((group) => (
-            <a
-              key={group.name}
-              href={`#${group.name.toLowerCase().replace(/[^a-z]+/g, "-")}`}
-              className="font-mono text-[0.75rem] tracking-[0.12em] uppercase text-faint transition-colors hover:text-ember"
-            >
-              {group.name}
-            </a>
-          ))}
+          <a
+            href={`#${downloadGroup.name.toLowerCase().replace(/[^a-z]+/g, "-")}`}
+            className="font-mono text-[0.75rem] tracking-[0.12em] uppercase text-faint transition-colors hover:text-ember"
+          >
+            {downloadGroup.name}
+          </a>
           <a
             href="#faq"
             className="font-mono text-[0.75rem] tracking-[0.12em] uppercase text-faint transition-colors hover:text-ember"
@@ -66,49 +55,46 @@ function Support() {
       <Section>
         <Container>
           <div className="space-y-16">
-            {activeDownloadGroups.map((group, groupIndex) => (
+            <div
+              id={downloadGroup.name.toLowerCase().replace(/[^a-z]+/g, "-")}
+              className="scroll-mt-28"
+            >
               <div
-                key={group.name}
-                id={group.name.toLowerCase().replace(/[^a-z]+/g, "-")}
-                className="scroll-mt-28"
+                className="flex flex-wrap items-baseline justify-between gap-4 border-b border-line-strong pb-5"
+                data-reveal
               >
-                <div
-                  className="flex flex-wrap items-baseline justify-between gap-4 border-b border-line-strong pb-5"
-                  data-reveal
-                >
-                  <h2 className="display-md text-xl md:text-2xl">
-                    <span className="mr-4 font-mono text-xs tracking-[0.18em] text-ember">
-                      {String(groupIndex + 1).padStart(2, "0")}
-                    </span>
-                    {group.name}
-                  </h2>
-                  <p className="text-[0.875rem] text-faint">{group.note}</p>
-                </div>
-
-                <ul className="divide-y divide-line">
-                  {group.items.map((item, i) => (
-                    <li key={item.title} data-reveal data-reveal-delay={i * 50}>
-                      <button
-                        type="button"
-                        className="group flex w-full items-center justify-between gap-6 py-5 text-left transition-colors duration-300 hover:bg-surface"
-                      >
-                        <span className="min-w-0">
-                          <span className="block truncate text-[0.9375rem] text-ink">
-                            {item.title}
-                          </span>
-                          <span className="mt-1 block font-mono text-[0.75rem] tracking-[0.06em] text-faint">
-                            {item.meta}
-                          </span>
-                        </span>
-                        <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-[4px] border border-line text-faint transition-colors duration-300 group-hover:border-ember group-hover:text-ember">
-                          <Download className="size-4" />
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+                <h2 className="display-md text-xl md:text-2xl">
+                  <span className="mr-4 font-mono text-xs tracking-[0.18em] text-ember">
+                    01
+                  </span>
+                  {downloadGroup.name}
+                </h2>
+                <p className="text-[0.875rem] text-faint">{downloadGroup.note}</p>
               </div>
-            ))}
+
+              <ul className="divide-y divide-line">
+                {downloadGroup.items.map((item: any, i: number) => (
+                  <li key={item.title} data-reveal data-reveal-delay={i * 50}>
+                    <button
+                      type="button"
+                      className="group flex w-full items-center justify-between gap-6 py-5 text-left transition-colors duration-300 hover:bg-surface"
+                    >
+                      <span className="min-w-0">
+                        <span className="block truncate text-[0.9375rem] text-ink">
+                          {item.title}
+                        </span>
+                        <span className="mt-1 block font-mono text-[0.75rem] tracking-[0.06em] text-faint">
+                          {item.meta}
+                        </span>
+                      </span>
+                      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-[4px] border border-line text-faint transition-colors duration-300 group-hover:border-ember group-hover:text-ember">
+                        <Download className="size-4" />
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </Section>
@@ -118,16 +104,14 @@ function Support() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
             <div data-reveal>
-              <Eyebrow>Warranty & service</Eyebrow>
-              <h2 className="display-lg mt-6">If a fixture fails, this is the path.</h2>
+              <Eyebrow>{t('support.service_eyebrow')}</Eyebrow>
+              <h2 className="display-lg mt-6">{t('support.service_title')}</h2>
               <p className="mt-6 measure text-muted">
-                12 months on parts and labour, handled regionally. Common wear parts are held in
-                all three served regions, and certified partners carry out warranty work
-                locally.
+                {t('support.service_body')}
               </p>
               <div className="mt-9">
                 <ButtonLink href="/contact" variant="outline">
-                  Open a service enquiry
+                  {t('support.service_cta')}
                   <ArrowRight className="size-4" />
                 </ButtonLink>
               </div>
@@ -164,10 +148,9 @@ function Support() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <SectionHead eyebrow="FAQ" title="Questions we answer weekly" />
+              <SectionHead eyebrow={t('support.faq_eyebrow')} title={t('support.faq_title')} />
               <p className="mt-8 text-[0.9375rem] leading-relaxed text-faint">
-                Something not covered here? Technical questions reach an engineer, not a
-                ticket queue —{" "}
+                {t('support.faq_contact')}{" "}
                 <a
                   href={`mailto:${site.email}`}
                   className="text-muted underline-offset-4 hover:text-ember hover:underline"
