@@ -170,14 +170,11 @@ function Contact() {
   const { t, i18n } = useTranslation();
   useReveal();
 
-  // Get the phone number from site and format it for WhatsApp
-  const phoneRaw = site.phone;
+  // Choose the WhatsApp number based on the current language
+  const phoneRaw = i18n.language === 'es' ? site.whatsappPhoneEs : site.whatsappPhoneEn;
   const phoneDigits = phoneRaw.replace(/\D/g, "");
 
-  // Pre-filled message in the correct language
   const whatsappMessage = t('contact.whatsapp_message', { defaultValue: "Hello, I'm interested in your stage lighting products." });
-
-  // Build WhatsApp URL
   const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
