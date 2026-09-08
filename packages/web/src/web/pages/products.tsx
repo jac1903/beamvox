@@ -17,7 +17,7 @@ import { ProductCard } from "@/components/site/product-card";
 
 function Products() {
   const { t } = useTranslation();
-  const { categories, products } = useContent(); // <-- First, get the data
+  const { categories, products } = useContent();
   const search = useSearch();
   const [, navigate] = useLocation();
 
@@ -25,11 +25,11 @@ function Products() {
 
   const isCategoryId = (value: string | null): value is CategoryId =>
     categories.some((category) => category.id === value);
-  
-  // Filter categories to only show active ones
+
+  // ✅ Fixed: depends on categories
   const activeCategories = useMemo(
     () => categories.filter((c) => ACTIVE_CATEGORIES.includes(c.id)),
-    []
+    [categories]
   );
 
   const active = useMemo(() => {
@@ -37,11 +37,11 @@ function Products() {
     return isCategoryId(value) && ACTIVE_CATEGORIES.includes(value) ? value : null;
   }, [search]);
 
-  // Filter products to only show active categories
+  // ✅ Fixed: depends on active AND products
   const visible = useMemo(() => {
     const filtered = products.filter((p) => ACTIVE_CATEGORIES.includes(p.category));
     return active ? filtered.filter((p) => p.category === active) : filtered;
-  }, [active]);
+  }, [active, products]);
 
   const activeCategory = activeCategories.find((c) => c.id === active);
 
@@ -51,7 +51,6 @@ function Products() {
     navigate(id ? `/products?category=${id}` : "/products");
   };
 
-  // Get catalog download URL (you can replace this with your actual catalog file)
   const catalogUrl = "/downloads/catalogue.pdf";
 
   return (
