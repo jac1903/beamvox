@@ -334,5 +334,28 @@
     "cta_body": "Plano, dimensiones del lugar, distancias de proyección o un cronograma de equipos existente — cualquiera de esos es suficiente para que te propongamos un rig y los datos detrás de él.",
     "cta_contact": "Hablar con un especialista",
     "cta_products": "Ver la gama"
+  },
+    "why": {
+    "eyebrow": "Por qué Beamvox",
+    "title": "El argumento silencioso: nuestros números sobreviven al escrutinio.",
+    "body": "Cualquiera puede imprimir una cifra mayor en una hoja de especificaciones. La prueba es si el equipo sigue midiendo igual después de una temporada en la carretera, y si el siguiente lote coincide con el anterior.",
+    "specs_eyebrow": "Honestidad en las especificaciones",
+    "specs_title": "Cómo declaramos una cifra, y cómo se declara habitualmente",
+    "specs_body": "No es una comparación con la competencia — es una descripción de las dos convenciones que encontrarás al comparar cotizaciones.",
+    "figure_column": "Cifra",
+    "ours_column": "Cómo lo declara Beamvox",
+    "common_column": "Declaración común",
+    "manufacturing_eyebrow": "Fabricación",
+    "manufacturing_title": "Cuatro pasos entre la placa y la caja",
+    "after_sale_eyebrow": "Después de la venta",
+    "after_sale_title": "La mayor parte de la vida útil de un equipo ocurre después de la factura",
+    "after_sale_body": "El precio de compra es una pequeña parte de lo que cuesta un rig en diez años. Estos son los compromisos que deciden el resto.",
+    "values_eyebrow": "Lo que defendemos",
+    "compliance_eyebrow": "Cumplimiento",
+    "compliance_note": "El alcance de la certificación varía según el modelo y el mercado. Las declaraciones de conformidad se publican para cada equipo en la sección de descargas. Listado provisional pendiente de los registros de certificación finales.",
+    "cta_title": "Prueba las afirmaciones con una unidad de demostración.",
+    "cta_body": "Hay stock de evaluación disponible a través de distribuidores regionales. Mídelo tú mismo contra los datos publicados.",
+    "cta_demo": "Solicitar una demostración",
+    "cta_data": "Datos fotométricos"
   }
 }
