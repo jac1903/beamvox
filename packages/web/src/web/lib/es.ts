@@ -1008,66 +1008,61 @@ export const applications = [
     id: "touring",
     name: "Conciertos y giras",
     image: "/images/applications/concerts.jpg",
-    summary:
-      "Equipos que sobreviven a una carga de camión cada noche y mantienen la calibración al final de una gira.",
+    summary: "Equipos que sobreviven a una carga de camión cada noche y mantienen la calibración al final de una gira.",
     points: [
       "Cabezales de haz e híbridos para trabajo de largo alcance en arenas",
       "Color consistente entre lotes de producción",
       "Repuestos disponibles en tres almacenes regionales",
     ],
-    recommended: ["bvx-b450-ip", "bvx-h380", "bvx-st1200"],
+    recommended: ["380W Beam Light", "380W Prism King", "IP66 550W Moving Head Light"],
   },
   {
     id: "theatre",
     name: "Teatro y artes escénicas",
     image: "/images/applications/theatre.jpg",
-    summary:
-      "Equipos silenciosos con control de enmarcado, especificados para rigs de repertorio que permanecen años en su lugar.",
+    summary: "Equipos silenciosos con control de enmarcado, especificados para rigs de repertorio que permanecen años en su lugar.",
     points: [
       "Modo teatro de 32 dB(A) en cabezales de perfil",
       "Enmarcado de cuatro cuchillas con rotación de ±60°",
       "Largos intervalos de servicio y acceso sin herramientas",
     ],
-    recommended: ["bvx-s700", "bvx-w760-ip", "bvx-bl8"],
+    recommended: ["380W Prism King", "LED600W Beam Light"],
   },
   {
     id: "broadcast",
     name: "Televisión y broadcast",
     image: "/images/applications/broadcast.jpg",
-    summary:
-      "Salida sin parpadeo con alta fidelidad de color para entornos de estudio con múltiples cámaras.",
+    summary: "Salida sin parpadeo con alta fidelidad de color para entornos de estudio con múltiples cámaras.",
     points: [
       "PWM seleccionable hasta 25 kHz",
       "CRI ≥ 92 con puntos blancos calibrados",
       "Ajuste de tinte sobre RDM para coincidencia de cámaras",
     ],
-    recommended: ["bvx-w760-ip", "bvx-s700", "bvx-px1000-ip"],
+    recommended: ["LED600W Beam Light", "LED400W Beam Light"],
   },
   {
     id: "clubs",
     name: "Clubes y vida nocturna",
     image: "/images/applications/club.jpg",
-    summary:
-      "Cabezales compactos y equipos de efectos diseñados para largas horas nocturnas en espacios cálidos y cerrados.",
+    summary: "Cabezales compactos y equipos de efectos diseñados para largas horas nocturnas en espacios cálidos y cerrados.",
     points: [
       "Cabezales de efectos y matriz con rotación continua",
       "Carcasas enfriadas por convección sin filtros que limpiar",
       "Modos autónomos y sensibles al sonido para espacios pequeños",
     ],
-    recommended: ["bvx-m19", "bvx-h380", "bvx-st1200"],
+    recommended: ["IP65 Strike V", "LED 48 + 24 LONG STROBE LIGHT", "10 x 40W BEAM LIGHT"],
   },
   {
     id: "corporate",
     name: "Corporativo y casas de culto",
     image: "/images/applications/corporate.jpg",
-    summary:
-      "Iluminación discreta y silenciosa para espacios donde el equipo no debe llamar la atención.",
+    summary: "Iluminación discreta y silenciosa para espacios donde el equipo no debe llamar la atención.",
     points: [
       "Operación de bajo ruido para programas hablados",
       "Equipos arquitectónicos estáticos para instalación permanente",
       "Control sencillo desde una superficie de control pequeña",
     ],
-    recommended: ["bvx-ar200-ip", "bvx-px1000-ip", "bvx-c24"],
+    recommended: ["380W Prism King", "LED600W Beam Light"],
   },
 ];
 
