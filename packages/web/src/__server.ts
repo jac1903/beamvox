@@ -1,26 +1,36 @@
-import { Hono } from "hono";
-import { cors } from "hono/cors";
 import apiApp from "./api";
+import { cors } from "hono/cors";
 
-// Create a new Hono app to handle everything
-const app = new Hono();
+const port = Number(process.env.PORT ?? 3000);
 
-// Add CORS middleware
-app.use("*", cors({
+console.log(`🚀 Starting server on port ${port}`);
+
+// Add CORS middleware to the API app
+apiApp.use("*", cors({
   origin: "https://jac1903.github.io",
   allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowHeaders: ["Content-Type"],
 }));
 
-// Mount your API app under /api
-app.route("/api", apiApp);
-
-const port = Number(process.env.PORT ?? 3000);
-
 const server = Bun.serve({
   hostname: "0.0.0.0",
   port,
-  fetch: app.fetch,
+  async fetch(request) {
+    const url = new URL(request.url);
+    console.log(`📨 ${request.method} ${url.pathname}`);
+
+    // ✅ Forward ALL requests to the Hono app (it will handle routing)
+    // Your Hono app expects /contact/submit, not /api/contact/submit
+    // So we strip the /api prefix
+    if (url.pathname.startsWith("/api")) {
+      const newPath = url.pathname.replace(/^\/api/, "");
+      const newUrl = new URL(newPath, url.origin);
+      const newRequest = new Request(newUrl.toString(), request);
+      return apiApp.fetch(newRequest);
+    }
+
+    return new Response("Not found", { status: 404 });
+  },
 });
 
-console.log(`✅ Server listening on http://0.0.0.0:${port}`);
+console.log(`✅ Server listening on http://0.0.0.0:${server.port}`);
