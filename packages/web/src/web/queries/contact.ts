@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
 // ✅ Use your Render API URL
-const API_URL = import.meta.env.VITE_API_URL || "https://beamvox-api.onrender.com";
+const API_URL = "https://beamvox-api.onrender.com";
 
 interface FormValues {
   name: string;
@@ -17,7 +17,11 @@ interface FormValues {
 export function useSubmitContact() {
   return useMutation({
     mutationFn: async (data: FormValues) => {
-      const response = await fetch(`${API_URL}/api/contact/submit`, {
+      const url = `${API_URL}/api/contact/submit`;
+      console.log("📤 Sending to:", url);
+      console.log("📦 Data:", data);
+
+      const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -25,10 +29,13 @@ export function useSubmitContact() {
 
       if (!response.ok) {
         const errorText = await response.text();
+        console.error("❌ Error response:", errorText);
         throw new Error(errorText || "Failed to submit");
       }
 
-      return response.json();
+      const result = await response.json();
+      console.log("✅ Success:", result);
+      return result;
     },
   });
 }
