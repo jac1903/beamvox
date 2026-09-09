@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 
-// Use the Render API URL – change this to your actual Render URL
+// ✅ Use your Render API URL
 const API_URL = import.meta.env.VITE_API_URL || "https://beamvox-api.onrender.com";
 
 interface FormValues {
