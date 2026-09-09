@@ -12,6 +12,10 @@ apiApp.use("*", cors({
   allowHeaders: ["Content-Type"],
 }));
 
+// ➕ Add a simple health check route
+apiApp.get("/", (c) => c.text("OK"));
+apiApp.get("/health", (c) => c.text("OK"));
+
 const server = Bun.serve({
   hostname: "0.0.0.0",
   port,
@@ -19,17 +23,16 @@ const server = Bun.serve({
     const url = new URL(request.url);
     console.log(`📨 ${request.method} ${url.pathname}`);
 
-    // ✅ Forward ALL requests to the Hono app (it will handle routing)
-    // Your Hono app expects /contact/submit, not /api/contact/submit
-    // So we strip the /api prefix
-    if (url.pathname.startsWith("/api")) {
-      const newPath = url.pathname.replace(/^\/api/, "");
-      const newUrl = new URL(newPath, url.origin);
-      const newRequest = new Request(newUrl.toString(), request);
-      return apiApp.fetch(newRequest);
+    // Forward all requests to the Hono app
+    // The Hono app expects /contact/submit, not /api/contact/submit
+    // So we strip the /api prefix if present
+    let path = url.pathname;
+    if (path.startsWith("/api")) {
+      path = path.replace(/^\/api/, "");
     }
-
-    return new Response("Not found", { status: 404 });
+    const newUrl = new URL(path, url.origin);
+    const newRequest = new Request(newUrl.toString(), request);
+    return apiApp.fetch(newRequest);
   },
 });
 
