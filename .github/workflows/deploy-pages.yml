@@ -46,6 +46,10 @@ jobs:
           # named FORM_ENDPOINT and the forms will POST there instead of
           # falling back to the visitor's mail client.
           VITE_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
+          # 🔥 Email environment variables for nodemailer
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: bun run build:web
 
       - name: Add SPA fallback and disable Jekyll
