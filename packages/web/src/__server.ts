@@ -19,15 +19,16 @@ const server = Bun.serve({
     const url = new URL(request.url);
     console.log(`📨 ${request.method} ${url.pathname}`);
 
-    // ✅ Handle API requests – forward to Hono app
+    // ✅ If it's an API request, forward to the Hono app
     if (url.pathname.startsWith("/api")) {
-      // ✅ Strip the /api prefix so the Hono app gets the correct route
-      const newUrl = new URL(request.url);
-      newUrl.pathname = url.pathname.replace(/^\/api/, "");
+      // Strip the /api prefix
+      const newPath = url.pathname.replace(/^\/api/, "");
+      const newUrl = new URL(newPath, url.origin);
       const newRequest = new Request(newUrl.toString(), request);
       return app.fetch(newRequest);
     }
 
+    // For non-API requests, return 404 (or serve static files if needed)
     return new Response("Not found", { status: 404 });
   },
 });
