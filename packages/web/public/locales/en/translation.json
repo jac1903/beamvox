@@ -434,5 +434,11 @@
     "regions_eyebrow": "Regional routing",
     "whatsapp_button": "Chat with us on WhatsApp",
     "whatsapp_message": "Hello, I'm interested in your stage lighting products."
+  },
+    "consent": {
+    "message": "We use cookies to enhance your browsing experience and analyze site traffic.",
+    "accept": "Accept All",
+    "decline": "Decline",
+    "settings": "Customize"
   }
 }
