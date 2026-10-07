@@ -190,3 +190,21 @@
   }
   html { scroll-behavior: auto; }
 }
+
+/* Cookie consent banner – custom button colors */
+.consent-popup button,
+.consent-popup .button,
+[class*="consent"] button {
+  background-color: #FF6A1A !important;
+  border-color: #FF6A1A !important;
+  color: #08080A !important;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.consent-popup button:hover,
+.consent-popup .button:hover,
+[class*="consent"] button:hover {
+  background-color: #FF9A5C !important;
+  border-color: #FF9A5C !important;
+}
