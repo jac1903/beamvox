@@ -191,42 +191,34 @@
   html { scroll-behavior: auto; }
 }
 
-/* Cookie consent banner – override all button styles */
-div[class*="consent"] button,
-div[class*="Consent"] button,
-div[class*="cookie"] button,
-div[class*="Cookie"] button,
-div[class*="banner"] button,
-[class*="consent"] button,
-[class*="Consent"] button,
-[class*="cookie"] button,
-[class*="Cookie"] button,
-button[class*="approve"],
-button[class*="decline"],
-button[class*="settings"],
-button[class*="accept"] {
+/* Cookie consent banner – override library button styles */
+.rcc-popup_btn {
   background: #FF6A1A !important;
   background-color: #FF6A1A !important;
   background-image: none !important;
   border: 1px solid #FF6A1A !important;
   color: #08080A !important;
   font-weight: 600 !important;
-  transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
 }
 
-div[class*="consent"] button:hover,
-div[class*="Consent"] button:hover,
-div[class*="cookie"] button:hover,
-div[class*="Cookie"] button:hover,
-div[class*="banner"] button:hover,
-[class*="consent"] button:hover,
-[class*="cookie"] button:hover,
-button[class*="approve"]:hover,
-button[class*="decline"]:hover,
-button[class*="settings"]:hover,
-button[class*="accept"]:hover {
+.rcc-popup_btn:hover {
   background: #FF9A5C !important;
   background-color: #FF9A5C !important;
   border-color: #FF9A5C !important;
   color: #08080A !important;
+}
+
+/* Optional: make the primary button stand out more */
+.rcc-popup_btn--primary {
+  background: #FF6A1A !important;
+  background-color: #FF6A1A !important;
+  border-color: #FF6A1A !important;
+  color: #08080A !important;
+}
+
+.rcc-popup_btn--primary:hover {
+  background: #FF9A5C !important;
+  background-color: #FF9A5C !important;
+  border-color: #FF9A5C !important;
 }
