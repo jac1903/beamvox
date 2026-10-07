@@ -5,8 +5,7 @@ import { AgentFeedback } from "@runablehq/website-runtime";
 import { Header } from "./components/site/header";
 import { Footer } from "./components/site/footer";
 import { useScrollTop } from "./hooks/use-reveal";
-import { ConsentProvider, ConsentPopup } from 'react-cookie-consent-popup';
-import 'react-cookie-consent-popup/styles';
+import CookieConsent from "react-cookie-consent";
 
 import Index from "./pages/index";
 import Products from "./pages/products";
@@ -69,33 +68,47 @@ function App() {
 
   return (
     <Provider>
-      <ConsentProvider
-        options={{
-          services: consentServices,
-          theme: 'dark',
-          onConsentChange: (consent) => console.log('Consent updated:', consent),
+      <Router base={routerBase}>
+        <div className="flex min-h-screen flex-col bg-void text-ink">
+          <Header />
+          <main className="flex-1">
+            <Routes />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+
+      <CookieConsent
+        location="bottom"
+        buttonText={t('consent.accept')}
+        declineButtonText={t('consent.decline')}
+        enableDeclineButton
+        cookieName="beamvox-consent"
+        expires={365}
+        buttonStyle={{
+          background: "#FF6A1A",
+          color: "#08080A",
+          fontSize: "15px",
+          fontWeight: 600,
+          borderRadius: "4px",
+        }}
+        declineButtonStyle={{
+          background: "#FF6A1A",
+          color: "#08080A",
+          fontSize: "15px",
+          fontWeight: 600,
+          borderRadius: "4px",
+        }}
+        style={{
+          background: "#0f1013",
+          color: "#f6f5f3",
+          alignItems: "center",
         }}
       >
-        <Router base={routerBase}>
-          <div className="flex min-h-screen flex-col bg-void text-ink">
-            <Header />
-            <main className="flex-1">
-              <Routes />
-            </main>
-            <Footer />
-          </div>
-        </Router>
+        {t('consent.message')}
+      </CookieConsent>
 
-        <ConsentPopup
-          settings={{ label: t('consent.settings') }}
-          decline={{ label: t('consent.decline') }}
-          approve={{ label: t('consent.accept') }}
-        >
-          {t('consent.message')}
-        </ConsentPopup>
-
-        {import.meta.env.DEV && <AgentFeedback />}
-      </ConsentProvider>
+      {import.meta.env.DEV && <AgentFeedback />}
     </Provider>
   );
 }
