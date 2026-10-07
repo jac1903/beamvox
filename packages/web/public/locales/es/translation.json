@@ -434,5 +434,11 @@
     "regions_eyebrow": "Enrutamiento regional",
     "whatsapp_button": "Chatea con nosotros en WhatsApp",
     "whatsapp_message": "Hola, estoy interesado en sus productos de iluminación escénica."
+  },
+    "consent": {
+    "message": "Usamos cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio.",
+    "accept": "Aceptar todo",
+    "decline": "Rechazar",
+    "settings": "Personalizar"
   }
 }
