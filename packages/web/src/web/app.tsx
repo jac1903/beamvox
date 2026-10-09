@@ -6,6 +6,9 @@ import { Header } from "./components/site/header";
 import { Footer } from "./components/site/footer";
 import { useScrollTop } from "./hooks/use-reveal";
 import CookieConsent from "react-cookie-consent";
+import { getCookieConsentValue } from "react-cookie-consent";
+import { useEffect } from "react";
+import { loadRunableAnalytics } from "./lib/analytics-consent";
 
 import Index from "./pages/index";
 import Products from "./pages/products";
@@ -15,6 +18,7 @@ import WhyBeamvox from "./pages/why-beamvox";
 import Support from "./pages/support";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Legal from "./pages/legal";
 
 function NotFound() {
   return (
@@ -45,6 +49,7 @@ function Routes() {
       <Route path="/support" component={Support} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/legal" component={Legal} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -52,19 +57,14 @@ function Routes() {
 
 const routerBase = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
 
-// Define your cookie services here
-const consentServices = [
-  {
-    id: 'essential',
-    name: 'Essential Cookies',
-    description: 'Required for the website to function properly.',
-    mandatory: true,
-  },
-  // Add analytics or marketing services later if needed
-];
-
 function App() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (getCookieConsentValue("beamvox-consent") === "true") {
+      loadRunableAnalytics();
+    }
+  }, []);
 
   return (
     <Provider>
@@ -85,6 +85,7 @@ function App() {
         enableDeclineButton
         cookieName="beamvox-consent"
         expires={365}
+        onAccept={loadRunableAnalytics}
         buttonStyle={{
           background: "#FF6A1A",
           color: "#08080A",

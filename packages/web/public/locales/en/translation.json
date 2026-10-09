@@ -435,10 +435,55 @@
     "whatsapp_button": "Chat with us on WhatsApp",
     "whatsapp_message": "Hello, I'm interested in your stage lighting products."
   },
-    "consent": {
-    "message": "We use cookies to enhance your browsing experience and analyze site traffic.",
-    "accept": "Accept All",
-    "decline": "Decline",
+    "footer": {
+    "legal": "Legal"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Legal information",
+    "intro": "General information about privacy, cookies, site content, and use of this website.",
+    "generalNotice": "This general draft avoids identifying a specific legal entity or jurisdiction. It may need review and adaptation before being relied on for a particular use.",
+    "manageConsent": "Manage cookie choice",
+    "sections": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "paragraphs": [
+          "If you send an enquiry or application through this website, the information you choose to provide may include your name, contact details, company, location, areas of interest, and message. The information is used to receive and respond to the request and to operate the related website functions.",
+          "Information submitted through forms may pass through services configured to receive, transmit, store, or route submissions. The providers and processing locations depend on the website deployment and configuration. This page does not identify a specific provider or server location.",
+          "This website may also process basic technical and usage information when optional analytics is enabled after consent. See the Cookie Policy for details. Retention and handling depend on the systems used and the circumstances of the request; no specific retention period is stated here.",
+          "For questions about information submitted through this website, use the contact options shown on the Contact page. This general summary does not describe jurisdiction-specific rights or procedures."
+        ]
+      },
+      "cookies": {
+        "title": "Cookie Policy",
+        "paragraphs": [
+          "This website stores your cookie choice in a consent cookie. The choice is saved for up to 365 days. You can use the control below to clear the saved choice and see the consent prompt again.",
+          "The site also saves your language preference in browser local storage. This is separate from a cookie and helps remember the selected site language.",
+          "Optional Runable analytics loads only after you select Accept. It can report page views and information such as page paths, referring pages, and campaign tags. If you select Decline, the analytics script is not loaded."
+        ]
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "paragraphs": [
+          "Website content is provided for general information. Product descriptions, specifications, availability, and other content may change and may not cover every use or installation. Confirm details relevant to a project before relying on them.",
+          "Content on this website is not a substitute for advice or assessment tailored to a specific technical, safety, commercial, or other situation. Use of the information and website is at the visitor’s discretion, subject to requirements that apply in the relevant circumstances."
+        ]
+      },
+      "terms": {
+        "title": "Terms of Use",
+        "paragraphs": [
+          "Use this website in a lawful and respectful way. Do not attempt to disrupt its operation, bypass access controls, or use it to send harmful or misleading material.",
+          "Website content is provided for general reference. Do not treat product information as a confirmed offer, order acceptance, or project-specific specification. Any transaction or service may be subject to additional terms provided for that purpose.",
+          "Third-party sites or services may have their own terms and privacy information. Review those notices when using them.",
+          "This page contains general terms and does not specify a governing law, forum, or legal entity. If this text is revised, the updated version will appear on this page."
+        ]
+      }
+    }
+  },
+  "consent": {
+    "message": "An essential cookie remembers your choice. Optional analytics runs only if you accept. You can change your choice from the Legal page.",
+    "accept": "Accept analytics",
+    "decline": "Decline optional analytics",
     "settings": "Customize"
   }
 }

@@ -435,10 +435,55 @@
     "whatsapp_button": "Chatea con nosotros en WhatsApp",
     "whatsapp_message": "Hola, estoy interesado en sus productos de iluminación escénica."
   },
-    "consent": {
-    "message": "Usamos cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio.",
-    "accept": "Aceptar todo",
-    "decline": "Rechazar",
+    "footer": {
+    "legal": "Información legal"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Información legal",
+    "intro": "Información general sobre privacidad, cookies, contenido y uso de este sitio web.",
+    "generalNotice": "Este borrador general no identifica una entidad legal ni una jurisdicción específica. Puede requerir revisión y adaptación antes de utilizarse para un propósito concreto.",
+    "manageConsent": "Gestionar elección de cookies",
+    "sections": {
+      "privacy": {
+        "title": "Política de privacidad",
+        "paragraphs": [
+          "Si envías una consulta o solicitud mediante este sitio web, la información que decidas proporcionar puede incluir tu nombre, datos de contacto, empresa, ubicación, áreas de interés y mensaje. La información se utiliza para recibir y responder la solicitud y operar las funciones relacionadas del sitio.",
+          "La información enviada mediante formularios puede pasar por servicios configurados para recibir, transmitir, almacenar o dirigir los envíos. Los proveedores y las ubicaciones de tratamiento dependen de la implementación y configuración del sitio. Esta página no identifica un proveedor ni una ubicación de servidor específicos.",
+          "Este sitio también puede procesar información técnica y de uso básica cuando se habilitan las analíticas opcionales después del consentimiento. Consulta la Política de cookies. El manejo y la conservación dependen de los sistemas utilizados y las circunstancias de la solicitud; aquí no se establece un período concreto de conservación.",
+          "Para consultas sobre la información enviada mediante este sitio, utiliza las opciones de contacto de la página Contacto. Este resumen general no describe derechos ni procedimientos específicos de una jurisdicción."
+        ]
+      },
+      "cookies": {
+        "title": "Política de cookies",
+        "paragraphs": [
+          "Este sitio guarda tu elección de cookies en una cookie de consentimiento. La elección se conserva hasta 365 días. Puedes utilizar el control siguiente para borrar la elección guardada y volver a mostrar el aviso de consentimiento.",
+          "El sitio también guarda tu preferencia de idioma en el almacenamiento local del navegador. Es distinto de una cookie y ayuda a recordar el idioma seleccionado.",
+          "Runable Analytics, una función opcional de analítica, se carga únicamente si seleccionas Aceptar. Puede informar visitas a páginas e información como rutas, páginas de referencia y etiquetas de campaña. Si seleccionas Rechazar, el script de analítica no se carga."
+        ]
+      },
+      "disclaimer": {
+        "title": "Aviso legal",
+        "paragraphs": [
+          "El contenido del sitio se ofrece con fines informativos generales. Las descripciones de productos, especificaciones, disponibilidad y demás contenido pueden cambiar y quizá no contemplen todos los usos o instalaciones. Confirma los detalles pertinentes antes de basarte en ellos.",
+          "El contenido de este sitio no sustituye una evaluación o asesoría adaptada a una situación técnica, de seguridad, comercial u otra específica. El visitante decide cómo utilizar la información y el sitio, sujeto a los requisitos aplicables en cada circunstancia."
+        ]
+      },
+      "terms": {
+        "title": "Términos de uso",
+        "paragraphs": [
+          "Utiliza este sitio web de forma lícita y respetuosa. No intentes interrumpir su funcionamiento, eludir controles de acceso ni utilizarlo para enviar material dañino o engañoso.",
+          "El contenido del sitio se ofrece como referencia general. No consideres la información de productos como una oferta confirmada, aceptación de un pedido o especificación para un proyecto concreto. Una transacción o servicio puede estar sujeto a condiciones adicionales proporcionadas para ese fin.",
+          "Los sitios o servicios de terceros pueden tener sus propias condiciones e información de privacidad. Consulta esos avisos cuando los utilices.",
+          "Esta página contiene términos generales y no especifica una ley aplicable, un foro ni una entidad legal. Si se revisa este texto, la versión actualizada aparecerá en esta página."
+        ]
+      }
+    }
+  },
+  "consent": {
+    "message": "Una cookie esencial recuerda tu elección. Las analíticas opcionales solo se activan si aceptas. Puedes cambiar tu elección desde la página Legal.",
+    "accept": "Aceptar analíticas",
+    "decline": "Rechazar analíticas opcionales",
     "settings": "Personalizar"
   }
 }

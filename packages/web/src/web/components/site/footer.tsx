@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { categories, regions, site } from "@/lib/content";
 import { Container } from "./primitives";
@@ -33,6 +34,8 @@ const columns = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative overflow-hidden border-t border-line" style={{ minHeight: '400px' }}>
       {/* 🏢 Background image - Company facade */}
@@ -119,6 +122,9 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.legalName}. All rights reserved. Placeholder
             content for review.
+            <Link to="/legal" className="ml-4 text-ink transition-colors hover:text-ember">
+              {t("footer.legal")}
+            </Link>
           </p>
           <p className="font-mono tracking-[0.08em]">
             Specifications subject to change without notice

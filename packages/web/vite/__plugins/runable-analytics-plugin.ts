@@ -15,10 +15,11 @@ export default function runableAnalyticsPlugin(): Plugin {
 				? `${applicationId}-website`
 				: "localhost";
 
-			// Runable analytics script — do not remove, required for analytics tracking
+			// Keep analytics configuration in the document without loading the tracker.
+			// The app activates the script only after the visitor accepts analytics cookies.
 			const script = doc.createElement("script");
-			script.defer = true;
-			script.src = "/runable.js";
+			script.type = "text/plain";
+			script.dataset.runableAnalytics = "consent-gated";
 			script.dataset.hostname = hostname;
 			script.dataset.url = "https://r.lilstts.com/events";
 			if (hostname === "localhost") {
