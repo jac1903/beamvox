@@ -482,6 +482,7 @@
   },
   "consent": {
     "message": "Una cookie esencial recuerda tu elección. Las analíticas opcionales solo se activan si aceptas. Puedes cambiar tu elección desde la página Legal.",
+    "readPolicies": "Leer políticas",
     "accept": "Aceptar analíticas",
     "decline": "Rechazar analíticas opcionales",
     "settings": "Personalizar"

@@ -482,6 +482,7 @@
   },
   "consent": {
     "message": "An essential cookie remembers your choice. Optional analytics runs only if you accept. You can change your choice from the Legal page.",
+    "readPolicies": "Read policies",
     "accept": "Accept analytics",
     "decline": "Decline optional analytics",
     "settings": "Customize"

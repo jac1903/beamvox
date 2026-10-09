@@ -106,7 +106,10 @@ function App() {
           alignItems: "center",
         }}
       >
-        {t('consent.message')}
+        {t('consent.message')} {" "}
+        <a href={`${routerBase}/legal`} className="underline underline-offset-2">
+          {t('consent.readPolicies')}
+        </a>
       </CookieConsent>
 
       {import.meta.env.DEV && <AgentFeedback />}
