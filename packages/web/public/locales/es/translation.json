@@ -368,6 +368,8 @@
     "body": "Manuales, tablas DMX, perfiles GDTF, archivos fotométricos y firmware para cada modelo de la gama. Archivos provisionales para revisión — los enlaces se activarán cuando la biblioteca de documentos esté conectada.",
     "downloads_heading": "Documentos comerciales",
     "downloads_note": "Para distribuidores y especificadores.",
+    "resource_unavailable": "Este recurso todavía no está disponible.",
+    "unavailable_label": "No disponible",
     "downloads_items": [
       {
         "title": "Catálogo de productos",
@@ -424,7 +426,7 @@
     "body": "Consultas de ventas, técnicas y de distribución llegan aquí. Dinos el alcance, el lugar y la cantidad, y la respuesta será específica.",
     "form_eyebrow": "Formulario de consulta",
     "form_title": "Cuéntanos lo que necesitas",
-    "form_body": "Formulario provisional para revisión — los envíos se almacenan y se listan para el equipo de ventas.",
+    "form_body": "Utiliza este formulario para consultas comerciales, técnicas o de distribución.",
     "direct_eyebrow": "Directo",
     "email_label": "Correo electrónico",
     "phone_label": "Teléfono",
@@ -433,10 +435,102 @@
     "placeholder_note": "Datos de contacto provisionales — reemplazar antes del lanzamiento.",
     "regions_eyebrow": "Enrutamiento regional",
     "whatsapp_button": "Chatea con nosotros en WhatsApp",
-    "whatsapp_message": "Hola, estoy interesado en sus productos de iluminación escénica."
+    "whatsapp_message": "Hola, estoy interesado en sus productos de iluminación escénica.",
+    "fields": {
+      "name": "Nombre",
+      "email": "Correo electrónico de trabajo",
+      "company": "Empresa",
+      "country": "País",
+      "phone": "Teléfono",
+      "enquiry_type": "Tipo de consulta",
+      "product_interest": "Producto de interés",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Tu nombre completo",
+      "email": "nombre@empresa.com",
+      "company": "Empresa o recinto",
+      "country": "País donde se utilizarán los equipos",
+      "phone": "Incluye el código de país",
+      "enquiry_type": "Selecciona un tipo",
+      "product_interest": "Ningún modelo en particular",
+      "message": "Cuéntanos qué necesitas iluminar."
+    },
+    "hints": {
+      "product_interest": "Opcional: nos ayuda a dirigir la consulta.",
+      "message": "La distancia de proyección, el tamaño del recinto, las cantidades y los plazos nos ayudarán a responder con más precisión."
+    },
+    "enquiry_types": {
+      "product_specification": "Consulta sobre productos o especificaciones",
+      "quotation": "Solicitud de cotización",
+      "distribution": "Consulta sobre distribución",
+      "technical_support": "Soporte técnico",
+      "warranty_service": "Garantía o servicio",
+      "other": "Otro"
+    },
+    "form_status": {
+      "success_title": "Consulta recibida",
+      "success_body": "Respondemos en un día hábil, según la zona horaria de tu región.",
+      "error_body": "No se pudo enviar el mensaje. Revisa los campos obligatorios o contáctanos por correo electrónico.",
+      "sending": "Enviando…",
+      "submit": "Enviar consulta",
+      "privacy_note": "Usamos tus datos únicamente para responder a esta consulta."
+    },
+    "regions": {
+      "europe": {
+        "name": "Europa",
+        "note": "Almacén con existencias y despacho en 48 horas para los productos de catálogo."
+      },
+      "americas": {
+        "name": "Américas",
+        "note": "Hay variantes con certificación ETL y configuraciones de 120 V disponibles bajo solicitud."
+      },
+      "africa": {
+        "name": "África",
+        "note": "Socios regionales de servicio para reparaciones en garantía y repuestos."
+      }
+    }
   },
     "footer": {
-    "legal": "Información legal"
+    "legal": "Información legal",
+    "distribution_information": "Información de distribución",
+    "columns": {
+      "products": "Productos",
+      "company": "Empresa",
+      "partners_support": "Socios y soporte"
+    },
+    "links": {
+      "about": "Acerca de Beamvox",
+      "why_beamvox": "Por qué Beamvox",
+      "applications": "Aplicaciones",
+      "contact": "Contacto",
+      "manuals_downloads": "Manuales y descargas",
+      "faq": "Preguntas frecuentes"
+    },
+    "categories": {
+      "beam-spot": "Beam y Spot",
+      "wash-profile": "Wash y Profile",
+      "effect": "Efectos y matrices",
+      "strobe": "Strobe y blinder",
+      "static": "Iluminación fija y arquitectónica",
+      "control": "Control"
+    },
+    "regions": {
+      "europe": "Europa",
+      "americas": "Américas",
+      "africa": "África"
+    },
+    "factory_image_alt": "Entrada de la empresa",
+    "site_description": "Iluminación profesional para escenarios, fabricada para giras, teatro, televisión e instalaciones permanentes. Se suministra mediante distribuidores en Europa, Américas y África.",
+    "copyright": "© {{year}} {{name}}. Todos los derechos reservados.",
+    "placeholder_notice": "Contenido provisional para revisión.",
+    "specifications_notice": "Las especificaciones pueden cambiar sin previo aviso."
+  },
+  "partners_page": {
+    "eyebrow": "Distribución",
+    "title": "Información de distribución",
+    "body": "Estamos confirmando la información sobre territorios de distribución y condiciones de solicitud.",
+    "notice": "Esta página no tiene un formulario de solicitud ni un directorio de distribuidores. Aquí no se enviará ninguna solicitud."
   },
   "legal": {
     "eyebrow": "Legal",

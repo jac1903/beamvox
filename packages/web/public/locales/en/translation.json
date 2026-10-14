@@ -368,6 +368,8 @@
     "body": "Manuals, DMX charts, GDTF profiles, photometric files and firmware for every model in the range. Placeholder files for review — links resolve once the document library is connected.",
     "downloads_heading": "Commercial documents",
     "downloads_note": "For distributors and specifiers.",
+    "resource_unavailable": "This resource is not available yet.",
+    "unavailable_label": "Unavailable",
     "downloads_items": [
       {
         "title": "Product catalogue",
@@ -424,7 +426,7 @@
     "body": "Sales, technical and distribution enquiries all arrive here. Tell us the throw, the venue and the quantity, and the reply will be specific.",
     "form_eyebrow": "Enquiry form",
     "form_title": "Tell us what you need",
-    "form_body": "Placeholder form for review — submissions are stored and listed for the sales team.",
+    "form_body": "Use this form for sales, technical or distribution enquiries.",
     "direct_eyebrow": "Direct",
     "email_label": "Email",
     "phone_label": "Phone",
@@ -433,10 +435,102 @@
     "placeholder_note": "Placeholder contact details — replace before launch.",
     "regions_eyebrow": "Regional routing",
     "whatsapp_button": "Chat with us on WhatsApp",
-    "whatsapp_message": "Hello, I'm interested in your stage lighting products."
+    "whatsapp_message": "Hello, I'm interested in your stage lighting products.",
+    "fields": {
+      "name": "Name",
+      "email": "Work email",
+      "company": "Company",
+      "country": "Country",
+      "phone": "Phone",
+      "enquiry_type": "Enquiry type",
+      "product_interest": "Product of interest",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your full name",
+      "email": "name@company.com",
+      "company": "Organisation or venue",
+      "country": "Where the fixtures will be used",
+      "phone": "Including country code",
+      "enquiry_type": "Select a type",
+      "product_interest": "No specific model",
+      "message": "Tell us what you are lighting."
+    },
+    "hints": {
+      "product_interest": "Optional — helps us route the enquiry.",
+      "message": "Throw distance, venue size, quantities and timeline get you a faster answer."
+    },
+    "enquiry_types": {
+      "product_specification": "Product or specification question",
+      "quotation": "Quotation request",
+      "distribution": "Distribution enquiry",
+      "technical_support": "Technical support",
+      "warranty_service": "Warranty or service",
+      "other": "Other"
+    },
+    "form_status": {
+      "success_title": "Message received",
+      "success_body": "We reply within one working day, in the timezone of your region.",
+      "error_body": "The message did not send. Check the required fields, or email us directly.",
+      "sending": "Sending…",
+      "submit": "Send enquiry",
+      "privacy_note": "We use your details to answer this enquiry only."
+    },
+    "regions": {
+      "europe": {
+        "name": "Europe",
+        "note": "Stocked warehouse, 48-hour dispatch on catalogue lines."
+      },
+      "americas": {
+        "name": "Americas",
+        "note": "ETL-listed variants, 120 V configurations available on request."
+      },
+      "africa": {
+        "name": "Africa",
+        "note": "Regional service partners for warranty work and spare parts."
+      }
+    }
   },
     "footer": {
-    "legal": "Legal"
+    "legal": "Legal",
+    "distribution_information": "Distribution information",
+    "columns": {
+      "products": "Products",
+      "company": "Company",
+      "partners_support": "Partners & support"
+    },
+    "links": {
+      "about": "About Beamvox",
+      "why_beamvox": "Why Beamvox",
+      "applications": "Applications",
+      "contact": "Contact",
+      "manuals_downloads": "Manuals & downloads",
+      "faq": "Frequently asked questions"
+    },
+    "categories": {
+      "beam-spot": "Beam & Spot",
+      "wash-profile": "Wash & Profile",
+      "effect": "Effect & Matrix",
+      "strobe": "Strobe & Blinder",
+      "static": "Static & Architectural",
+      "control": "Control"
+    },
+    "regions": {
+      "europe": "Europe",
+      "americas": "Americas",
+      "africa": "Africa"
+    },
+    "factory_image_alt": "Company entrance",
+    "site_description": "Professional stage lighting for touring, theatre, broadcast and permanent installation. Supplied through distribution across Europe, the Americas and Africa.",
+    "copyright": "© {{year}} {{name}}. All rights reserved.",
+    "placeholder_notice": "Placeholder content for review.",
+    "specifications_notice": "Specifications subject to change without notice."
+  },
+  "partners_page": {
+    "eyebrow": "Distribution",
+    "title": "Distribution information",
+    "body": "Information about distributor territories and application terms is being confirmed.",
+    "notice": "A distributor application form and directory are not available on this page. No application will be submitted here."
   },
   "legal": {
     "eyebrow": "Legal",

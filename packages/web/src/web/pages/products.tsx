@@ -21,37 +21,25 @@ function Products() {
   const search = useSearch();
   const [, navigate] = useLocation();
 
-  const ACTIVE_CATEGORIES: CategoryId[] = ["beam-spot", "strobe"];
-
   const isCategoryId = (value: string | null): value is CategoryId =>
     categories.some((category) => category.id === value);
 
-  // ✅ Fixed: depends on categories
-  const activeCategories = useMemo(
-    () => categories.filter((c) => ACTIVE_CATEGORIES.includes(c.id)),
-    [categories]
-  );
-
   const active = useMemo(() => {
     const value = new URLSearchParams(search).get("category");
-    return isCategoryId(value) && ACTIVE_CATEGORIES.includes(value) ? value : null;
-  }, [search]);
+    return isCategoryId(value) ? value : null;
+  }, [search, categories]);
 
-  // ✅ Fixed: depends on active AND products
   const visible = useMemo(() => {
-    const filtered = products.filter((p) => ACTIVE_CATEGORIES.includes(p.category));
-    return active ? filtered.filter((p) => p.category === active) : filtered;
+    return active ? products.filter((p) => p.category === active) : products;
   }, [active, products]);
 
-  const activeCategory = activeCategories.find((c) => c.id === active);
+  const activeCategory = categories.find((c) => c.id === active);
 
   useReveal([active]);
 
   const setCategory = (id: CategoryId | null) => {
     navigate(id ? `/products?category=${id}` : "/products");
   };
-
-  const catalogUrl = "/downloads/catalogue.pdf";
 
   return (
     <>
@@ -63,7 +51,7 @@ function Products() {
         <div className="mt-12 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border-t border-line pt-8 sm:grid-cols-4">
           {[
             { label: t('products.stats.models'), value: String(visible.length) },
-            { label: t('products.stats.platforms'), value: String(activeCategories.length) },
+            { label: t('products.stats.platforms'), value: String(categories.length) },
             { label: t('products.stats.warranty'), value: "12 months" },
             { label: t('products.stats.data'), value: "IES · GDTF" },
           ].map((item) => (
@@ -94,7 +82,7 @@ function Products() {
               >
                 {t('products.filter_all')}
               </button>
-              {activeCategories.map((category) => (
+              {categories.map((category) => (
                 <button
                   key={category.id}
                   type="button"
@@ -150,12 +138,6 @@ function Products() {
               <p className="mt-6 measure text-muted">
                 {t('products.config_body')}
               </p>
-              <div className="mt-6">
-                <ButtonLink href={catalogUrl} size="lg" target="_blank" rel="noopener noreferrer">
-                  {t('products.download_catalogue')}
-                  <ArrowRight className="size-4" />
-                </ButtonLink>
-              </div>
             </div>
             <div className="flex flex-wrap gap-4 lg:justify-end" data-reveal data-reveal-delay={80}>
               <ButtonLink href="/contact" size="lg">

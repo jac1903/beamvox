@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Download, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 import { site } from "@/lib/content";
 import {
@@ -78,22 +78,19 @@ function Support() {
               <ul className="divide-y divide-line">
                 {downloadGroup.items.map((item: any, i: number) => (
                   <li key={item.title} data-reveal data-reveal-delay={i * 50}>
-                    <button
-                      type="button"
-                      className="group flex w-full items-center justify-between gap-6 py-5 text-left transition-colors duration-300 hover:bg-surface"
-                    >
+                    <div className="flex w-full items-center justify-between gap-6 py-5 text-left">
                       <span className="min-w-0">
                         <span className="block truncate text-[0.9375rem] text-ink">
                           {item.title}
                         </span>
                         <span className="mt-1 block font-mono text-[0.75rem] tracking-[0.06em] text-faint">
-                          {item.meta}
+                          {t('support.resource_unavailable')}
                         </span>
                       </span>
-                      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-[4px] border border-line text-faint transition-colors duration-300 group-hover:border-ember group-hover:text-ember">
-                        <Download className="size-4" />
+                      <span className="shrink-0 font-mono text-[0.6875rem] tracking-[0.08em] uppercase text-faint">
+                        {t('support.unavailable_label')}
                       </span>
-                    </button>
+                    </div>
                   </li>
                 ))}
               </ul>

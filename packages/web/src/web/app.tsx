@@ -19,6 +19,7 @@ import Support from "./pages/support";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Legal from "./pages/legal";
+import Partners from "./pages/partners";
 
 function NotFound() {
   return (
@@ -49,6 +50,7 @@ function Routes() {
       <Route path="/support" component={Support} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/partners" component={Partners} />
       <Route path="/legal" component={Legal} />
       <Route component={NotFound} />
     </Switch>

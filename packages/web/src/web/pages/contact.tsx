@@ -32,15 +32,16 @@ const emptyForm = {
 };
 
 const enquiryTypes = [
-  "Product or specification question",
-  "Quotation request",
-  "Distribution enquiry",
-  "Technical support",
-  "Warranty or service",
-  "Other",
+  { value: "Product or specification question", label: "contact.enquiry_types.product_specification" },
+  { value: "Quotation request", label: "contact.enquiry_types.quotation" },
+  { value: "Distribution enquiry", label: "contact.enquiry_types.distribution" },
+  { value: "Technical support", label: "contact.enquiry_types.technical_support" },
+  { value: "Warranty or service", label: "contact.enquiry_types.warranty_service" },
+  { value: "Other", label: "contact.enquiry_types.other" },
 ];
 
 function ContactForm() {
+  const { t } = useTranslation();
   const [form, setForm] = useState(emptyForm);
   const submit = useSubmitContact();
 
@@ -57,72 +58,75 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="Name" required>
+        <Field label={t("contact.fields.name")} required>
           <TextInput
             required
             minLength={2}
             value={form.name}
             onChange={(e) => set("name")(e.target.value)}
-            placeholder="Your full name"
+            placeholder={t("contact.placeholders.name")}
             autoComplete="name"
           />
         </Field>
-        <Field label="Work email" required>
+        <Field label={t("contact.fields.email")} required>
           <TextInput
             required
             type="email"
             value={form.email}
             onChange={(e) => set("email")(e.target.value)}
-            placeholder="name@company.com"
+            placeholder={t("contact.placeholders.email")}
             autoComplete="email"
           />
         </Field>
-        <Field label="Company">
+        <Field label={t("contact.fields.company")}>
           <TextInput
             value={form.company}
             onChange={(e) => set("company")(e.target.value)}
-            placeholder="Organisation or venue"
+            placeholder={t("contact.placeholders.company")}
             autoComplete="organization"
           />
         </Field>
-        <Field label="Country">
+        <Field label={t("contact.fields.country")}>
           <TextInput
             value={form.country}
             onChange={(e) => set("country")(e.target.value)}
-            placeholder="Where the fixtures will be used"
+            placeholder={t("contact.placeholders.country")}
             autoComplete="country-name"
           />
         </Field>
-        <Field label="Phone">
+        <Field label={t("contact.fields.phone")}>
           <TextInput
             value={form.phone}
             onChange={(e) => set("phone")(e.target.value)}
-            placeholder="Including country code"
+            placeholder={t("contact.placeholders.phone")}
             autoComplete="tel"
           />
         </Field>
-        <Field label="Enquiry type" required>
+        <Field label={t("contact.fields.enquiry_type")} required>
           <Select
             required
             value={form.enquiryType}
             onChange={(e) => set("enquiryType")(e.target.value)}
           >
-            <option value="">Select a type</option>
+            <option value="">{t("contact.placeholders.enquiry_type")}</option>
             {enquiryTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
+              <option key={type.value} value={type.value}>
+                {t(type.label)}
               </option>
             ))}
           </Select>
         </Field>
       </div>
 
-      <Field label="Product of interest" hint="Optional — helps us route the enquiry.">
+      <Field
+        label={t("contact.fields.product_interest")}
+        hint={t("contact.hints.product_interest")}
+      >
         <Select
           value={form.productInterest}
           onChange={(e) => set("productInterest")(e.target.value)}
         >
-          <option value="">No specific model</option>
+          <option value="">{t("contact.placeholders.product_interest")}</option>
           {products.map((product) => (
             <option key={product.slug} value={product.model}>
               {product.model} — {product.name}
@@ -132,9 +136,9 @@ function ContactForm() {
       </Field>
 
       <Field
-        label="Message"
+        label={t("contact.fields.message")}
         required
-        hint="Throw distance, venue size, quantities and timeline get you a faster answer."
+        hint={t("contact.hints.message")}
       >
         <TextArea
           required
@@ -142,24 +146,24 @@ function ContactForm() {
           rows={6}
           value={form.message}
           onChange={(e) => set("message")(e.target.value)}
-          placeholder="Tell us what you are lighting."
+          placeholder={t("contact.placeholders.message")}
         />
       </Field>
 
       <FormStatus
         state={state}
-        successTitle="Message received"
-        successBody="We reply within one working day, in the timezone of your region."
-        errorBody="The message did not send. Check the required fields, or email us directly."
+        successTitle={t("contact.form_status.success_title")}
+        successBody={t("contact.form_status.success_body")}
+        errorBody={t("contact.form_status.error_body")}
       />
 
       <div className="flex flex-wrap items-center gap-5 pt-1">
         <Button type="submit" size="lg" disabled={submit.isPending}>
-          {submit.isPending ? "Sending…" : "Send enquiry"}
+          {submit.isPending ? t("contact.form_status.sending") : t("contact.form_status.submit")}
           {!submit.isPending && <ArrowRight className="size-4" />}
         </Button>
         <p className="text-[0.8125rem] text-faint">
-          We use your details to answer this enquiry only.
+          {t("contact.form_status.privacy_note")}
         </p>
       </div>
     </form>
@@ -259,11 +263,11 @@ function Contact() {
                   {regions.map((region) => (
                     <li key={region.id} className="border-l-2 border-line pl-5">
                       <p className="font-display text-base font-semibold tracking-[-0.02em]">
-                        {region.name}
+                        {t(`contact.regions.${region.id}.name`)}
                       </p>
                       <p className="mono-meta mt-1.5 text-ember">{region.detail}</p>
                       <p className="mt-2 text-[0.875rem] leading-relaxed text-muted">
-                        {region.note}
+                        {t(`contact.regions.${region.id}.note`)}
                       </p>
                     </li>
                   ))}

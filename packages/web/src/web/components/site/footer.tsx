@@ -7,41 +7,48 @@ import { asset } from "@/lib/utils";
 
 const columns = [
   {
-    title: "Products",
+    title: "footer.columns.products",
     links: categories.map((c) => ({
-      label: c.name,
+      label: `footer.categories.${c.id}`,
       href: `/products?category=${c.id}`,
     })),
   },
   {
-    title: "Company",
+    title: "footer.columns.company",
     links: [
-      { label: "About Beamvox", href: "/about" },
-      { label: "Why Beamvox", href: "/why-beamvox" },
-      { label: "Applications", href: "/applications" },
-      { label: "Contact", href: "/contact" },
+      { label: "footer.links.about", href: "/about" },
+      { label: "footer.links.why_beamvox", href: "/why-beamvox" },
+      { label: "footer.links.applications", href: "/applications" },
+      { label: "footer.links.contact", href: "/contact" },
     ],
   },
   {
-    title: "Partners & support",
+    title: "footer.columns.partners_support",
     links: [
-      { label: "Become a distributor", href: "/partners" },
-      { label: "Find a distributor", href: "/partners#find" },
-      { label: "Manuals & downloads", href: "/support" },
-      { label: "Frequently asked questions", href: "/support#faq" },
+      { label: "footer.distribution_information", href: "/partners" },
+      { label: "footer.links.manuals_downloads", href: "/support" },
+      { label: "footer.links.faq", href: "/support#faq" },
     ],
   },
 ];
 
 export function Footer() {
   const { t } = useTranslation();
+  const localizedColumns = columns.map((column) => ({
+    ...column,
+    title: t(column.title),
+    links: column.links.map((link) => ({
+      ...link,
+      label: t(link.label),
+    })),
+  }));
 
   return (
     <footer className="relative overflow-hidden border-t border-line" style={{ minHeight: '400px' }}>
       {/* 🏢 Background image - Company facade */}
       <img
         src="/beamvox/images/factoryentrc.jpg"
-        alt="Our company entrance"
+        alt={t("footer.factory_image_alt")}
         loading="lazy"
         className="absolute inset-0 size-full object-cover object-top"
         style={{ opacity: 0.3 }}
@@ -60,9 +67,7 @@ export function Footer() {
               height={116}
             />
             <p className="mt-6 max-w-xs text-[0.9375rem] leading-relaxed text-muted">
-              Professional stage lighting, manufactured for touring, theatre, broadcast and
-              permanent installation. Supplied through distribution across Europe, the
-              Americas and Africa.
+              {t("footer.site_description")}
             </p>
             <ul className="mt-7 space-y-3 text-[0.875rem] text-muted">
               <li className="flex gap-3">
@@ -86,7 +91,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {columns.map((column) => (
+          {localizedColumns.map((column) => (
             <nav key={column.title} aria-label={column.title}>
               <h3 className="eyebrow" style={{ letterSpacing: "0.18em" }}>
                 {column.title}
@@ -111,7 +116,7 @@ export function Footer() {
           {regions.map((region) => (
             <div key={region.id}>
               <p className="font-mono text-[0.8125rem] tracking-[0.08em] text-ink">
-                {region.name}
+                {t(`footer.regions.${region.id}`)}
               </p>
               <p className="mt-1 text-[0.8125rem] text-faint">{region.detail}</p>
             </div>
@@ -120,14 +125,14 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-line py-7 text-[0.8125rem] text-faint md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.legalName}. All rights reserved. Placeholder
-            content for review.
+            {t("footer.copyright", { year: new Date().getFullYear(), name: site.legalName })}{" "}
+            {t("footer.placeholder_notice")}
             <Link to="/legal" className="ml-4 text-ink transition-colors hover:text-ember">
               {t("footer.legal")}
             </Link>
           </p>
           <p className="font-mono tracking-[0.08em]">
-            Specifications subject to change without notice
+            {t("footer.specifications_notice")}
           </p>
         </div>
       </Container>
