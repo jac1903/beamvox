@@ -67,11 +67,13 @@ export function FormStatus({
   state,
   successTitle,
   successBody,
+  errorTitle,
   errorBody,
 }: {
   state: "idle" | "success" | "error";
   successTitle: string;
   successBody: string;
+  errorTitle: string;
   errorBody: string;
 }) {
   if (state === "idle") return null;
@@ -86,7 +88,7 @@ export function FormStatus({
       )}
     >
       <p className="font-display text-base font-semibold text-ink">
-        {isSuccess ? successTitle : "Something went wrong"}
+        {isSuccess ? successTitle : errorTitle}
       </p>
       <p className="mt-1.5 text-[0.9375rem] text-muted">
         {isSuccess ? successBody : errorBody}

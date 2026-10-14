@@ -471,6 +471,7 @@
     "form_status": {
       "success_title": "Consulta recibida",
       "success_body": "Respondemos en un día hábil, según la zona horaria de tu región.",
+      "error_title": "No se pudo enviar el mensaje",
       "error_body": "No se pudo enviar el mensaje. Revisa los campos obligatorios o contáctanos por correo electrónico.",
       "sending": "Enviando…",
       "submit": "Enviar consulta",

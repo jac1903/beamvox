@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, Clock, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useReveal } from "@/hooks/use-reveal";
 import { products, regions, site } from "@/lib/content";
-import { useSubmitContact } from "@/queries/contact";
+import { ContactSubmissionError, useSubmitContact } from "@/queries/contact";
 import {
   Container,
   Button,
@@ -44,13 +44,22 @@ function ContactForm() {
   const { t } = useTranslation();
   const [form, setForm] = useState(emptyForm);
   const submit = useSubmitContact();
+  const submissionInProgress = useRef(false);
 
   const set = (key: keyof typeof form) => (value: string) =>
     setForm((prev) => ({ ...prev, [key]: value }));
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    submit.mutate(form, { onSuccess: () => setForm(emptyForm) });
+    if (submissionInProgress.current) return;
+
+    submissionInProgress.current = true;
+    submit.mutate(new FormData(event.currentTarget), {
+      onSuccess: () => setForm(emptyForm),
+      onSettled: () => {
+        submissionInProgress.current = false;
+      },
+    });
   };
 
   const state = submit.isSuccess ? "success" : submit.isError ? "error" : "idle";
@@ -62,6 +71,7 @@ function ContactForm() {
           <TextInput
             required
             minLength={2}
+            name="name"
             value={form.name}
             onChange={(e) => set("name")(e.target.value)}
             placeholder={t("contact.placeholders.name")}
@@ -72,6 +82,7 @@ function ContactForm() {
           <TextInput
             required
             type="email"
+            name="email"
             value={form.email}
             onChange={(e) => set("email")(e.target.value)}
             placeholder={t("contact.placeholders.email")}
@@ -80,6 +91,7 @@ function ContactForm() {
         </Field>
         <Field label={t("contact.fields.company")}>
           <TextInput
+            name="company"
             value={form.company}
             onChange={(e) => set("company")(e.target.value)}
             placeholder={t("contact.placeholders.company")}
@@ -88,6 +100,7 @@ function ContactForm() {
         </Field>
         <Field label={t("contact.fields.country")}>
           <TextInput
+            name="country"
             value={form.country}
             onChange={(e) => set("country")(e.target.value)}
             placeholder={t("contact.placeholders.country")}
@@ -96,6 +109,7 @@ function ContactForm() {
         </Field>
         <Field label={t("contact.fields.phone")}>
           <TextInput
+            name="phone"
             value={form.phone}
             onChange={(e) => set("phone")(e.target.value)}
             placeholder={t("contact.placeholders.phone")}
@@ -105,6 +119,7 @@ function ContactForm() {
         <Field label={t("contact.fields.enquiry_type")} required>
           <Select
             required
+            name="enquiry_type"
             value={form.enquiryType}
             onChange={(e) => set("enquiryType")(e.target.value)}
           >
@@ -123,6 +138,7 @@ function ContactForm() {
         hint={t("contact.hints.product_interest")}
       >
         <Select
+          name="product_interest"
           value={form.productInterest}
           onChange={(e) => set("productInterest")(e.target.value)}
         >
@@ -143,6 +159,7 @@ function ContactForm() {
         <TextArea
           required
           minLength={10}
+          name="message"
           rows={6}
           value={form.message}
           onChange={(e) => set("message")(e.target.value)}
@@ -154,7 +171,12 @@ function ContactForm() {
         state={state}
         successTitle={t("contact.form_status.success_title")}
         successBody={t("contact.form_status.success_body")}
-        errorBody={t("contact.form_status.error_body")}
+        errorTitle={t("contact.form_status.error_title")}
+        errorBody={
+          submit.error instanceof ContactSubmissionError && submit.error.providerMessage
+            ? submit.error.providerMessage
+            : t("contact.form_status.error_body")
+        }
       />
 
       <div className="flex flex-wrap items-center gap-5 pt-1">

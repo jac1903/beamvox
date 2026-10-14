@@ -471,6 +471,7 @@
     "form_status": {
       "success_title": "Message received",
       "success_body": "We reply within one working day, in the timezone of your region.",
+      "error_title": "Something went wrong",
       "error_body": "The message did not send. Check the required fields, or email us directly.",
       "sending": "Sending…",
       "submit": "Send enquiry",
