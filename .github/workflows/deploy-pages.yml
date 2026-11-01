@@ -26,11 +26,9 @@ jobs:
 
       - run: bun install
 
-      # ❌ DELETED: "Work out the base path" step goes here
-
       - name: Build static site
         env:
-          VITE_BASE: "/" # ✅ CHANGED: Hardcoded to root for custom domain
+          VITE_BASE: "/"
           VITE_STATIC: "true"
           VITE_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
@@ -56,7 +54,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
       - id: deployment
         uses: actions/deploy-pages@v4
