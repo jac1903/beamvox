@@ -10,7 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-# Never run two deploys at once; let a newer push finish rather than cancel it.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -27,26 +26,13 @@ jobs:
 
       - run: bun install
 
-      - name: Work out the base path
-        id: base
-        run: |
-          # A user/org site (<user>.github.io) is served from the domain root.
-          # Any other repo is a project site served from /<repo>/.
-          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
-            echo "path=/" >> "$GITHUB_OUTPUT"
-          else
-            echo "path=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
-          fi
+      # ❌ DELETED: "Work out the base path" step goes here
 
       - name: Build static site
         env:
-          VITE_BASE: ${{ steps.base.outputs.path }}
+          VITE_BASE: "/" # ✅ CHANGED: Hardcoded to root for custom domain
           VITE_STATIC: "true"
-          # Optional: add a form endpoint (Formspree etc.) as a repo variable
-          # named FORM_ENDPOINT and the forms will POST there instead of
-          # falling back to the visitor's mail client.
           VITE_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
-          # 🔥 Email environment variables for nodemailer
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
           ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
@@ -54,9 +40,6 @@ jobs:
 
       - name: Add SPA fallback and disable Jekyll
         run: |
-          # GitHub Pages has no rewrite rules, so a deep link like /products
-          # would 404. Serving index.html as the 404 page lets the client
-          # router take over and render the right page.
           cp packages/web/dist/index.html packages/web/dist/404.html
           touch packages/web/dist/.nojekyll
 
@@ -73,5 +56,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
       - id: deployment
         uses: actions/deploy-pages@v4
