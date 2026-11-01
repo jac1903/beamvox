@@ -47,7 +47,7 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-line" style={{ minHeight: '400px' }}>
       {/* 🏢 Background image - Company facade */}
       <img
-        src="/beamvox/images/factoryentrc.jpg"
+        src={asset("/images/factoryentrc.jpg")}
         alt={t("footer.factory_image_alt")}
         loading="lazy"
         className="absolute inset-0 size-full object-cover object-top"
