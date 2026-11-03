@@ -286,8 +286,7 @@ function Distribution() {
               {t('distribution.description')}
             </p>
             <div className="mt-9 flex flex-wrap gap-6">
-              <TextLink href="/partners">{t('distribution.cta_partners')}</TextLink>
-              <TextLink href="/contact">{t('distribution.cta_contact')}</TextLink>
+              <TextLink href="/contact">{t('distribution.cta_partners')}</TextLink>
             </div>
           </div>
 
