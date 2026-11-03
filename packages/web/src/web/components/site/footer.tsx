@@ -25,7 +25,7 @@ const columns = [
   {
     title: "footer.columns.partners_support",
     links: [
-      { label: "footer.distribution_information", href: "/partners" },
+      { label: "footer.distribution_information", href: "/contact" }, // ✅ CHANGED FROM "/partners"
       { label: "footer.links.manuals_downloads", href: "/support" },
       { label: "footer.links.faq", href: "/support#faq" },
     ],
